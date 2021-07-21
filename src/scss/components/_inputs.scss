@@ -1,0 +1,38 @@
+.base-input {
+    height: 40px;
+    background: #F2F2F2;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 7px 16px;
+    border: none;
+    color: rgba(0, 29, 58, 0.9);
+
+    ::placeholder {
+        color: #646464;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        background: #F2F2F2;
+    }
+}
+
+.group-field {
+    position: relative;
+}
+
+.group-field__label {
+    position: absolute;
+    left: 16px;
+    top: 6px;
+    font-size: 10px;
+    line-height: 14px;
+    color: #646464;
+}
+
+.group-field__input {
+    height: 52px;
+    padding: 20px 16px 6px;
+}

@@ -1,0 +1,22 @@
+// BS Abstract
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+//BS reboot
+@import "~bootstrap/scss/reboot";
+
+// BS grid
+@import "~bootstrap/scss/grid";
+
+// BS components
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/forms";
+
+@import "base/fonts";
+
+
+// Custom components
+@import "components/header";
+@import "components/buttons";
+@import "components/inputs";
