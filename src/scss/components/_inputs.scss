@@ -7,6 +7,7 @@
     padding: 7px 16px;
     border: none;
     color: rgba(0, 29, 58, 0.9);
+    border: 1px solid #F2F2F2;
 
     ::placeholder {
         color: #646464;
@@ -15,24 +16,55 @@
     &:focus {
         outline: none;
         box-shadow: none;
-        background: #F2F2F2;
+        background: #fff;
+        border-color: #3275EE;
     }
 }
 
-.group-field {
+.materil-group {
+    display: block;
     position: relative;
 }
 
-.group-field__label {
+.materil-group__label {
     position: absolute;
+    left: 16px;
+    top: 13px;
+    color: #646464;
+    font-size: 16px;
+    line-height: 26px;
+    transition: 0.15s ease-in-out;
+    margin-bottom: 24px;
+}
+
+.materil-group__input {
+    height: 52px;
+    padding: 20px 16px 6px;
+}
+
+.materil-group.active .materil-group__label {
     left: 16px;
     top: 6px;
     font-size: 10px;
     line-height: 14px;
-    color: #646464;
 }
 
-.group-field__input {
-    height: 52px;
-    padding: 20px 16px 6px;
+.materil-group.error .materil-group__input {
+    background-color: #FFD9D9;
+    border-color: #FF3D3D;
+}
+
+.materil-group__error-text {
+    font-size: 12px;
+    line-height: 17px;
+    color: #FF3D3D;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 6px;
+}
+
+.materil-group.error .materil-group__error-text {
+    display: block;
 }

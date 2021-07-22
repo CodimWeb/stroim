@@ -13,8 +13,11 @@
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/forms";
 
-@import "base/fonts";
+// plugins
+@import "~select2/src/scss/core.scss";
 
+// fonts
+@import "base/fonts";
 
 // Custom components
 @import "components/header";

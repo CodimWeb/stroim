@@ -9,7 +9,7 @@
     color: #fff;
     background-color: transparent;
     border-radius: 8px;
-    border: none;
+    border: 2px solid transparent;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 
@@ -23,9 +23,27 @@
 
 .btn-primary {
     background-color: #3275EE;
+    border-color: #3275EE;
 
     &:hover {
+        background-color: #225ECA;
+        border-color: #225ECA;
+    }
+
+    &:active {
         
+    }
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border-color: #3275EE;
+    color: #3275EE;
+
+    &:hover {
+        background-color: #fff;
+        border-color: #225ECA;
+        color: #225ECA;
     }
 
     &:active {
