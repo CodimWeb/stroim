@@ -1,0 +1,31 @@
+@import "../abstract/variables";
+
+.banner-card{
+  display: inline-block;
+  width: 100%;
+  padding: 48px 25px 43px;
+  background-color: $yellow;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: $text_color;
+  font-weight: $font-weight-medium;
+
+  &:hover{
+    color: $text_color
+  }
+}
+
+.banner-card__img {
+  margin-bottom: 42px;
+}
+
+.banner-card__subtitle{
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 12px;
+}
+
+.banner-card__title{
+
+}

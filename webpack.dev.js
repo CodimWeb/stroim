@@ -34,28 +34,30 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: [
-                  { loader: MiniCssExtractPlugin.loader },
-                  {
-                    loader: 'css-loader',
-                    options: {
-                        url: false,
-                        sourceMap: true
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
                     }
-                  },
-                  {
-                    loader: 'postcss-loader',
-                    options: {
-                      sourceMap: true
-                    }
-                  },
-                  {
-                    loader: 'sass-loader',
-                    options: {
-                      sourceMap: true
-                    }
-                  }
                 ]
-              }
+            }
         ]
     },
     plugins: [
@@ -75,10 +77,10 @@ module.exports = {
             filename: "css/style.css"
         }),
         new CopyWebpackPlugin(
-            { 
+            {
                 patterns: [
-                    { from: './src/img', to: './img' },
-                    // { from: './src/fonts', to: './dist/fonts' }
+                    {from: './src/img', to: './img'},
+                    // {from: './src/fonts', to: './dist/fonts'}
                 ]
             }
         ),

@@ -1,0 +1,72 @@
+@import "../abstract/variables";
+.faq{
+  padding: 80px 0 120px;
+}
+
+.fag__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.faq__title{
+  margin-bottom: 32px;
+}
+
+.faq__item {
+  position: relative;
+  border-top: 1px solid #001D3A;
+  padding: 32px 0;
+
+  &:last-child{
+    border-bottom: 1px solid #001D3A;
+  }
+}
+
+.faq__caption{
+  font-size: 22px;
+  line-height: 140%;
+  font-weight: $font-weight-medium;
+  margin: 0;
+}
+
+.faq__body{
+  font-size: 22px;
+  line-height: 160%;
+  display: none;
+}
+
+.faq__btn{
+  width: 32px;
+  height: 32px;
+  color: $text_color;
+  line-height: 0;
+  border-radius: 50%;
+  border: 1px solid $text_color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+
+  &:hover {
+    color: $text_color;
+
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  svg{
+    transition: all .3s;
+  }
+
+  .faq--open & {
+    background-color: $text_color;
+    color: #fff;
+
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+}

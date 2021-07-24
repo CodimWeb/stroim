@@ -1,0 +1,63 @@
+@import "../abstract/variables";
+
+.statistic{
+  padding: 80px 0 80px;
+}
+
+.statistic__title{
+  max-width: 570px;
+}
+
+
+.statistic__container{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.statistic__left{
+  flex-grow: 1;
+}
+
+.statistic__right{
+  flex-shrink: 0;
+  width: 294px;
+}
+
+.statistic__list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statistic__item{
+  width: calc(100% / 3);
+  margin-top: 48px;
+}
+
+.statistic__item-inner{
+  max-width: 225px;
+  position: relative;
+
+  &::after{
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: $text_color;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.statistic__caption{
+  font-size: 48px;
+  font-weight: $font-weight-normal;
+  line-height: 140%;
+  color: $text_color;
+  margin-bottom: 12px;
+}
+
+.statistic__description{
+  padding-bottom: 12px;
+}

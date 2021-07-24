@@ -4,7 +4,6 @@ import $ from 'jquery';
 
 //BS4 components
 // import bootstrap from 'bootstrap';
-// import Util from 'bootstrap/js/dist/util.js'
 import Collapse from 'bootstrap/js/dist/collapse';
 import Modal from 'bootstrap/js/dist/modal';
 
@@ -31,9 +30,25 @@ $(document).ready(function(){
         dropdownCssClass: 'base-select-dropdown'
     });
 
+
     $('.sidebar__show-more').on('click', function(){
         $(this).siblings('.sidebar__links').toggleClass('full-height');
         $(this).toggleClass('active');
     })
-})
+
+    toggleFaq();
+});
+
+function toggleFaq() {
+    const $fagItem = $('.js-faq');
+    $fagItem.each(function (_, item) {
+        const $btn = $(item).find('.faq__btn');
+        const $body = $(item).find('.faq__body');
+        $btn.off('click').on('click', function (e) {
+            e.preventDefault();
+            $(item).toggleClass('faq--open');
+            $body.toggle(400)
+        })
+    });
+}
 

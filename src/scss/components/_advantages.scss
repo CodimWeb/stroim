@@ -1,0 +1,37 @@
+@import "../abstract/variables";
+
+.advantages{
+  padding: 80px 0;
+}
+
+.advantages__title{
+  margin-bottom: 32px;
+  max-width: 620px;
+}
+
+.advantages__wrapper{
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.advantages__item{
+  width: 280px;
+
+  & + & {
+    margin-left: 150px;
+  }
+}
+
+.advantages__num{
+  font-weight: $font-weight-medium;
+  font-size: 144px;
+  line-height: 125%;
+  margin-bottom: 5px;
+  color: $blue;
+}
+
+.advantages__description{
+  font-size: 22px;
+  line-height: 160%;
+  color: $blue;
+}

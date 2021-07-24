@@ -1,0 +1,78 @@
+@import '../abstract/variables';
+
+.tariff-card{
+  padding: 24px 16px;
+  border: 2px solid #DFDEE2;
+  border-radius: 8px;
+  color: $text_color;
+
+  &--special{
+    border-color: $blue;
+  }
+}
+
+.tariff-card__label{
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 12px;
+
+  .tariff-card--special & {
+    color: $blue;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.tariff-card__duration{
+  font-size: 28px;
+  line-height: 140%;
+  font-weight: $font-weight-medium;
+  margin-bottom: 8px;
+}
+
+.tariff-card__price{
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 12px;
+  font-weight: $font-weight-medium;
+}
+
+.tariff-card__location{
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: $font-weight-medium;
+  color: $grey;
+
+  .tariff-card--special & {
+    color: $blue;
+  }
+}
+
+.tariff-card__notification{
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 32px;
+}
+
+.tariff-card__ratting{
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: $font-weight-medium;
+  margin-bottom: 16px;
+}
+
+.tariff-card__rating-container{
+  display: flex;
+  margin-bottom: 34px;
+
+  img + img {
+    margin-left: 12px;
+  }
+}
+
+.tariff-card__btn{
+  width: 100%;
+}
+
+.tariff-card__conditions{
+  margin-bottom: 12px;
+}
