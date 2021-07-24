@@ -1,0 +1,28 @@
+.capabilities{
+  padding: 48px 0 70px;
+}
+
+.capabilities__container{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -15px;
+  width: auto;
+}
+
+.capabilities__item{
+  display: flex;
+  padding: 0 15px;
+  width: 25%;
+}
+
+.capabilities__icon{
+  width: 56px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.capabilities__text{
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(0, 29, 58, 0.9);
+}
