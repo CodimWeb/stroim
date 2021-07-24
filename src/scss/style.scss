@@ -11,8 +11,13 @@
 @import "~bootstrap/scss/grid";
 
 // BS components
+@import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/bootstrap";
 
 // plugins
 @import "~select2/src/scss/core.scss";

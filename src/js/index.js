@@ -4,6 +4,9 @@ import $ from 'jquery';
 
 //BS4 components
 // import bootstrap from 'bootstrap';
+// import Util from 'bootstrap/js/dist/util.js'
+import Collapse from 'bootstrap/js/dist/collapse';
+import Modal from 'bootstrap/js/dist/modal';
 
 //styles
 import '../scss/style.scss';
@@ -27,5 +30,10 @@ $(document).ready(function(){
         selectionCssClass: 'base-select',
         dropdownCssClass: 'base-select-dropdown'
     });
+
+    $('.sidebar__show-more').on('click', function(){
+        $(this).siblings('.sidebar__links').toggleClass('full-height');
+        $(this).toggleClass('active');
+    })
 })
 
