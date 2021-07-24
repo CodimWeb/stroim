@@ -1,0 +1,39 @@
+.tariff{
+  padding: 80px 0 56px;
+}
+
+.tariff__title{
+  margin-bottom: 16px;
+}
+
+.tariff__notation{
+  margin-bottom: 32px;
+}
+
+.tariff__wrapper{
+  display: flex;
+  margin: 0 -15px 32px;
+  width: auto;
+}
+
+.tariff__card{
+  width: 25%;
+  padding: 0 15px;
+}
+
+.tariff__info{
+  line-height: 140%;
+  color: $text_color;
+}
+
+.tariff__email{
+  font-weight: $font-weight-medium;
+  color: $blue;
+  text-decoration: none;
+}
+
+.tariff__phone{
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  color: $text_color;
+}
