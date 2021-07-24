@@ -1,0 +1,53 @@
+@import '../abstract/variables';
+
+.marketing-banner{
+  padding: 120px 0 80px;
+}
+
+.marketing-banner__inner{
+  background: $yellow;
+  padding: 20px 112px 48px 66px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.marketing-banner__title{
+  margin-bottom: 8px;
+}
+
+.marketing-banner__image {
+  line-height: 0;
+}
+
+.marketing-banner__content{
+  flex-grow: 1;
+}
+
+.marketing-banner__info{
+  line-height: 140%;
+  margin-bottom: 32px;
+}
+
+.marketing-banner__price{
+  font-weight: $font-weight-medium;
+  margin-bottom: 4px;
+}
+
+.marketing-banner__location{
+  color: $grey;
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 48px;
+}
+
+.marketing-banner__more{
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: $font-weight-medium;
+  color: $text_color;
+
+  img{
+    padding-left: 3px;
+  }
+}
