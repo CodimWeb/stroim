@@ -1,6 +1,6 @@
 'use strict'
 
-// import $ from 'jquery';
+import $ from 'jquery';
 
 //BS4 components
 // import bootstrap from 'bootstrap';
@@ -9,9 +9,6 @@
 import '../scss/style.scss';
 
 import select2 from 'select2';
-
-console.log(select2);
-
 
 
 $(document).ready(function(){
@@ -25,10 +22,10 @@ $(document).ready(function(){
         }
     })
 
-    $('.test').select2({
+    $('.select').select2({
         width: '100%',
-        selectionCssClass: 'test',
-        dropdownCssClass: 'test-dropdown'
+        selectionCssClass: 'base-select',
+        dropdownCssClass: 'base-select-dropdown'
     });
 })
 

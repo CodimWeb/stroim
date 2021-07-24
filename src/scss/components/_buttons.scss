@@ -31,7 +31,8 @@
     }
 
     &:active {
-        
+        background-color: #1C4A9D;
+        border-color: #1C4A9D;
     }
 }
 
@@ -47,6 +48,8 @@
     }
 
     &:active {
-        
+        background-color: #fff;
+        border-color: #1C4A9D;
+        color: #1C4A9D;
     }
 }
