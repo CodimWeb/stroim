@@ -21,7 +21,11 @@
 .sidebar {
     width: 235px;
     margin-right: 30px;
-    padding-top: 30px;
+    padding-top: 26px;
+}
+
+.sidebar__item {
+    margin-bottom: 5px;
 }
 
 .sidebar__item__collapse-btn {
@@ -59,11 +63,8 @@
 .sidebar__links {
     max-height: 270px;
     overflow: hidden;
+    margin-bottom: 5px;
     transition: max-height 0.3s ease-in-out;
-
-    &.full-height {
-        max-height: fit-content;
-    }
 }
 
 .sidebar__links__item {
@@ -74,12 +75,23 @@
     display: block;
     font-size: 14px;
     line-height: 22px;
+
+    span {
+        color: #646464;
+    }
+
+    &:hover {
+        span {
+            color: #646464;
+        }
+    }
 }
 
 .sidebar__show-more {
     color: #3275EE;
     text-align: left;
     padding: 0 20px 0 0;
+    margin-bottom: 15px;
     font-weight: 400;
     position: relative;
 }

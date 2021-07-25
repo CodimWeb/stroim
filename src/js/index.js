@@ -32,8 +32,20 @@ $(document).ready(function(){
 
 
     $('.sidebar__show-more').on('click', function(){
-        $(this).siblings('.sidebar__links').toggleClass('full-height');
-        $(this).toggleClass('active');
+        var links = $(this).siblings('.sidebar__links').find('.sidebar__links__item');
+        var linkHeight = links.outerHeight();
+        var maxHeight = (linkHeight + 12) * links.length;
+        console.log(links.length)
+        if($(this).hasClass('active')) {
+            $(this).siblings('.sidebar__links').removeAttr('style')
+            $(this).removeClass('active');
+            console.log('if')
+        }
+        else {
+            $(this).siblings('.sidebar__links').css('max-height', maxHeight + 'px');
+            $(this).addClass('active');
+            console.log('else')
+        }
     })
 
     toggleFaq();
