@@ -9,11 +9,49 @@
 </head>
 
 <body>
-<div class="header">
-    header
-    <a href="" class="btn btn-primary js-auth" data-bs-toggle="modal" data-bs-target="#authModal">Войти</a>
-</div>
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <div class="header__location">
+                <img src="img/header/location-icon.svg" alt="">
+                <span>Новосибирск</span>
+            </div>
+            <div class="header__links">
+                <a href="/about" class="header__link">О нас</a>
+                <a href="/black" class="header__link">Черный список</a>
+                <a href="tel:" class="header__link">
+                    Отдел Продаж:
+                    <span class="header__link--accent">8 (499) 270 58 45</span>
+                </a>
+            </div>
+        </div>
 
+        <div class="header__middle">
+
+<!--            <a href="/" class="header__logo">-->
+<!--                <img src="img/header/logo.svg" alt="">-->
+<!--            </a>-->
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="header__bottom"></div>
+    </div>
+</header>
+
+
+<!--<a href="" class="btn btn-primary js-auth" data-bs-toggle="modal" data-bs-target="#authModal">Войти</a>-->
 
 <div class="home content">
     <section class="navigation">
@@ -494,7 +532,8 @@
 <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-stroim">
         <div class="modal-content modal-stroim__content">
-            <button type="button" class="btn-close modal-stroim__btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close modal-stroim__btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             <div class="modal-stroim__title">Вход</div>
             <form class="modal-stroim__form">
                 <label class="materil-group">
@@ -522,5 +561,6 @@
 </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
 </html>

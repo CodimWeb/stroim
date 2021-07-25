@@ -1,0 +1,45 @@
+@import '../abstract/variables';
+
+.header{
+
+}
+
+.header__top{
+  padding: 5px 0 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__location{
+  font-size: 14px;
+  line-height: 160%;
+  color: $text_color;
+
+  img {
+    margin-left: 6px;
+  }
+}
+
+.header__link{
+  font-size: 14px;
+  line-height: 160%;
+  color: $text_color;
+  text-decoration: none;
+  transition: color .3s;
+
+  & + & {
+    margin-left: 48px;
+  }
+
+  &:hover{
+    color: $blue;
+  }
+
+  &--accent{
+    font-weight: $font-weight-medium;
+  }
+}
+
+.header__logo{
+  display: inline-block;
+}
