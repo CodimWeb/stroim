@@ -131,8 +131,14 @@
 .catalog__filter{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     align-content: center;
     padding: 24px 0;
+}
+
+.catalog__filter-info{
+    width: 100%;
+    margin-right: 110px;
 }
 
 .catalog__filter-tabs{
@@ -164,6 +170,7 @@
 .catalog__filter-btn{
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 
     svg {
         margin-right: 5px;

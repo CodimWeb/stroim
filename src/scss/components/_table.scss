@@ -38,6 +38,8 @@
   flex-direction: column;
   justify-content: center;
 
+  //tender-table
+
   &--num {
     width: 48px;
   }
@@ -53,6 +55,25 @@
   &--price,
   &--status {
     width: 153px;
+  }
+
+  //customers-request-table
+  &--title{
+    width: 237px;
+  }
+
+  &--size,
+  &--count,
+  &--width{
+    width: 126px;
+  }
+
+  &--params{
+    width: 173px;
+  }
+
+  &--cost {
+    width: 148px;
   }
 }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Тендеры</title>
+    <title>Заявки покупателей</title>
 </head>
 
 <body>
@@ -47,12 +47,12 @@
                     <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__text">Цены поставщиков</span>
+                    <span class="breadcrumbs__text">Заявки покупателей</span>
                 </li>
             </ul>
             <div class="catalog">
                 <div class="catalog__header">
-                    <h2 class="h2">Тендеры</h2>
+                    <h2 class="h2">Заявки покупателей</h2>
                     <div class="catalog__qnty">2140 товаров</div>
                 </div>
                 <div class="catalog__body">
@@ -119,11 +119,8 @@
                         </div>
 
                         <div class="catalog__filter">
-                            <div class="catalog__filter-tabs">
-                                <a href="" class="catalog__filter-tab active">Все</a>
-                                <a href="" class="catalog__filter-tab">Открытые</a>
-                                <a href="" class="catalog__filter-tab">Предстоящие</a>
-                                <a href="" class="catalog__filter-tab">Завершенные</a>
+                            <div class="catalog__filter-info">
+                                Данный раздел предназначен для размещения Заявок и тендеров на Покупку строительные материалыа. Всего 3 минуты и Вашу заявку получат Основные поставщики в выбранных Вами Регионах РФ и стран СНГ!
                             </div>
                             <a href="" class="catalog__filter-btn btn btn--sm btn-primary">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +128,7 @@
                                     <line x1="5.9" y1="9.1" x2="12.1" y2="9.1" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
                                     <line x1="9.1" y1="12.1" x2="9.1" y2="5.9" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
                                 </svg>
-                                <span>Объявить тендер</span>
+                                <span>Добавить заявку на покупку</span>
                             </a>
                         </div>
 
@@ -149,12 +146,6 @@
                                             <span class="tender-card__accent">17:00 8 ноября 2019 г.</span>
                                         </p>
                                     </div>
-                                  <span class="tender-card__status tender-card__status--open">
-                                      Открытый конкурс
-                                  </span>
-                                 <!-- <span class="tender-card__status tender-card__status&#45;&#45;pending">
-                                      Запрос котировок
-                                  </span>-->
                                 </div>
                                 <div class="tender-card__table">
                                     <div class="table">
@@ -162,17 +153,23 @@
                                             <div class="table__col table__col--num">
                                                 №
                                             </div>
-                                            <div class="table__col table__col--name">
+                                            <div class="table__col table__col--title">
                                                 Наименование
                                             </div>
-                                            <div class="table__col table__col--lot">
-                                                Состав лота
+                                            <div class="table__col table__col--size">
+                                                Размер
                                             </div>
-                                            <div class="table__col table__col--price">
-                                                Сумма контракта
+                                            <div class="table__col table__col--count">
+                                                Кол-во
                                             </div>
-                                            <div class="table__col table__col--status">
-                                                Статус
+                                            <div class="table__col table__col--width">
+                                                Длина
+                                            </div>
+                                            <div class="table__col table__col--params">
+                                                Параметры
+                                            </div>
+                                            <div class="table__col table__col--cost">
+                                                Цена (не больше)
                                             </div>
                                         </div>
                                         <div class="table__body">
@@ -180,40 +177,72 @@
                                                 <div class="table__col table__col--num">
                                                     1
                                                 </div>
-                                                <div class="table__col table__col--name">
+                                                <div class="table__col table__col--title">
                                                     Тендер на поставку отводы, соеденители и прочее
                                                 </div>
-                                                <div class="table__col table__col--lot">
-                                                    Вентиль, Заглушка, Задвижка, Муфта, Отвод, Переход, Тройник, Фланец, Затвор
+                                                <div class="table__col table__col--size">
+                                                    СВ - 95 -3
                                                 </div>
-                                                <div class="table__col table__col--price">
-                                                    20 000 руб.
+                                                <div class="table__col table__col--count">
+                                                    296
                                                 </div>
-                                                <div class="table__col table__col--status">
-                                                    <span class="table__status table__status--pending">
-                                                        Идут торги
-                                                    </span>
+                                                <div class="table__col table__col--width">
+                                                    Не указана
+                                                </div>
+                                                <div class="table__col table__col--params">
+                                                    Не указаны
+                                                </div>
+                                                <div class="table__col table__col--cost">
+                                                    32 400 руб.
                                                 </div>
                                             </div>
                                             <div class="table__row">
                                                 <div class="table__col table__col--num">
                                                     2
                                                 </div>
-                                                <div class="table__col table__col--name">
+                                                <div class="table__col table__col--title">
                                                     Тендер на поставку отводы, соеденители и прочее
                                                 </div>
-                                                <div class="table__col table__col--lot">
-                                                    Вентиль, Заглушка, Задвижка, Муфта, Отвод, Переход, Тройник, Фланец, Затвор
+                                                <div class="table__col table__col--size">
+                                                    СВ - 95 -3
                                                 </div>
-                                                <div class="table__col table__col--price">
-                                                    20 000 руб.
+                                                <div class="table__col table__col--count">
+                                                    296
                                                 </div>
-                                                <div class="table__col table__col--status">
-                                                    <span class="table__status table__status--pending">
-                                                        Идут торги
-                                                    </span>
+                                                <div class="table__col table__col--width">
+                                                    Не указана
+                                                </div>
+                                                <div class="table__col table__col--params">
+                                                    Не указаны
+                                                </div>
+                                                <div class="table__col table__col--cost">
+                                                    32 400 руб.
                                                 </div>
                                             </div>
+                                            <div class="table__row">
+                                                <div class="table__col table__col--num">
+                                                    3
+                                                </div>
+                                                <div class="table__col table__col--title">
+                                                    Тендер на поставку отводы, соеденители и прочее
+                                                </div>
+                                                <div class="table__col table__col--size">
+                                                    СВ - 95 -3
+                                                </div>
+                                                <div class="table__col table__col--count">
+                                                    296
+                                                </div>
+                                                <div class="table__col table__col--width">
+                                                    Не указана
+                                                </div>
+                                                <div class="table__col table__col--params">
+                                                    Не указаны
+                                                </div>
+                                                <div class="table__col table__col--cost">
+                                                    32 400 руб.
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -239,12 +268,6 @@
                                             <span class="tender-card__accent">17:00 8 ноября 2019 г.</span>
                                         </p>
                                     </div>
-                                  <!--<span class="tender-card__status tender-card__status&#45;&#45;open">
-                                      Открытый конкурс
-                                  </span>-->
-                                  <span class="tender-card__status tender-card__status--pending">
-                                      Запрос котировок
-                                  </span>
                                 </div>
                                 <div class="tender-card__table">
                                     <div class="table">
@@ -252,17 +275,23 @@
                                             <div class="table__col table__col--num">
                                                 №
                                             </div>
-                                            <div class="table__col table__col--name">
+                                            <div class="table__col table__col--title">
                                                 Наименование
                                             </div>
-                                            <div class="table__col table__col--lot">
-                                                Состав лота
+                                            <div class="table__col table__col--size">
+                                                Размер
                                             </div>
-                                            <div class="table__col table__col--price">
-                                                Сумма контракта
+                                            <div class="table__col table__col--count">
+                                                Кол-во
                                             </div>
-                                            <div class="table__col table__col--status">
-                                                Статус
+                                            <div class="table__col table__col--width">
+                                                Длина
+                                            </div>
+                                            <div class="table__col table__col--params">
+                                                Параметры
+                                            </div>
+                                            <div class="table__col table__col--cost">
+                                                Цена (не больше)
                                             </div>
                                         </div>
                                         <div class="table__body">
@@ -270,128 +299,46 @@
                                                 <div class="table__col table__col--num">
                                                     1
                                                 </div>
-                                                <div class="table__col table__col--name">
+                                                <div class="table__col table__col--title">
                                                     Тендер на поставку отводы, соеденители и прочее
                                                 </div>
-                                                <div class="table__col table__col--lot">
-                                                    Вентиль, Заглушка, Задвижка, Муфта, Отвод, Переход, Тройник, Фланец, Затвор
+                                                <div class="table__col table__col--size">
+                                                    СВ - 95 -3
                                                 </div>
-                                                <div class="table__col table__col--price">
-                                                    20 000 руб.
+                                                <div class="table__col table__col--count">
+                                                    296
                                                 </div>
-                                                <div class="table__col table__col--status">
-                                                    <span class="table__status table__status--pending">
-                                                        Идут торги
-                                                    </span>
+                                                <div class="table__col table__col--width">
+                                                    Не указана
+                                                </div>
+                                                <div class="table__col table__col--params">
+                                                    Не указаны
+                                                </div>
+                                                <div class="table__col table__col--cost">
+                                                    32 400 руб.
                                                 </div>
                                             </div>
                                             <div class="table__row">
                                                 <div class="table__col table__col--num">
                                                     2
                                                 </div>
-                                                <div class="table__col table__col--name">
+                                                <div class="table__col table__col--title">
                                                     Тендер на поставку отводы, соеденители и прочее
                                                 </div>
-                                                <div class="table__col table__col--lot">
-                                                    Вентиль, Заглушка, Задвижка, Муфта, Отвод, Переход, Тройник, Фланец, Затвор
+                                                <div class="table__col table__col--size">
+                                                    СВ - 95 -3
                                                 </div>
-                                                <div class="table__col table__col--price">
-                                                    20 000 руб.
+                                                <div class="table__col table__col--count">
+                                                    296
                                                 </div>
-                                                <div class="table__col table__col--status">
-                                                    <span class="table__status table__status--pending">
-                                                        Идут торги
-                                                    </span>
+                                                <div class="table__col table__col--width">
+                                                    Не указана
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tender-card__comments">
-                                    <p class="tender-card__comments-title">
-                                        Комментарий к тендеру:
-                                    </p>
-                                    <div class="tender-card__comments-text">
-                                        Переходник (тройник) на закачную скважину предназначен для монтажа на закачную скважину, в условиях самоизлива служит герметизирующим устройством, также является средством для коммутации с технологическим узлом закисления (ТУЗом). Представляет из себя трубу ПНД-110 с конической резьбой для вкручивания в обсадную трубу ПНД-110 и отвод-63 с отбортовкой 50 (с обратным фланцем ДУ-50, ст-3). Отвод служит для установки запорной арматуры, через которую скважина подключается к ТУЗу. Сверху посредством конической резьбы в оголовник закачной скважины вкручивается заглушка (ОНС).
-                                    </div>
-                                </div>
-                                <a href="" class="tender-card__link link">Перейти к тендеру</a>
-                            </div>
-                            <div class="tender-card">
-                                <div class="tender-card__head">
-                                    <div class="tender-card__info">
-                                        <p class="tender-card__number">
-                                            Тендер № 279
-                                        </p>
-                                        <p class="tender-card__period">
-                                            Период торгов: с
-                                            <span class="tender-card__accent">10:40 30 октября 2019 г.</span> по
-                                            <span class="tender-card__accent">17:00 8 ноября 2019 г.</span>
-                                        </p>
-                                    </div>
-                                  <!--<span class="tender-card__status tender-card__status&#45;&#45;open">
-                                      Открытый конкурс
-                                  </span>-->
-                                  <span class="tender-card__status tender-card__status--pending">
-                                      Запрос котировок
-                                  </span>
-                                </div>
-                                <div class="tender-card__table">
-                                    <div class="table">
-                                        <div class="table__head">
-                                            <div class="table__col table__col--num">
-                                                №
-                                            </div>
-                                            <div class="table__col table__col--name">
-                                                Наименование
-                                            </div>
-                                            <div class="table__col table__col--lot">
-                                                Состав лота
-                                            </div>
-                                            <div class="table__col table__col--price">
-                                                Сумма контракта
-                                            </div>
-                                            <div class="table__col table__col--status">
-                                                Статус
-                                            </div>
-                                        </div>
-                                        <div class="table__body">
-                                            <div class="table__row">
-                                                <div class="table__col table__col--num">
-                                                    1
+                                                <div class="table__col table__col--params">
+                                                    Не указаны
                                                 </div>
-                                                <div class="table__col table__col--name">
-                                                    Тендер на поставку отводы, соеденители и прочее
-                                                </div>
-                                                <div class="table__col table__col--lot">
-                                                    Вентиль, Заглушка, Задвижка, Муфта, Отвод, Переход, Тройник, Фланец, Затвор
-                                                </div>
-                                                <div class="table__col table__col--price">
-                                                    20 000 руб.
-                                                </div>
-                                                <div class="table__col table__col--status">
-                                                    <span class="table__status">
-                                                        Торги завершены
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="table__row">
-                                                <div class="table__col table__col--num">
-                                                    2
-                                                </div>
-                                                <div class="table__col table__col--name">
-                                                    Тендер на поставку отводы, соеденители и прочее
-                                                </div>
-                                                <div class="table__col table__col--lot">
-                                                    Вентиль, Заглушка, Задвижка, Муфта, Отвод, Переход, Тройник, Фланец, Затвор
-                                                </div>
-                                                <div class="table__col table__col--price">
-                                                    20 000 руб.
-                                                </div>
-                                                <div class="table__col table__col--status">
-                                                    <span class="table__status">
-                                                        Торги завершены
-                                                    </span>
+                                                <div class="table__col table__col--cost">
+                                                    32 400 руб.
                                                 </div>
                                             </div>
                                         </div>
