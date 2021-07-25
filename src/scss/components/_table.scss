@@ -1,0 +1,66 @@
+@import "../abstract/variables";
+
+.table{
+  background: #FFFFFF;
+  border: 1px solid #DFDEE2;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 160%;
+  overflow: hidden;
+}
+
+.table__head,
+.table__row{
+  background-color: #F2F2F2;
+  color: $text_color;
+  display: flex;
+  padding: 12px 0;
+  font-weight: $font-weight-medium;
+}
+
+.table__row{
+  font-weight: $font-weight-normal;
+  padding: 16px 0;
+  background-color: #F9F9F9;
+  
+  &:nth-child(2n + 1) {
+    background-color: #fff;
+  }
+
+  .table__col--num{
+    padding-left: 16px;
+  }
+}
+
+.table__col {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--num {
+    width: 48px;
+  }
+
+  &--name {
+    width: 260px;
+  }
+
+  &--lot {
+    width: 370px;
+  }
+
+  &--price,
+  &--status {
+    width: 153px;
+  }
+}
+
+.table__status{
+  font-weight: $font-weight-medium;
+  color: $grey;
+
+  &--pending{
+    color: $green;
+  }
+}

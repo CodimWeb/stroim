@@ -1,3 +1,5 @@
+@import '../abstract/variables';
+
 .catalog__header {
     display: flex;
     align-items: flex-end;
@@ -124,4 +126,46 @@
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+.catalog__filter{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 24px 0;
+}
+
+.catalog__filter-tabs{
+    display: flex;
+}
+
+.catalog__filter-tab{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 12px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: $text_color;
+    border-radius: 30px;
+    transition: all .3s;
+
+    &.active,
+    &:hover{
+        color: #fff;
+        background-color: $blue;
+    }
+
+    & + & {
+        margin-left: 16px;
+    }
+}
+
+.catalog__filter-btn{
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 5px;
+    }
 }

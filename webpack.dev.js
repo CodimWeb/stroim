@@ -70,6 +70,10 @@ module.exports = {
             template: './src/ceni-postavshikov.html'
           }),
         new HtmlWebpackPlugin({
+            filename: 'tender-list.html',
+            template: './src/tender-list.html'
+          }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

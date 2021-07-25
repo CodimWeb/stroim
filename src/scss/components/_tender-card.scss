@@ -1,0 +1,71 @@
+@import "../abstract/variables";
+
+.tender-card{
+  padding: 24px 0;
+  border-bottom: 1px solid #DFDEE2;
+}
+
+.tender-card__head{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.tender-card__number{
+  font-size: 18px;
+  line-height: 160%;
+  font-weight: $font-weight-medium;
+  margin-bottom: 8px;
+}
+
+.tender-card__status{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text_color;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  &--open{
+    background-color: #BEFBC4;
+  }
+
+  &--pending{
+    background-color: #DBBEFF;
+  }
+}
+
+.tender-card__period{
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey;
+}
+
+.tender-card__accent{
+  font-weight: $font-weight-medium;
+}
+
+.tender-card__table{
+  margin-bottom: 12px;
+}
+
+.tender-card__comments{
+  margin-bottom: 16px;
+}
+
+.tender-card__comments-title,
+.tender-card__comments-text{
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey;
+}
+
+.tender-card__comments-title{
+  font-weight: $font-weight-medium;
+  margin-bottom: 8px;
+}
+
+.tender-card__link{
+  font-weight: $font-weight-medium;
+}
