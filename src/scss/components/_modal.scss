@@ -1,0 +1,47 @@
+@import "../abstract/variables";
+
+.modal-stroim{
+  position: relative;
+  max-width: 457px;
+}
+
+.modal-stroim__content{
+  padding: 48px;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal-stroim__btn-close{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  opacity: 1;
+}
+
+.modal-stroim__title {
+  font-size: 28px;
+  font-weight: $font-weight-medium;
+  margin-bottom: 24px;
+}
+
+.modal-stroim__form{
+
+  .materil-group {
+    margin-top: 16px;
+
+    &:first-of-type{
+      margin: 0;
+    }
+  }
+}
+
+.modal-stroim__btn {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.modal-stroim__actions{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}

@@ -50,5 +50,7 @@ function toggleFaq() {
             $body.toggle(400)
         })
     });
-}
+};
+
+
 
