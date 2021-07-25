@@ -2,12 +2,11 @@
 
 import $ from 'jquery';
 
-//BS5 components
-import bootstrap from 'bootstrap';
-
+//BS4 components
+// import bootstrap from 'bootstrap';
 import Collapse from 'bootstrap/js/dist/collapse';
-import Dropdown from 'bootstrap/js/dist/dropdown';
 import Modal from 'bootstrap/js/dist/modal';
+import Dropdown from 'bootstrap/js/dist/dropdown';
 
 //styles
 import '../scss/style.scss';
@@ -33,7 +32,7 @@ $(document).ready(function(){
     });
 
 
-    $('.sidebar__show-more').on('click', function(){
+    $(document).on('click', '.sidebar__show-more', function(){
         var links = $(this).siblings('.sidebar__links').find('.sidebar__links__item');
         var linkHeight = links.outerHeight();
         var maxHeight = (linkHeight + 12) * links.length;
@@ -50,6 +49,11 @@ $(document).ready(function(){
         }
     })
 
+    $('.sidebar__item__search-field').on('input', function(e){
+        var searchQuery = e.target.value;
+    })
+
+
     toggleFaq();
 });
 
@@ -64,7 +68,6 @@ function toggleFaq() {
             $body.toggle(400)
         })
     });
-};
+}
 
-
-
+function renderCategory() {}
