@@ -7,6 +7,7 @@ import $ from 'jquery';
 import Collapse from 'bootstrap/js/dist/collapse';
 import Modal from 'bootstrap/js/dist/modal';
 import Dropdown from 'bootstrap/js/dist/dropdown';
+import Tab from 'bootstrap/js/dist/tab';
 
 //styles
 import '../scss/style.scss';
@@ -31,6 +32,19 @@ $(document).ready(function(){
         dropdownCssClass: 'base-select-dropdown'
     });
 
+    $('.select-header').select2({
+        width: '100%',
+        selectionCssClass: 'select-header',
+        dropdownCssClass: 'select-header-dropdown',
+
+    }).on('select2:open', function () {
+        setTimeout(function () {
+            $('.header__search').addClass('header__search--infocus')
+        }, 0)
+    }).on('select2:close', function () {
+        $('.header__search').removeClass('header__search--infocus')
+    });
+
 
     $(document).on('click', '.sidebar__show-more', function(){
         var links = $(this).siblings('.sidebar__links').find('.sidebar__links__item');
@@ -51,7 +65,15 @@ $(document).ready(function(){
 
     $('.sidebar__item__search-field').on('input', function(e){
         var searchQuery = e.target.value;
-    })
+    });
+
+    $('.header__search-input').on('focus', function (e) {
+        $('.header__search').addClass('header__search--infocus')
+    });
+
+    $('.header__search-input').on('blur', function (e) {
+        $('.header__search').removeClass('header__search--infocus')
+    });
 
 
     toggleFaq();
@@ -70,4 +92,4 @@ function toggleFaq() {
     });
 }
 
-function renderCategory() {}
+
