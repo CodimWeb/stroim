@@ -18,6 +18,7 @@
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/accordion";
 @import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/bootstrap";
 
 // plugins
@@ -26,6 +27,9 @@
 // fonts
 @import "base/fonts";
 @import "base/typography";
+
+//Layout
+@import "layout/header";
 
 // Custom components
 @import "components/buttons";
@@ -46,5 +50,6 @@
 @import "components/faq";
 @import "components/tender-card";
 @import "components/table";
+@import "components/modal";
 
 @import "components/navigation";
