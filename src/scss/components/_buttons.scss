@@ -12,6 +12,7 @@
     border: 2px solid transparent;
     cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
 
     &:hover,
     &:focus,
@@ -24,10 +25,6 @@
         font-size: 14px;
         padding: 6px 24px;
     }
-}
-
-.btn {
-    // transition: background-color 0.2s ease-in-out;
 }
 
 .btn-primary {

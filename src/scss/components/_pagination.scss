@@ -1,0 +1,27 @@
+.pagination {
+    display: flex;
+    margin: 32px 0;
+}
+
+.pagination-item {
+    margin-right: 12px;
+}
+
+.pagination-link {
+    display: inline-block;
+    width: 31px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 8px;
+
+    &.active {
+        background: #C1D6FA;
+    }
+
+    &.pagination-link-next {
+        width: 84px;
+        background: #C1D6FA;
+        font-weight: 500;
+    }
+}

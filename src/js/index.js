@@ -50,7 +50,41 @@ $(document).ready(function(){
     })
 
     $('.sidebar__item__search-field').on('input', function(e){
-        var searchQuery = e.target.value;
+        var searchtList = $(this).closest('.collapse').find('.sidebar__links');
+        var links = searchtList.find('.sidebar__links__item');
+        links.each(function(){
+            if($(this).attr('data-value').toLowerCase().indexOf(e.target.value.toLowerCase()) == -1) {
+                $(this).addClass('hidden');
+            }
+            else {
+                $(this).removeClass('hidden');
+            }
+        })
+        var visibleLink = searchtList.find('.sidebar__links__item:not(.hidden)');
+        if(visibleLink.length < 9) {
+            $(this).closest('.collapse').find('.sidebar__show-more').addClass('hidden')
+        }
+        else {
+            $(this).closest('.collapse').find('.sidebar__show-more').removeClass('hidden')
+        }
+
+    })
+
+    $('.catalog-item__phone__label').on('click', function(){
+        $(this).css('display', 'none')
+    })
+
+    $('.catalog-direction__btn').on('click', function(){
+        $('.catalog-direction__btn').removeClass('active')
+        $(this).addClass('active');
+
+        if($(this).hasClass('horizontal-on')) {
+            $('.catalog-list').addClass('horizontal')
+        }
+        else {
+            $('.catalog-list').removeClass('horizontal')  
+        }
+        
     })
 
 
@@ -70,4 +104,3 @@ function toggleFaq() {
     });
 }
 
-function renderCategory() {}
