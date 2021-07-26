@@ -2,10 +2,37 @@
 
 .header{
 
+  .header__search-input {
+    border: none;
+    border-left: 1px solid #F2F2F2;
+    border-radius: 0;
+    background-color: #F9F9F9;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  .header__btn-search{
+    min-width: 50px;
+    width: 50px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    img{
+      display: block;
+    }
+  }
+
 }
 
 .header__top{
-  padding: 5px 0 6px;
+  padding: 5px 0 6px!important;
   display: flex;
   justify-content: space-between;
 }
@@ -16,19 +43,20 @@
   color: $text_color;
 
   img {
-    margin-left: 6px;
+    margin-right: 1px;
   }
 }
 
 .header__link{
   font-size: 14px;
   line-height: 160%;
+  padding: 0 12px;
   color: $text_color;
   text-decoration: none;
   transition: color .3s;
 
   & + & {
-    margin-left: 48px;
+    margin-left: 20px;
   }
 
   &:hover{
@@ -42,4 +70,240 @@
 
 .header__logo{
   display: inline-block;
+  margin-right: 46px;
+}
+
+.header__middle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 7px!important;
+}
+
+.header__right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header__dropdown-menu{
+  width: 100vw;
+  height: 516px;
+  transform: translateX(100px);
+  padding: 0;
+  border: none;
+  box-shadow: 0px 2px 8px rgba(0, 29, 58, 0.12);
+}
+
+.header__dropdown-menu-inner{
+  height: 100%;
+}
+
+.header__navs{
+  width: 300px;
+  height: 516px;
+  background-color: #F2F2F2;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.header__tab-content{
+  height: 100%;
+}
+
+.header__nav{
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 16px;
+  line-height: 160%;
+  color: $text_color;
+  transition: all .3s;
+
+  &.active,
+  &:hover{
+    background-color: #fff;
+    color: $blue;
+  }
+}
+
+.header__dropdown--add{
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+.header__dropdown--auth{
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.header__dropdown-container{
+  width: 176px;
+  background: #FFFFFF;
+  border: 1px solid #DFDEE2;
+  border-radius: 8px;
+}
+
+.header__btn-auth{
+  color: $text_color;
+  padding: 12px 8px;
+
+  svg {
+    margin-right: 12px;
+  }
+}
+
+.header__dropdown-content{
+  width: 329px;
+  background: #FFFFFF;
+  border: 1px solid #DFDEE2;
+  border-radius: 8px;
+}
+
+.dropdown-item__row{
+  display: flex;
+  padding: 14px 22px;
+
+  img{
+    margin-right: 16px;
+  }
+
+  &:hover,
+  &:focus{
+    background-color: #F9F9F9;
+  }
+}
+
+.header__btn-add {
+  padding: 12px 8px;
+
+  svg {
+    margin-left: 4px;
+  }
+
+  &.show {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.header__tab-pane{
+  height: 100%;
+}
+
+.header__basket{
+  padding: 12px 8px;
+  flex-shrink: 0;
+  margin-left: 10px;
+
+  svg {
+    margin-right: 6px;
+  }
+}
+
+.header__nav-links{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.header__nav-link{
+  margin-top: 16px;
+  width: 180px;
+  margin-left: 40px;
+}
+
+.dropdown .header__btn-dropdown{
+  padding: 4px 10px;
+  height: 40px;
+  width: 128px;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.header__search{
+  margin-left: 16px;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+
+.header__search-decorator{
+  border: 2px solid $blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity .2s;
+
+  .header__search--infocus & {
+    opacity: 1;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+.burger {
+  display: inline-flex;
+  outline: none;
+  height: 12px;
+  width: 24px;
+  border: 0px;
+  padding: 0px;
+  background: transparent;
+  transform: translateY(4px);
+  transition: all 250ms ease-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger:before, .burger:after {
+  content: '';
+  height: 3px;
+  position: absolute;
+  background: #fff;
+  transition: all 250ms ease-out;
+  border-radius: 30px;
+  will-change: transform;
+}
+
+.burger:before {
+  width: 24px;
+  transform: translateY(-3px);
+}
+
+.burger:after {
+  width: 16px;
+  transform: translateY(6px);
+}
+
+.show .burger:before {
+  top: initial;
+  width: 24px;
+  transform: translateY(0) rotate(45deg);
+}
+
+.show .burger:after {
+  top: initial;
+  width: 24px;
+  transform: translateY(0) rotate(-45deg);
 }
