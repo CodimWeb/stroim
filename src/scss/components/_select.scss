@@ -48,6 +48,7 @@
   padding-right: 24px;
   background: #F9F9F9;
   font-size: 16px;
+  padding-left: 16px;
 }
 
 .select2-container--default.select2-container--open .base-select .select2-selection__rendered,
@@ -61,12 +62,12 @@
   height: 7px;
   top: 50%;
   right: 18px;
-  margin-top: -2px;
+  margin-top: -3px;
   background-image: url(../img/icon-down.svg);
 }
 
 .select2-container--default .select-header .select2-selection__arrow{
-  right: 8px;
+  right: 10px;
 }
 
 .select2-container--default .base-select .select2-selection__arrow b,

@@ -151,7 +151,7 @@
   padding: 12px 8px;
 
   svg {
-    margin-right: 12px;
+    margin-right: 8px;
   }
 }
 
@@ -173,6 +173,7 @@
   &:hover,
   &:focus{
     background-color: #F9F9F9;
+    color: #3275EE;
   }
 }
 
@@ -197,7 +198,7 @@
 .header__basket{
   padding: 12px 8px;
   flex-shrink: 0;
-  margin-left: 10px;
+  margin-left: 13px;
 
   svg {
     margin-right: 6px;
@@ -255,22 +256,16 @@
 }
 
 
-
-
-
-
-
-
-
 .burger {
   display: inline-flex;
   outline: none;
   height: 12px;
   width: 24px;
+  margin-right: 5px;
   border: 0px;
   padding: 0px;
   background: transparent;
-  transform: translateY(4px);
+  transform: translateY(5px);
   transition: all 250ms ease-out;
   cursor: pointer;
   position: relative;
