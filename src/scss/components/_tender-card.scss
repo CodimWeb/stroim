@@ -54,11 +54,15 @@
   margin-bottom: 16px;
 }
 
-.tender-card__comments-title,
-.tender-card__comments-text{
+.tender-card__comments-title{
   font-size: 14px;
   line-height: 160%;
   color: $grey;
+}
+
+.tender-card__comments-text {
+  font-size: 14px;
+  line-height: 160%;
 }
 
 .tender-card__comments-title{

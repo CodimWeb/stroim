@@ -37,7 +37,7 @@
     color: #001D3A;
     text-align: left;
     padding: 7px 20px 7px 0;
-
+    
     &:after {
         content: '';
         display: inline-block;
@@ -48,6 +48,11 @@
         right: 0;
         margin-top: -2px;
         background-image: url(../img/icon-down.svg);
+        transform: rotateZ(180deg);
+    }
+
+    &.collapsed:after {
+        transform: rotateZ(0);
     }
 
     &:hover {
@@ -171,6 +176,7 @@
     line-height: 34px;
     font-size: 14px;
     color: $text_color;
+    background: #F9F9F9;
     border-radius: 30px;
     transition: all .3s;
 
@@ -530,4 +536,17 @@
     height: 32px;
     padding: 0;
     border-radius: 4px;
+}
+
+.sidebar__filters {
+    margin-top: 5px;
+}
+
+.catalog__clear-filter {
+    width: 100%;
+    margin-top: 19px;
+}
+
+.catalog__filter__label {
+    margin-right: 16px;
 }

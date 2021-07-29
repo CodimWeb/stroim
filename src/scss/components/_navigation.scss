@@ -33,27 +33,9 @@
   position: relative;
   z-index: 2;
   color: #001D3A;
-  font-weight: $font-weight-medium;
   transition: color 0.2s ease-in-out;
-
-  // &::after{
-  //   content: '';
-  //   display: block;
-  //   height: 3px;
-  //   width: 100%;
-  //   border-radius: 8px;
-  //   background: $blue;
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   opacity: 0;
-  //   transition: opacity .3s;
-  // }
 
   &:hover {
     color: #3275EE;
-    // &::after{
-    //   opacity: 1;
-    // }
   }
 }

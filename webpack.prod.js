@@ -70,6 +70,14 @@ module.exports = {
           template: './src/ceni-postavshikov.html'
         }),
         new HtmlWebpackPlugin({
+          filename: 'ceni-postavshikov-horizontal.html',
+          template: './src/ceni-postavshikov-horizontal.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'ceni-postavshikov-filter.html',
+          template: './src/ceni-postavshikov-filter.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'tender-list.html',
             template: './src/tender-list.html'
         }),
