@@ -40,7 +40,8 @@
 .header__location{
   font-size: 14px;
   line-height: 160%;
-  color: $text_color;
+  text-decoration: none;
+  cursor: pointer;
 
   img {
     margin-right: 1px;

@@ -47,13 +47,18 @@
 @import "components/faq";
 @import "components/tender-card";
 @import "components/table";
-@import "components/modal";
+@import "components/modals/modal";
+@import "components/modals/modal-auth";
+@import "components/modals/modal-region";
 @import "components/navigation";
 @import "components/pagination";
+@import "components/recovery";
+@import "components/info-block";
 
 //Layout
 @import "layout/header";
 @import "layout/footer";
+@import "layout/grid";
 
 // pages
 @import "pages/advertisment"

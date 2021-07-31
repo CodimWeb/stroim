@@ -90,6 +90,18 @@ module.exports = {
             template: './src/advertisement.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'password-recovery-1.html',
+            template: './src/password-recovery-1.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'password-recovery-2.html',
+            template: './src/password-recovery-2.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'password-recovery-3.html',
+            template: './src/password-recovery-3.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

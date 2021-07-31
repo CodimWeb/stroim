@@ -1,0 +1,15 @@
+@import '../abstract/variables';
+
+.info-block{
+  position: relative;
+  max-width: 985px;
+  padding: 39px 40px 39px 104px;
+  border-radius: 8px;
+  background-color: #F9F9F9;
+  background-image: url(../img/info.svg);
+  background-position: 24px 50%;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba( $text_color, .9);
+}

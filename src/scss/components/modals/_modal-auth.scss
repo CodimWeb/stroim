@@ -1,0 +1,22 @@
+
+.modal-auth{
+
+  .materil-group {
+    margin-top: 16px;
+
+    &:first-of-type{
+      margin: 0;
+    }
+  }
+}
+
+.modal-auth__btn {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.modal-auth__actions{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}

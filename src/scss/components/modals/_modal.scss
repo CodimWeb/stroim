@@ -1,0 +1,41 @@
+.modalS{
+  position: relative;
+  width: 100%;
+  max-width: 457px;
+
+  &--region {
+    max-width: 516px;
+  }
+}
+
+.modalS__content{
+  padding: 48px;
+  border: none;
+  border-radius: 8px;
+
+  .modalS--region &{
+    padding: 48px 0 0;
+  }
+}
+
+.modalS__btn-close{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  opacity: 1;
+}
+
+.modalS__title {
+  font-size: 28px;
+  line-height: 140%;
+  font-weight: $font-weight-medium;
+  margin-bottom: 24px;
+
+  .modalS--region &{
+    margin-bottom: 16px;
+  }
+
+  .modalS--region &{
+    padding: 0 48px;
+  }
+}

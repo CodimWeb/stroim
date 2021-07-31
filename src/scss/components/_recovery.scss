@@ -1,0 +1,22 @@
+.recovery {
+  padding: 32px 0;
+}
+
+.recovery__title{
+  margin-bottom: 24px;
+}
+
+.recovery__form{
+  max-width: 361px;
+  margin-top: 32px;
+}
+
+.recovery__field {
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+.recovery__btn{
+  margin-top: 32px;
+}
