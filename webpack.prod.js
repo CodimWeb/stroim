@@ -86,6 +86,10 @@ module.exports = {
             template: './src/customers-requests.html'
         }),
         new HtmlWebpackPlugin({
+          filename: 'advertisement.html',
+          template: './src/advertisement.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

@@ -1,0 +1,78 @@
+.catalog-item--adv .catalog-item__body {
+    width: 505px;
+    max-width: 505px;
+    margin-right: 55px;
+}
+
+.catalog-item__adv-label {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+.catalog-item__adv-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #001D3A;
+    margin-top: -3px;
+    margin-bottom: 16px;
+}
+
+.status-sell {
+    background: #FFF1BE;
+}
+
+.status-buy {
+    background: #FFA6A6;
+}
+
+.status-demand {
+    background: #A5E9ED;
+}
+
+.status-offer {
+    background: #E6F4D7;
+}
+
+.catalog-item__description--adv {
+    -webkit-line-clamp: 5;
+    max-height: 110px;
+    margin: 0 0 12px;
+}
+
+.catalog-item__adv__name {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+}
+
+.catalog-item__phone--adv {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 38px;
+    width: 176px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #3275EE;
+    border-radius: 8px;
+    transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.catalog-item__phone--adv p {
+    height: 34px;
+    line-height: 36px;
+    font-weight: 500;
+    color: #3275EE;
+}
+
+.catalog-item__phone--adv:hover {
+    border-color: #225ECA;
+    p {
+        color: #225ECA;
+    }
+}
