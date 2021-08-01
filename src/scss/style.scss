@@ -1,3 +1,7 @@
+.transition-off * {
+    transition: none !important;
+}
+
 // BS Abstract
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -58,7 +62,7 @@
 //Layout
 @import "layout/header";
 @import "layout/footer";
-@import "layout/grid";
 
 // pages
-@import "pages/advertisment"
+@import "pages/advertisment";
+@import "pages/register";

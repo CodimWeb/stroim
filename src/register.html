@@ -284,21 +284,149 @@
 
 <div class="content content--recovery">
     <div class="container">
-        <div class="recovery">
+        <div class="register">
             <h2 class="h2 recovery__title">
-                Сбросить пароль
+                Регистрация
             </h2>
-            <form action="" class="recovery__form">
-                <label class="materil-group recovery__field">
-                    <span class="materil-group__label">Новый пароль</span>
-                    <input type="password" class="form-control base-input materil-group__input">
-                </label>
-                <label class="materil-group recovery__field">
-                    <span class="materil-group__label">Введите новый пароль повторно</span>
-                    <input type="password" class="form-control base-input materil-group__input">
-                </label>
-                <button type="submit" class="btn btn-primary recovery__btn">Сменить пароль</button>
-            </form>
+
+            <div class="register-nav">
+                <div class="register-nav__item">
+                    <input type="radio" class="register-type" id="register-individual" name="register-type" checked="checked">
+                    <label for="register-individual">Физическое лицо</label>
+                </div>
+                <div class="register-nav__item">
+                    <input type="radio" class="register-type" id="register-entity" name="register-type">
+                    <label for="register-entity">Юридическое лицо</label>
+                </div>
+            </div>
+            
+            <div class="register-forms">
+                <form action="" id="form-individual" class="refister__form active">
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Контактное лицо*</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Email*</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group active recovery__field">
+                        <span class="materil-group__label">Город*</span>
+                        <select name="" id="" class="select">
+                            <option value="Москва">Москва</option>
+                            <option value="Санкт - Петербург">Санкт - Петербург</option>
+                            <option value="Алматы">Алматы</option>
+                            <option value="Астана">Астана</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                        </select>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Пароль*</span>
+                        <input type="password" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Повторите пароль*</span>
+                        <input type="password" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Телефон</span>
+                        <input type="text" class="form-control base-input materil-group__input phone-input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <div class="recovery__field register-accept">
+                        <label>
+                            <input type="checkbox" name="" value="" />
+                            <span>Я принимаю условия <a href="#" class="link link-sm">договора оферты</a></span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary">Зарегистрирвоаться</button>
+                </form>
+
+                <form action="" id="form-entity" class="refister__form">
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Контактное лицо*</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Email*</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group active recovery__field">
+                        <span class="materil-group__label">Город*</span>
+                        <select name="" id="" class="select">
+                            <option value="Москва">Москва</option>
+                            <option value="Санкт - Петербург">Санкт - Петербург</option>
+                            <option value="Алматы">Алматы</option>
+                            <option value="Астана">Астана</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Архангельск">Архангельск</option>
+                        </select>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Пароль*</span>
+                        <input type="password" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Повторите пароль*</span>
+                        <input type="password" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Телефон</span>
+                        <input type="text" class="form-control base-input materil-group__input phone-input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Ваша организация*</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Телефон для связи*</span>
+                        <input type="text" class="form-control base-input materil-group__input phone-input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Почта для связи*</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <label class="materil-group recovery__field">
+                        <span class="materil-group__label">Адрес сайта вашей компании</span>
+                        <input type="text" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">error text</div>
+                    </label>
+                    <div class="recovery__field register-accept">
+                        <label>
+                            <input type="checkbox" name="" value="" />
+                            <span>Я принимаю условия <a href="#" class="link link-sm">договора оферты</a></span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary">Зарегистрирвоаться</button>
+                </form>
+            </div>
         </div>
 
     </div>

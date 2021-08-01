@@ -2,8 +2,8 @@
 
 import $ from 'jquery';
 
-//BS4 components
-// import bootstrap from 'bootstrap';
+//BS5 components
+
 import Collapse from 'bootstrap/js/dist/collapse';
 import Modal from 'bootstrap/js/dist/modal';
 import Dropdown from 'bootstrap/js/dist/dropdown';
@@ -12,10 +12,14 @@ import Tab from 'bootstrap/js/dist/tab';
 //styles
 import '../scss/style.scss';
 
+import Inputmask from "inputmask";
 import select2 from 'select2';
 
 
 $(document).ready(function(){
+
+    $('body').removeClass('transition-off')
+
     $('.materil-group__input').on('focus', function(){
         $(this).closest('.materil-group').addClass('active');
     })
@@ -103,6 +107,35 @@ $(document).ready(function(){
 
     $('.catalog-item__phone__label').on('click', function(){
         $(this).css('display', 'none')
+    })
+
+    // var regIndividual = document.querySelector('#register-individual')
+    // var regEntity = document.querySelector('#register-entity');
+    // console.log(regIndividual)
+    // console.log(regEntity)
+    // var tabIndividual = new bootstrap.Tab(regIndividual)
+    // var tabEntity = new bootstrap.Tab(regEntity)
+
+    // console.log(tabIndividual)
+    // console.log(tabEntity)
+
+    var phones = document.querySelectorAll('.phone-input')
+    if(phones) {
+        Inputmask({"mask": "+7(999) 999-99-99"}).mask(phones);
+    }
+    
+    $('.register-type').on('change', function(e){
+        if(e.target.id == 'register-individual') {
+            $('.refister__form').removeClass('active');
+            $('#form-individual').addClass('active');
+            console.log('fiz');
+        }
+        if(e.target.id == 'register-entity') {
+            $('.refister__form').removeClass('active');
+            $('#form-entity').addClass('active');
+            console.log('entity');
+
+        }
     })
 
     // $('.catalog-direction__btn').on('click', function(){

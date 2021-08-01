@@ -43,6 +43,10 @@
 .materil-group__input {
     height: 52px;
     padding: 20px 16px 6px;
+
+    &::placeholder {
+        color: transparent;
+    }
 }
 
 .materil-group.active .materil-group__label {

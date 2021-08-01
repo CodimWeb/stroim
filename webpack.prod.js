@@ -78,20 +78,36 @@ module.exports = {
           template: './src/ceni-postavshikov-filter.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'tender-list.html',
-            template: './src/tender-list.html'
+          filename: 'tender-list.html',
+          template: './src/tender-list.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'customers-requests.html',
-            template: './src/customers-requests.html'
+          filename: 'customers-requests.html',
+          template: './src/customers-requests.html'
         }),
         new HtmlWebpackPlugin({
           filename: 'advertisement.html',
           template: './src/advertisement.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'ui.html',
-            template: './src/ui.html'
+          filename: 'register.html',
+          template: './src/register.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'password-recovery-1.html',
+          template: './src/password-recovery-1.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'password-recovery-2.html',
+          template: './src/password-recovery-2.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'password-recovery-3.html',
+          template: './src/password-recovery-3.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'ui.html',
+          template: './src/ui.html'
         }),
         new MiniCssExtractPlugin({
             // filename: "[name].[hash].css"

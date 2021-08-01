@@ -1,0 +1,30 @@
+.register {
+    padding-top: 32px;
+}
+
+.register-forms {
+    width: 360px;
+}
+
+.register-nav {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.register-nav__item {
+    margin-right: 24px;
+}
+
+.refister__form {
+    display: none;
+    margin-bottom: 120px;
+  
+    &.active {
+      display: block;
+    }
+}
+  
+.register-accept {
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
