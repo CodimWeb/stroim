@@ -20,6 +20,10 @@
     margin-top: 8px;
   }
 
+  strong {
+    font-weight: $font-weight-medium;
+  }
+
 }
 
 .additional__form{
@@ -34,8 +38,13 @@
   }
 }
 
+.additional__container{
+  display: flex;
+}
+
 .additional__sidebar{
   width: 255px;
+  flex-shrink: 0;
 }
 
 .additional__content{
@@ -47,7 +56,8 @@
   max-width: 860px;
 }
 
-.additional__btn{
+.additional__btn,
+.additional__article{
   margin-top: 32px;
 }
 
@@ -63,15 +73,16 @@
   font-size: 14px;
   line-height: 160%;
   color: $grey;
-
-  strong {
-    font-weight: $font-weight-medium;
-  }
 }
 
 .additional__text{
   font-size: 14px;
   line-height: 160%;
   color: $text-color;
+}
+
+.additional__caption,
+.additional__service{
+  margin-bottom: 12px;
 }
 

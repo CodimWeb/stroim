@@ -118,6 +118,10 @@ module.exports = {
             template: './src/add-to-blacklist.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'services.html',
+            template: './src/services.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
