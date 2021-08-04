@@ -106,6 +106,10 @@ module.exports = {
             template: './src/password-recovery-3.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'tender-card-unauth.html',
+            template: './src/tender-card-unauth.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
