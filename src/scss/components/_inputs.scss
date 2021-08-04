@@ -74,13 +74,20 @@
     margin-bottom: 24px;
 }
 
-.materil-group__input {
+.materil-group__input,
+.materil-group__textarea{
     height: 52px;
     padding: 20px 16px 6px;
 
     &::placeholder {
         color: transparent;
     }
+}
+
+.materil-group__textarea{
+    height: auto;
+    min-height: 78px!important;
+    resize: none;
 }
 
 .materil-group.active .materil-group__label {
@@ -198,4 +205,51 @@ input[type="checkbox"]:checked + span:after {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.input-file-container {
+    position: relative;
+    width: 225px;
+}
+.input-file-trigger {
+    display: block;
+    padding: 14px 45px;
+    background: #39D2B4;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+.input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 225px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+.input-file:hover + .input-file-trigger,
+.input-file:focus + .input-file-trigger,
+.input-file-trigger:hover,
+.input-file-trigger:focus {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.file-return {
+    margin: 0;
+}
+.file-return:not(:empty) {
+    margin: 1em 0;
+}
+.file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+}
+.file-return:not(:empty):before {
+    content: "Выбранный файл: ";
+    font-style: normal;
+    font-weight: normal;
+}
+
 

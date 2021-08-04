@@ -9,6 +9,10 @@
   line-height: 160%;
   color: #646464;
   margin-bottom: 8px;
+
+  strong{
+    font-weight: $font-weight-medium;
+  }
 }
 
 .black-card__info{
