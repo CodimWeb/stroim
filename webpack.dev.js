@@ -106,6 +106,10 @@ module.exports = {
             template: './src/password-recovery-3.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'blacklist.html',
+            template: './src/blacklist.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

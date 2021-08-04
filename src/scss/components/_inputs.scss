@@ -23,6 +23,40 @@
     }
 }
 
+.search-input {
+    position: relative;
+    width: 100%;
+}
+
+.search-input__field {
+    padding-left: 40px;
+    background: #F9F9F9;
+    border-color: #F9F9F9;
+
+    &::placeholder{
+        font-size: 14px;
+        color: #646464;
+    }
+}
+
+.search-input__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 41px;
+    padding: 0;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    img {
+        width: 16px;
+        height: auto;
+    }
+}
+
 .materil-group {
     display: block;
     position: relative;
