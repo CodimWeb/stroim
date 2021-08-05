@@ -122,6 +122,10 @@ module.exports = {
             template: './src/services.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

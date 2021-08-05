@@ -122,6 +122,10 @@ module.exports = {
             template: './src/services.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html'
+        }),
+        new HtmlWebpackPlugin({
           filename: 'ui.html',
           template: './src/ui.html'
         }),
@@ -130,7 +134,7 @@ module.exports = {
             filename: "css/style.[hash].css"
         }),
         new CopyWebpackPlugin(
-            { 
+            {
                 patterns: [
                     { from: './src/img', to: './img' },
                     // { from: './src/fonts', to: './dist/fonts' }
@@ -141,5 +145,5 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
         }),
-    ],   
+    ],
 }

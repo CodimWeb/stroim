@@ -24,6 +24,16 @@
     font-weight: $font-weight-medium;
   }
 
+  .additional__caption,
+  .additional__service{
+    margin: 0 0 12px 0;
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
 }
 
 .additional__form{
@@ -82,18 +92,16 @@
   color: $text-color;
 }
 
-.additional__caption,
-.additional__service{
-  margin: 0 0 12px 0!important;
 
-  img{
-    max-width: 100%;
-    height: auto;
+
+.additional__service {
+
+  &--red{
+    color: #ff3d3d;
   }
-}
-
-.additional__service--red {
-  color: #ff3d3d;
+  &--mb-0{
+    margin: 0;
+  }
 }
 
 .additional__service-caption{
