@@ -151,26 +151,11 @@ $(document).ready(function(){
 
     // })
 
-    // file loader
-    var fileInput  = document.querySelector( ".input-file" ),
-        button     = document.querySelector( ".input-file-trigger" ),
-        the_return = document.querySelector(".file-return");
 
-    button.addEventListener( "keydown", function( event ) {
-        if ( event.keyCode == 13 || event.keyCode == 32 ) {
-            fileInput.focus();
-        }
-    });
-    button.addEventListener( "click", function( event ) {
-        fileInput.focus();
-        return false;
-    });
-    fileInput.addEventListener( "change", function( event ) {
-        console.log(the_return);
-        the_return.innerHTML = this.value;
-    });
+
 
     toggleFaq();
+    fileReader();
 
 });
 
@@ -185,4 +170,38 @@ function toggleFaq() {
             $body.toggle(400)
         })
     });
+}
+
+function fileReader() {
+    var fileInput  = document.querySelector( ".file-reader__input" );
+    var button     = document.querySelector( ".file-reader__label" );
+    var theReturn = document.querySelector(".file-reader__return")
+    var theReturnText = document.querySelector(".file-reader__return-text");
+    var closeBnt = document.querySelector('.file-reader__icon-close');
+
+    fileInput.addEventListener("change", function () {
+        button.classList.add('loading');
+
+        getData();
+    });
+
+    function getData() {
+        const files = fileInput.files[0];
+        if (files) {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(files);
+            fileReader.addEventListener("load", function (e) {
+                setTimeout(() => {
+                    button.classList.remove('loading')
+                }, 500)
+                theReturnText.textContent = files.name;
+                theReturn.style.display = "flex";
+            });
+            closeBnt.addEventListener('click', function() {
+                theReturn.style.display = "none";
+                fileReader.abort()
+            })
+        }
+    }
+
 }
