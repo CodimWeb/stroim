@@ -181,7 +181,6 @@ function fileReader() {
 
     fileInput.addEventListener("change", function () {
         button.classList.add('loading');
-
         getData();
     });
 
