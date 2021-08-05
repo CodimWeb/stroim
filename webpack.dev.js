@@ -130,6 +130,10 @@ module.exports = {
             template: './src/advertisement.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'banner-grid.html',
+            template: './src/banner-grid.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
