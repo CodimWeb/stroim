@@ -3,18 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Реклама</title>
 </head>
 
 <body class="page transition-off">
 <header class="header">
     <div class="header__top container">
-        <div class="header__location">
-            <img src="img/header/location-icon.svg" alt="">
+        <a hre="#" class="header__location link link-dark" data-bs-toggle="modal" data-bs-target="#regionChooseModal">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.28608 0 2.07812 2.20795 2.07812 4.92188C2.07812 5.83882 2.33212 6.73367 2.81282 7.51002L6.71984 13.8061C6.79468 13.9267 6.92653 14 7.06833 14C7.06943 14 7.07049 14 7.07159 14C7.21462 13.9989 7.34675 13.9233 7.42022 13.8006L11.2276 7.44352C11.6818 6.68358 11.9219 5.81161 11.9219 4.92188C11.9219 2.20795 9.71392 0 7 0ZM10.5237 7.02237L7.06213 12.802L3.51004 7.07782C3.10991 6.43163 2.89297 5.68613 2.89297 4.92188C2.89297 2.66027 4.7384 0.814844 7 0.814844C9.2616 0.814844 11.1043 2.66027 11.1043 4.92188C11.1043 5.66347 10.9017 6.38991 10.5237 7.02237Z"
+                      fill="currentColor"/>
+                <path d="M7 2.46094C5.64304 2.46094 4.53906 3.56491 4.53906 4.92188C4.53906 6.27017 5.62507 7.38281 7 7.38281C8.39188 7.38281 9.46094 6.25535 9.46094 4.92188C9.46094 3.56491 8.35696 2.46094 7 2.46094ZM7 6.56797C6.09063 6.56797 5.35391 5.82879 5.35391 4.92188C5.35391 4.01723 6.09536 3.27578 7 3.27578C7.90464 3.27578 8.64336 4.01723 8.64336 4.92188C8.64336 5.81555 7.92378 6.56797 7 6.56797Z"
+                      fill="currentColor"/>
+            </svg>
+
             <span>Новосибирск</span>
-        </div>
+        </a>
         <div class="header__links">
             <a href="/about" class="header__link">О нас</a>
             <a href="/black" class="header__link">Черный список</a>
@@ -31,102 +37,107 @@
         </a>
         <div class="header__right">
             <div class="header__dropdown header__dropdown--catalog dropdown">
-                <a class="btn btn-primary header__btn-dropdown" href="#" role="button" id="dropdownMenuLink"
-                   data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,59" data-bs-auto-close="false">
+                <a class="btn btn-primary header__btn-dropdown" href="#" role="button" id="catalog-dropdown"
+                   data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="false" data-bs-display="static">
                     <button class="burger"></button>
                     <span>Каталог</span>
                 </a>
-                <ul class="header__dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <div class="header__dropdown-menu-inner d-flex align-items-start">
-                        <div class="header__navs nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                             aria-orientation="vertical">
-                            <button class="active header__nav" id="v-1-tab" data-bs-toggle="pill" data-bs-target="#v-1"
-                                    type="button" role="tab" aria-controls="v-1" aria-selected="true">
-                                ЖБИ
-                            </button>
-                            <button class=" header__nav" id="v-2-tab" data-bs-toggle="pill" data-bs-target="#v-2"
-                                    type="button" role="tab" aria-controls="v-2" aria-selected="false">
-                                Фитинг для труб
-                            </button>
-                            <button class="header__nav" id="v-3-tab" data-bs-toggle="pill" data-bs-target="#v-3"
-                                    type="button" role="tab" aria-controls="v-3" aria-selected="false">
-                                Кирпич
-                            </button>
-                            <button class="header__nav" id="v-4-tab" data-bs-toggle="pill" data-bs-target="#v-4"
-                                    type="button" role="tab" aria-controls="v-4" aria-selected="false">
-                                Песок
-                            </button>
-                            <button class="header__nav" id="v-5-tab" data-bs-toggle="pill" data-bs-target="#v-5"
-                                    type="button" role="tab" aria-controls="v-5" aria-selected="true">
-                                ЖБИ
-                            </button>
-                            <button class=" header__nav" id="v-6-tab" data-bs-toggle="pill" data-bs-target="#v-6"
-                                    type="button" role="tab" aria-controls="v-6" aria-selected="false">
-                                Фитинг для труб
-                            </button>
-                            <button class="header__nav" id="v-7-tab" data-bs-toggle="pill" data-bs-target="#v-7"
-                                    type="button" role="tab" aria-controls="v-7" aria-selected="false">
-                                Кирпич
-                            </button>
-                            <button class="header__nav" id="v-8-tab" data-bs-toggle="pill" data-bs-target="#v-8"
-                                    type="button" role="tab" aria-controls="v-8" aria-selected="false">
-                                Песок
-                            </button>
-                            <button class="header__nav" id="v-9-tab" data-bs-toggle="pill" data-bs-target="#v-9"
-                                    type="button" role="tab" aria-controls="v-9" aria-selected="true">
-                                ЖБИ
-                            </button>
-                            <button class=" header__nav" id="v-10-tab" data-bs-toggle="pill" data-bs-target="#v-10"
-                                    type="button" role="tab" aria-controls="v-10" aria-selected="false">
-                                Фитинг для труб
-                            </button>
-                            <button class="header__nav" id="v-11-tab" data-bs-toggle="pill" data-bs-target="#v-11"
-                                    type="button" role="tab" aria-controls="v-11" aria-selected="false">
-                                Кирпич
-                            </button>
-                            <button class="header__nav" id="v-12-tab" data-bs-toggle="pill" data-bs-target="#v-12"
-                                    type="button" role="tab" aria-controls="v-12" aria-selected="false">
-                                Песок
-                            </button>
-                            <button class="header__nav" id="v-13-tab" data-bs-toggle="pill" data-bs-target="#v-13"
-                                    type="button" role="tab" aria-controls="v-13" aria-selected="true">
-                                ЖБИ
-                            </button>
-                            <button class=" header__nav" id="v-14-tab" data-bs-toggle="pill" data-bs-target="#v-14"
-                                    type="button" role="tab" aria-controls="v-14" aria-selected="false">
-                                Фитинг для труб
-                            </button>
-                        </div>
-                        <div class="header__tab-content" id="v-pills-tabContent">
-                            <div class="header__tab-pane fade show active" id="v-1" role="tabpanel"
-                                 aria-labelledby="v-1-tab">
-                                <div class="header__nav-links">
-                                    <a href="" class="header__nav-link link link-dark">Ограждения</a>
-                                    <a href="" class="header__nav-link link link-dark">Плиты</a>
-                                    <a href="" class="header__nav-link link link-dark">Кабельные каналы</a>
-                                    <a href="" class="header__nav-link link link-dark">Блок</a>
-                                    <a href="" class="header__nav-link link link-dark">Бортовой камень</a>
-                                    <a href="" class="header__nav-link link link-dark">Бордюрный камень</a>
-                                    <a href="" class="header__nav-link link link-dark">Заборы</a>
-                                    <a href="" class="header__nav-link link link-dark">Ограждения</a>
-                                    <a href="" class="header__nav-link link link-dark">Плиты</a>
-                                    <a href="" class="header__nav-link link link-dark">Кабельные каналы</a>
-                                    <a href="" class="header__nav-link link link-dark">Блок</a>
-                                    <a href="" class="header__nav-link link link-dark">Бордюрный камень</a>
-                                    <a href="" class="header__nav-link link link-dark">Заборы</a>
-                                    <a href="" class="header__nav-link link link-dark">Ограждения</a>
-                                    <a href="" class="header__nav-link link link-dark">Плиты</a>
-                                    <a href="" class="header__nav-link link link-dark">Кабельные каналы</a>
-                                    <a href="" class="header__nav-link link link-dark">Блок</a>
+                <div class="header__dropdown-menu dropdown-menu" aria-labelledby="catalog-dropdown">
+                    <div class="container ">
+                        <div class="header__dropdown-menu-inner d-flex align-items-start">
+                            <div class="header__navs nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                 aria-orientation="vertical">
+                                <button class="active header__nav" id="v-1-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-1"
+                                        type="button" role="tab" aria-controls="v-1" aria-selected="true">
+                                    ЖБИ
+                                </button>
+                                <button class=" header__nav" id="v-2-tab" data-bs-toggle="pill" data-bs-target="#v-2"
+                                        type="button" role="tab" aria-controls="v-2" aria-selected="false">
+                                    Фитинг для труб
+                                </button>
+                                <button class="header__nav" id="v-3-tab" data-bs-toggle="pill" data-bs-target="#v-3"
+                                        type="button" role="tab" aria-controls="v-3" aria-selected="false">
+                                    Кирпич
+                                </button>
+                                <button class="header__nav" id="v-4-tab" data-bs-toggle="pill" data-bs-target="#v-4"
+                                        type="button" role="tab" aria-controls="v-4" aria-selected="false">
+                                    Песок
+                                </button>
+                                <button class="header__nav" id="v-5-tab" data-bs-toggle="pill" data-bs-target="#v-5"
+                                        type="button" role="tab" aria-controls="v-5" aria-selected="true">
+                                    ЖБИ
+                                </button>
+                                <button class=" header__nav" id="v-6-tab" data-bs-toggle="pill" data-bs-target="#v-6"
+                                        type="button" role="tab" aria-controls="v-6" aria-selected="false">
+                                    Фитинг для труб
+                                </button>
+                                <button class="header__nav" id="v-7-tab" data-bs-toggle="pill" data-bs-target="#v-7"
+                                        type="button" role="tab" aria-controls="v-7" aria-selected="false">
+                                    Кирпич
+                                </button>
+                                <button class="header__nav" id="v-8-tab" data-bs-toggle="pill" data-bs-target="#v-8"
+                                        type="button" role="tab" aria-controls="v-8" aria-selected="false">
+                                    Песок
+                                </button>
+                                <button class="header__nav" id="v-9-tab" data-bs-toggle="pill" data-bs-target="#v-9"
+                                        type="button" role="tab" aria-controls="v-9" aria-selected="true">
+                                    ЖБИ
+                                </button>
+                                <button class=" header__nav" id="v-10-tab" data-bs-toggle="pill" data-bs-target="#v-10"
+                                        type="button" role="tab" aria-controls="v-10" aria-selected="false">
+                                    Фитинг для труб
+                                </button>
+                                <button class="header__nav" id="v-11-tab" data-bs-toggle="pill" data-bs-target="#v-11"
+                                        type="button" role="tab" aria-controls="v-11" aria-selected="false">
+                                    Кирпич
+                                </button>
+                                <button class="header__nav" id="v-12-tab" data-bs-toggle="pill" data-bs-target="#v-12"
+                                        type="button" role="tab" aria-controls="v-12" aria-selected="false">
+                                    Песок
+                                </button>
+                                <button class="header__nav" id="v-13-tab" data-bs-toggle="pill" data-bs-target="#v-13"
+                                        type="button" role="tab" aria-controls="v-13" aria-selected="true">
+                                    ЖБИ
+                                </button>
+                                <button class=" header__nav" id="v-14-tab" data-bs-toggle="pill" data-bs-target="#v-14"
+                                        type="button" role="tab" aria-controls="v-14" aria-selected="false">
+                                    Фитинг для труб
+                                </button>
+                            </div>
+                            <div class="header__tab-content" id="v-pills-tabContent">
+                                <div class="header__tab-pane fade show active" id="v-1" role="tabpanel"
+                                     aria-labelledby="v-1-tab">
+                                    <div class="header__nav-links">
+                                        <a href="" class="header__nav-link link link-dark">Ограждения</a>
+                                        <a href="" class="header__nav-link link link-dark">Плиты</a>
+                                        <a href="" class="header__nav-link link link-dark">Кабельные каналы</a>
+                                        <a href="" class="header__nav-link link link-dark">Блок</a>
+                                        <a href="" class="header__nav-link link link-dark">Бортовой камень</a>
+                                        <a href="" class="header__nav-link link link-dark">Бордюрный камень</a>
+                                        <a href="" class="header__nav-link link link-dark">Заборы</a>
+                                        <a href="" class="header__nav-link link link-dark">Ограждения</a>
+                                        <a href="" class="header__nav-link link link-dark">Плиты</a>
+                                        <a href="" class="header__nav-link link link-dark">Кабельные каналы</a>
+                                        <a href="" class="header__nav-link link link-dark">Блок</a>
+                                        <a href="" class="header__nav-link link link-dark">Бордюрный камень</a>
+                                        <a href="" class="header__nav-link link link-dark">Заборы</a>
+                                        <a href="" class="header__nav-link link link-dark">Ограждения</a>
+                                        <a href="" class="header__nav-link link link-dark">Плиты</a>
+                                        <a href="" class="header__nav-link link link-dark">Кабельные каналы</a>
+                                        <a href="" class="header__nav-link link link-dark">Блок</a>
+                                    </div>
+                                </div>
+                                <div class="header__tab-pane fade" id="v-2" role="tabpanel" aria-labelledby="v-2-tab">2
+                                </div>
+                                <div class="header__tab-pane fade" id="v-3" role="tabpanel" aria-labelledby="v-3">3
+                                </div>
+                                <div class="header__tab-pane fade" id="v-4" role="tabpanel" aria-labelledby="v-4">4
                                 </div>
                             </div>
-                            <div class="header__tab-pane fade" id="v-2" role="tabpanel" aria-labelledby="v-2-tab">2
-                            </div>
-                            <div class="header__tab-pane fade" id="v-3" role="tabpanel" aria-labelledby="v-3">3</div>
-                            <div class="header__tab-pane fade" id="v-4" role="tabpanel" aria-labelledby="v-4">4</div>
                         </div>
                     </div>
-                </ul>
+                </div>
             </div>
             <form class="header__search">
                 <div class="header__search-decorator"></div>
@@ -138,10 +149,21 @@
                         <option value="4">Тендеры</option>
                     </select>
                 </label>
-                <input type="text" class="form-control header__search-input base-input" placeholder="Поиск продукции">
+                <input type="text" id="header-search-input" class="form-control header__search-input base-input"
+                       placeholder="Поиск продукции">
                 <button type="submit" class="btn btn-primary header__btn-search">
                     <img src="img/header/loop.svg" alt="">
                 </button>
+                <ul class="header__search-result">
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                    <li><a href="#" class="header__search-link">Бетонные блоки</a></li>
+                </ul>
             </form>
             <div class="header__dropdown header__dropdown--add dropdown">
                 <a href="#" class="header__btn-add link link-dark" type="button" id="dropdownMenuAdd"
@@ -264,505 +286,198 @@
         </div>
     </div>
 </header>
-    <div class="content">
-        <div class="container">
-            <ul class="breadcrumbs">
-                <li class="breadcrumbs__item">
-                    <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__text">Цены поставщиков</span>
-                </li>
-            </ul>
-            <div class="catalog">
-                <div class="catalog__header">
-                    <h2 class="h2">Цены поставщиков</h2>
-                    <div class="catalog__qnty">2140 товаров</div>
-                </div>
-                <div class="catalog__body">
-                    <div class="sidebar">
-                       <div class="sidebar__item">
-                            <button class="btn sidebar__item__collapse-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-1" aria-expanded="false" aria-controls="#sidebar-collapse-1">
-                                ЖБИ
-                            </button>
-                            <div class="collapse" id="sidebar-collapse-1">
-                                <div class="sidebar__item__search">
-                                    <input type="text" class="form-control base-input sidebar__item__search-field" placeholder="Поиск">
-                                </div>
-                                <ul class="sidebar__links">
-                                    <li class="sidebar__links__item" data-value="Балка" data-qnty="24">
-                                        <a href="#" class="link link-dark sidebar__link">Балка <span>(24)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Ограждения" data-qnty="32">
-                                        <a href="#" class="link link-dark sidebar__link">Ограждения <span>(32)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Плиты" data-qnty="97">
-                                        <a href="#" class="link link-dark sidebar__link">Плиты <span>(97)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Кабельные каналы" data-qnty="12">
-                                        <a href="#" class="link link-dark sidebar__link">Кабельные каналы <span>(12)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Блок" data-qnty="213">
-                                        <a href="#" class="link link-dark sidebar__link">Блок <span>(213)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Бортовой камень" data-qnty="21">
-                                        <a href="#" class="link link-dark sidebar__link">Бортовой камень <span>(21)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Бордюрный камень" data-qnty="98">
-                                        <a href="#" class="link link-dark sidebar__link">Бордюрный камень <span>(98)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item" data-value="Заборы" data-qnty="82">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-link sidebar__show-more">
-                                    Показать все
-                                    <svg class="arrow-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.239442 1.43235L5.46073 6.77428C5.75445 7.07524 6.24479 7.07524 6.53972 6.77428L11.7598 1.43235C12.0801 1.10473 12.0801 0.587542 11.7598 0.259929C11.4208 -0.0866426 10.8563 -0.0866426 10.5168 0.259929L6.14407 4.73396C6.06506 4.81512 5.93418 4.81512 5.85517 4.73396L1.48249 0.259929C1.14353 -0.0866427 0.579004 -0.0866427 0.239442 0.259929C0.0802162 0.424032 7.59026e-08 0.634937 7.33876e-08 0.845841C7.08655e-08 1.05734 0.0802162 1.26824 0.239442 1.43235Z" fill=""/>
-                                    </svg>    
-                                </button>
-                            </div>
-                       </div>
-                        <div class="sidebar__item">
-                            <button class="btn sidebar__item__collapse-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-2" aria-expanded="false" aria-controls="#sidebar-collapse-2">
-                                Фитинг для труб
-                            </button>
-                            <div class="collapse" id="sidebar-collapse-2">
-                                <div class="sidebar__item__search">
-                                    <input type="text" class="form-control base-input sidebar__item__search-field" placeholder="Поиск">
-                                </div>
-                                <ul class="sidebar__links">
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Балка <span>(24)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Ограждения <span>(32)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Плиты <span>(97)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Кабельные каналы <span>(12)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Блок <span>(213)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Бортовой камень <span>(21)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Бордюрный камень <span>(98)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-link sidebar__show-more">
-                                    Показать все
-                                    <svg class="arrow-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.239442 1.43235L5.46073 6.77428C5.75445 7.07524 6.24479 7.07524 6.53972 6.77428L11.7598 1.43235C12.0801 1.10473 12.0801 0.587542 11.7598 0.259929C11.4208 -0.0866426 10.8563 -0.0866426 10.5168 0.259929L6.14407 4.73396C6.06506 4.81512 5.93418 4.81512 5.85517 4.73396L1.48249 0.259929C1.14353 -0.0866427 0.579004 -0.0866427 0.239442 0.259929C0.0802162 0.424032 7.59026e-08 0.634937 7.33876e-08 0.845841C7.08655e-08 1.05734 0.0802162 1.26824 0.239442 1.43235Z" fill=""/>
-                                    </svg>    
-                                </button>
-                            </div>
-                        </div>
-                        <div class="sidebar__item">
-                            <button class="btn sidebar__item__collapse-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-3" aria-expanded="false" aria-controls="#sidebar-collapse-3">
-                                Цемент и бетон
-                            </button>
-                            <div class="collapse" id="sidebar-collapse-3">
-                                <div class="sidebar__item__search">
-                                    <input type="text" class="form-control base-input sidebar__item__search-field" placeholder="Поиск">
-                                </div>
-                                <ul class="sidebar__links">
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Балка <span>(24)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Ограждения <span>(32)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Плиты <span>(97)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Кабельные каналы <span>(12)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Блок <span>(213)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Бортовой камень <span>(21)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Бордюрный камень <span>(98)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-link sidebar__show-more">
-                                    Показать все
-                                    <svg class="arrow-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.239442 1.43235L5.46073 6.77428C5.75445 7.07524 6.24479 7.07524 6.53972 6.77428L11.7598 1.43235C12.0801 1.10473 12.0801 0.587542 11.7598 0.259929C11.4208 -0.0866426 10.8563 -0.0866426 10.5168 0.259929L6.14407 4.73396C6.06506 4.81512 5.93418 4.81512 5.85517 4.73396L1.48249 0.259929C1.14353 -0.0866427 0.579004 -0.0866427 0.239442 0.259929C0.0802162 0.424032 7.59026e-08 0.634937 7.33876e-08 0.845841C7.08655e-08 1.05734 0.0802162 1.26824 0.239442 1.43235Z" fill=""/>
-                                    </svg>    
-                                </button>
-                            </div>
-                        </div>
-                        <div class="sidebar__item">
-                            <button class="btn sidebar__item__collapse-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-4" aria-expanded="false" aria-controls="#sidebar-collapse-4">
-                                Кирпич
-                            </button>
-                            <div class="collapse" id="sidebar-collapse-4">
-                                <div class="sidebar__item__search">
-                                    <input type="text" class="form-control base-input sidebar__item__search-field" placeholder="Поиск">
-                                </div>
-                                <ul class="sidebar__links">
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Балка <span>(24)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Ограждения <span>(32)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Плиты <span>(97)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Кабельные каналы <span>(12)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Блок <span>(213)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Бортовой камень <span>(21)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Бордюрный камень <span>(98)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                    <li class="sidebar__links__item">
-                                        <a href="#" class="link link-dark sidebar__link">Заборы <span>(82)</span></a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-link sidebar__show-more">
-                                    Показать все
-                                    <svg class="arrow-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.239442 1.43235L5.46073 6.77428C5.75445 7.07524 6.24479 7.07524 6.53972 6.77428L11.7598 1.43235C12.0801 1.10473 12.0801 0.587542 11.7598 0.259929C11.4208 -0.0866426 10.8563 -0.0866426 10.5168 0.259929L6.14407 4.73396C6.06506 4.81512 5.93418 4.81512 5.85517 4.73396L1.48249 0.259929C1.14353 -0.0866427 0.579004 -0.0866427 0.239442 0.259929C0.0802162 0.424032 7.59026e-08 0.634937 7.33876e-08 0.845841C7.08655e-08 1.05734 0.0802162 1.26824 0.239442 1.43235Z" fill=""/>
-                                    </svg>    
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__content">
-                        <div class="catalog-nav">
-                            <a href="#" class="link link-dark catalog-nav__item active">Цены поставщиков</a>
-                            <a href="#" class="link link-dark catalog-nav__item">Тендеры</a>
-                            <a href="#" class="link link-dark catalog-nav__item">Объявления</a>
-                            <a href="#" class="link link-dark catalog-nav__item">Заявки покупателей</a>
-                        </div>
-                        <div class="catalog-search__panel">
-                            <div class="catalog-search">
-                                <input type="text" class="form-control base-input catalog-search__input">
-                                <button class="btn catalog-search__btn">
-                                    <img src="img/icon-search-gray.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="" class="catalog__filter-btn btn btn--sm btn-primary">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="9" cy="9" r="8.1" stroke="white" stroke-width="1.8"/>
-                                    <line x1="5.9" y1="9.1" x2="12.1" y2="9.1" stroke="white" stroke-width="1.8"
-                                          stroke-linecap="round"/>
-                                    <line x1="9.1" y1="12.1" x2="9.1" y2="5.9" stroke="white" stroke-width="1.8"
-                                          stroke-linecap="round"/>
-                                </svg>
-                                <span>Добавить объявление</span>
-                            </a>
-                        </div>    
 
-                        <div class="catalog__filter" style="padding-bottom: 0; justify-content: flex-start">
-                            <div class="catalog__filter-tabs">
-                                <a href="" class="catalog__filter-tab active">Все</a>
-                                <a href="" class="catalog__filter-tab">Продам</a>
-                                <a href="" class="catalog__filter-tab">Куплю</a>
-                                <a href="" class="catalog__filter-tab">Предложение услуг</a>
-                                <a href="" class="catalog__filter-tab">Спрос услуг</a>
-                                <a href="" class="catalog__filter-tab">Другое</a>
-                            </div>
+
+<div class="content">
+
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <span class="breadcrumbs__text">Реклама</span>
+            </li>
+        </ul>
+        <div class="additional">
+            <div class="additional__container">
+                <div class="additional__sidebar">
+                    <div class="personal-account">
+                        <div class="personal-account__head">
+                            Личный кабинет
                         </div>
-                        <div class="catalog-list">
-                            <div class="catalog-item catalog-item--adv">
-                                <a href="#" class="catalog-item__image">
-                                    <img src="img/catalog-item.png" alt="">
-                                </a>
-                                <div class="catalog-item__body">
-                                    <div class="catalog-item__adv-label text-gray">Профнастил</div> 
-                                    <h4 class="catalog-item__name">
-                                        <a href="#" class="link link-dark">Бетон гранит М-150 П2 F50 W2</a>
-                                    </h4>
-                                    <div class="catalog-item__adv-status status-sell">Продам</div> 
-                                    <div class="catalog-item__description catalog-item__description--adv">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                    </div>
-                                    <div class="catalog-item__option horizontal__date">
-                                        <p class="catalog-item__option__label text-gray">Размещена</p>
-                                        <p class="catalog-item__option__value text-gray"><span class="fw-500">24.05.2021</span> в <span class="fw-500">17:10</span></p>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__action">
-                                    <p class="catalog-item__city">Москва</p>
-                                    <p class="catalog-item__adv__name">Александр</p>
-                                    <div>
-                                        <div class="catalog-item__phone catalog-item__phone--adv">
-                                            <p class="catalog-item__phone__label">Показать телефон</p>
-                                            <p class="catalog-item__phone__number">+ 7 (912) 657 67 67</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog-item catalog-item--adv">
-                                <a href="#" class="catalog-item__image">
-                                    <img src="img/catalog-item.png" alt="">
-                                </a>
-                                <div class="catalog-item__body">
-                                    <div class="catalog-item__adv-label text-gray">Профнастил</div> 
-                                    <h4 class="catalog-item__name">
-                                        <a href="#" class="link link-dark">Бетон гранит М-150 П2 F50 W2</a>
-                                    </h4>
-                                    <div class="catalog-item__adv-status status-buy">Куплю</div> 
-                                    <div class="catalog-item__description catalog-item__description--adv">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                    </div>
-                                    <div class="catalog-item__option horizontal__date">
-                                        <p class="catalog-item__option__label text-gray">Размещена</p>
-                                        <p class="catalog-item__option__value text-gray"><span class="fw-500">24.05.2021</span> в <span class="fw-500">17:10</span></p>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__action">
-                                    <p class="catalog-item__city">Москва</p>
-                                    <p class="catalog-item__adv__name">Александр</p>
-                                    <div>
-                                        <div class="catalog-item__phone catalog-item__phone--adv">
-                                            <p class="catalog-item__phone__label">Показать телефон</p>
-                                            <p class="catalog-item__phone__number">+ 7 (912) 657 67 67</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog-item catalog-item--adv">
-                                <a href="#" class="catalog-item__image">
-                                    <img src="img/catalog-item.png" alt="">
-                                </a>
-                                <div class="catalog-item__body">
-                                    <div class="catalog-item__adv-label text-gray">Профнастил</div> 
-                                    <h4 class="catalog-item__name">
-                                        <a href="#" class="link link-dark">Бетон гранит М-150 П2 F50 W2</a>
-                                    </h4>
-                                    <div class="catalog-item__adv-status status-demand">Спрос услуг</div> 
-                                    <div class="catalog-item__description catalog-item__description--adv">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                    </div>
-                                    <div class="catalog-item__option horizontal__date">
-                                        <p class="catalog-item__option__label text-gray">Размещена</p>
-                                        <p class="catalog-item__option__value text-gray"><span class="fw-500">24.05.2021</span> в <span class="fw-500">17:10</span></p>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__action">
-                                    <p class="catalog-item__city">Москва</p>
-                                    <p class="catalog-item__adv__name">Александр</p>
-                                    <div>
-                                        <div class="catalog-item__phone catalog-item__phone--adv">
-                                            <p class="catalog-item__phone__label">Показать телефон</p>
-                                            <p class="catalog-item__phone__number">+ 7 (912) 657 67 67</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog-item catalog-item--adv">
-                                <a href="#" class="catalog-item__image">
-                                    <img src="img/catalog-item.png" alt="">
-                                </a>
-                                <div class="catalog-item__body">
-                                    <div class="catalog-item__adv-label text-gray">Профнастил</div> 
-                                    <h4 class="catalog-item__name">
-                                        <a href="#" class="link link-dark">Бетон гранит М-150 П2 F50 W2</a>
-                                    </h4>
-                                    <div class="catalog-item__adv-status status-offer">Предложение услуг</div> 
-                                    <div class="catalog-item__description catalog-item__description--adv">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                    </div>
-                                    <div class="catalog-item__option horizontal__date">
-                                        <p class="catalog-item__option__label text-gray">Размещена</p>
-                                        <p class="catalog-item__option__value text-gray"><span class="fw-500">24.05.2021</span> в <span class="fw-500">17:10</span></p>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__action">
-                                    <p class="catalog-item__city">Москва</p>
-                                    <p class="catalog-item__adv__name">Александр</p>
-                                    <div>
-                                        <div class="catalog-item__phone catalog-item__phone--adv">
-                                            <p class="catalog-item__phone__label">Показать телефон</p>
-                                            <p class="catalog-item__phone__number">+ 7 (912) 657 67 67</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="personal-account__body">
+                            <ul class="personal-account__list">
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Мой кабинет</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Персональные данные</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Моя компания</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Мои тендеры</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Мои предложения на
+                                        торгах</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Мои заявки</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Мои ответы на заявки</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Мои объявления</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Подключить прайс-лист</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Добавить объявление</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Добавить завку на
+                                        покупку</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Объявить тендер</a>
+                                </li>
+                                <li class="personal-account__item">
+                                    <a href="#" class="personal-account__link link link-dark">Подписка на рассылку</a>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="pagination">
-                            <li class="pagination-item">
-                                <a class="link pagination-link active" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">8</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">9</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link" href="#">10</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a class="link pagination-link pagination-link-next" href="#">Вперёд</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- AUTH Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-stroim">
-            <div class="modal-content modal-stroim__content">
-                <button type="button" class="btn-close modal-stroim__btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                <div class="modal-stroim__title">Вход</div>
-                <form class="modal-stroim__form">
-                    <label class="materil-group">
-                        <span class="materil-group__label">Email</span>
-                        <input type="email" class="form-control base-input materil-group__input">
-                        <div class="materil-group__error-text">Укажите email</div>
-                    </label>
-                    <label class="materil-group">
-                        <span class="materil-group__label">Пароль</span>
-                        <input type="password" class="form-control base-input materil-group__input">
-                        <div class="materil-group__error-text">Укажите пароль</div>
-                    </label>
-                    <button type="submit" class="btn btn-primary modal-stroim__btn">Войти</button>
-                </form>
-                <div class="modal-stroim__actions">
-                    <a href="" class="modal-stroim__link link">
-                        Зарегистрироваться
-                    </a>
-                    <a href="" class="modal-stroim__link link">
-                        Забыли пароль?
-                    </a>
+                <div class="additional__content">
+                    <h2 class="h2">Реклама на Интернет портале stroim100.ru</h2>
+                    <div class="row additional__section">
+                        <div class="col-md-6">
+                            <div class="advertisement-card">
+                                <div class="advertisement-card__img">
+                                    <img src="img/advertisement/image-2.png" alt="">
+                                </div>
+                                <div class="advertisement-card__content">
+                                    <h5 class="h5">Размещение прайс-листов поставщиков строительные материалов</h5>
+                                    <p>Вы можете самостоятельно зарегистрироваться на сайте в личном кабинете, Выбрать соответствующий раздел и вид проката. При этом обновление ценового предложения производится самостоятельно.</p>
+                                    <a href="#" class="link link-dark h4 advertisement-card__link">
+                                        <span>Далее в раздел</span>
+                                        <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.7071 8.20711C17.0976 7.81658 17.0976 7.18342 16.7071 6.79289L10.3431 0.428932C9.95262 0.0384078 9.31946 0.0384078 8.92893 0.428932C8.53841 0.819457 8.53841 1.45262 8.92893 1.84315L14.5858 7.5L8.92893 13.1569C8.53841 13.5474 8.53841 14.1805 8.92893 14.5711C9.31946 14.9616 9.95262 14.9616 10.3431 14.5711L16.7071 8.20711ZM0 8.5H16V6.5H0V8.5Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="advertisement-card">
+                                <div class="advertisement-card__img">
+                                    <img src="img/advertisement/image-1.png" alt="">
+                                </div>
+                                <div class="advertisement-card__content">
+                                    <h5 class="h5">Баннерная реклама</h5>
+                                    <p>Доступно множество вариантов размещения. Выберите подходящий именно Вам!</p>
+                                    <a href="#" class="link link-dark h4 advertisement-card__link">
+                                        <span>Далее в раздел</span>
+                                        <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.7071 8.20711C17.0976 7.81658 17.0976 7.18342 16.7071 6.79289L10.3431 0.428932C9.95262 0.0384078 9.31946 0.0384078 8.92893 0.428932C8.53841 0.819457 8.53841 1.45262 8.92893 1.84315L14.5858 7.5L8.92893 13.1569C8.53841 13.5474 8.53841 14.1805 8.92893 14.5711C9.31946 14.9616 9.95262 14.9616 10.3431 14.5711L16.7071 8.20711ZM0 8.5H16V6.5H0V8.5Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional__form">
+                        <h4 class="h4 additional__caption"><strong>Комментарий к статье 435 ГК РФ</strong></h4>
+                        <p><em>
+                            Согласно п.2 статьи 435 ГК РФ - оферта связывает направившее ее лицо, и, следовательно, такое лицо считается заключившим договор, если на оферту последует надлежащий акцепт (см. ст.438 ГК и коммент. к ней). В этом случае при уклонении оферента от исполнения возникших договорных обязательств он несет ответственность за нарушение договора по общим правилам гражданского законодательства (гл.25 ГК). Оферта может быть сформулирована в виде письменного предложения или же полного текста договора, подписанного оферентом.
+                        </em></p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+
+
+</div>
+
+<!-- AUTH Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modalS">
+        <div class="modal-content modalS__content">
+            <button type="button" class="btn-close modalS__btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            <div class="modalS__title">Вход</div>
+            <form class="modal-auth">
+                <label class="materil-group">
+                    <span class="materil-group__label">Email</span>
+                    <input type="email" class="form-control base-input materil-group__input">
+                    <div class="materil-group__error-text">Укажите email</div>
+                </label>
+                <label class="materil-group">
+                    <span class="materil-group__label">Пароль</span>
+                    <input type="password" class="form-control base-input materil-group__input">
+                    <div class="materil-group__error-text">Укажите пароль</div>
+                </label>
+                <button type="submit" class="btn btn-primary modal-auth__btn">Войти</button>
+            </form>
+            <div class="modal-auth__actions">
+                <a href="" class="modal-auth__link link">
+                    Зарегистрироваться
+                </a>
+                <a href="" class="modal-auth__link link">
+                    Забыли пароль?
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- AUTH Modal -->
+
+<!-- REGION CHOOSE Modal -->
+<div class="modal fade" id="regionChooseModal" tabindex="-1" aria-labelledby="regionChooseModal" aria-hidden="true">
+    <div class="modal-dialog modalS modalS--region">
+        <div class="modal-content modalS__content">
+            <button type="button" class="btn-close modalS__btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            <div class="modalS__title">Выберите регион</div>
+            <form class="modal-region">
+                <div class="form-group">
+                    <div class="modal-region__input">
+                        <input type="text" class="form-control base-input" placeholder="Название населенного пункта">
+                    </div>
+                    <div class="modal-region__list">
+                        <a href="" class="modal-region__link link link-dark">Москва</a>
+                        <a href="" class="modal-region__link link link-dark">Санкт - Петербург</a>
+                        <a href="" class="modal-region__link link link-dark">Актау и Мангистау</a>
+                        <a href="" class="modal-region__link link link-dark">Актобе и область</a>
+                        <a href="" class="modal-region__link link link-dark">Алматы</a>
+                        <a href="" class="modal-region__link link link-dark">Архангельск</a>
+                        <a href="" class="modal-region__link link link-dark">Астана</a>
+                        <a href="" class="modal-region__link link link-dark">Астрахань и область</a>
+                        <a href="" class="modal-region__link link link-dark">Атырау и область</a>
+                        <a href="" class="modal-region__link link link-dark">Баку</a>
+                        <a href="" class="modal-region__link link link-dark">Белгород</a>
+                        <a href="" class="modal-region__link link link-dark">Брест и область</a>
+                        <a href="" class="modal-region__link link link-dark">Москва</a>
+                        <a href="" class="modal-region__link link link-dark">Санкт - Петербург</a>
+                        <a href="" class="modal-region__link link link-dark">Актау и Мангистау</a>
+                        <a href="" class="modal-region__link link link-dark">Актобе и область</a>
+                        <a href="" class="modal-region__link link link-dark">Алматы</a>
+                        <a href="" class="modal-region__link link link-dark">Архангельск</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- REGION CHOOSE Modal -->
 
 <footer class="footer">
     <div class="container footer__container">
@@ -771,7 +486,9 @@
                 <img src="img/header/logo.svg" alt="">
             </a>
             <p class="footer__description">
-                Основная цель проекта — обеспечение потенциальных покупателей, на основе свободного доступа, информацией о наличии, цене и качестве различных видов продукции строительной отрасли, с указанием координат потенциальных поставщиков.
+                Основная цель проекта — обеспечение потенциальных покупателей, на основе свободного доступа, информацией
+                о наличии, цене и качестве различных видов продукции строительной отрасли, с указанием координат
+                потенциальных поставщиков.
             </p>
         </div>
         <div class="footer__nav">
