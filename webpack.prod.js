@@ -120,10 +120,34 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: 'add-to-blacklist.html',
           template: './src/add-to-blacklist.html'
+        }),  
+        new HtmlWebpackPlugin({  
+            filename: 'blacklist.html',
+            template: './src/blacklist.html'
         }),
         new HtmlWebpackPlugin({
-          filename: 'services.html',
-          template: './src/services.html'
+            filename: 'blacklist-company.html',
+            template: './src/blacklist-company.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'add-to-blacklist.html',
+            template: './src/add-to-blacklist.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'services.html',
+            template: './src/services.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'advertisement.html',
+            template: './src/advertisement.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'banner-grid.html',
+            template: './src/banner-grid.html'
         }),
         new HtmlWebpackPlugin({
           filename: 'ui.html',
@@ -134,7 +158,7 @@ module.exports = {
             filename: "css/style.[hash].css"
         }),
         new CopyWebpackPlugin(
-            { 
+            {
                 patterns: [
                     { from: './src/img', to: './img' },
                     // { from: './src/fonts', to: './dist/fonts' }
@@ -145,5 +169,5 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
         }),
-    ],   
+    ],
 }

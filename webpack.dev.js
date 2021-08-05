@@ -126,6 +126,18 @@ module.exports = {
             template: './src/services.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'advertisement.html',
+            template: './src/advertisement.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'banner-grid.html',
+            template: './src/banner-grid.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

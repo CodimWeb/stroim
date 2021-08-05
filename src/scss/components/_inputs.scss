@@ -223,20 +223,48 @@ input[type="checkbox"]:checked + span:after {
     background-position: center center;
 }
 
-.input-file-container {
+.file-reader {
     position: relative;
-    width: 225px;
 }
-.input-file-trigger {
-    display: block;
-    padding: 14px 45px;
-    background: #39D2B4;
-    color: #fff;
-    font-size: 1em;
+.file-reader__label {
+    display: flex;
+    padding: 11px 30px;
+    background: #F2F2F2;
+    color: $text_color;
+    font-size: 16px;
+    line-height: 160%;
     transition: all .4s;
     cursor: pointer;
+    border-radius: 8px;
+    width: 217px;
+
+    &.loading{
+
+        .file-reader__icon-clip{
+            display: none;
+        }
+
+        .file-reader__loader{
+            display: block;
+        }
+    }
 }
-.input-file {
+
+.file-reader__loader{
+    display: none;
+}
+
+.file-reader__icon-clip{
+    width: 24px;
+    padding-right: 4px;
+    height: auto;
+}
+.file-reader__input-text{
+    padding-left: 9px;
+    display: block;
+}
+
+.file-reader__input {
     position: absolute;
     top: 0; left: 0;
     width: 225px;
@@ -244,29 +272,35 @@ input[type="checkbox"]:checked + span:after {
     padding: 14px 0;
     cursor: pointer;
 }
-.input-file:hover + .input-file-trigger,
-.input-file:focus + .input-file-trigger,
-.input-file-trigger:hover,
-.input-file-trigger:focus {
-    background: #34495E;
-    color: #39D2B4;
+
+.file-reader__icon-close {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-.file-return {
-    margin: 0;
+.file-reader__return {
+    display: none;
+    padding: 0 16px 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: $font-weight-medium;
+    background: #CCDCF7;
+    opacity: 0.8;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    max-width: 343px;
 }
-.file-return:not(:empty) {
-    margin: 1em 0;
+
+.file-reader__return-text{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
-.file-return {
-    font-style: italic;
-    font-size: .9em;
-    font-weight: bold;
-}
-.file-return:not(:empty):before {
-    content: "Выбранный файл: ";
-    font-style: normal;
-    font-weight: normal;
-}
+
+
 
 
