@@ -24,10 +24,24 @@ h3 {
     margin: 0;
 }
 
-h4 {
+h4, .h4 {
     font-weight: 500;
     font-size: 18px;
     line-height: 29px;
+    margin: 0;
+}
+
+h5, .h5 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0;
+}
+
+h6, .h6 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
     margin: 0;
 }
 
@@ -62,6 +76,10 @@ p {
 
 .link-dark  {
     color: #001D3A;
+
+    &:hover {
+        color: #3275EE;
+    }
 }
 
 .link-sm {

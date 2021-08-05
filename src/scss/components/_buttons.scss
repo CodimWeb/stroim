@@ -1,11 +1,11 @@
 .btn {
     display: inline-block;
     outline: none !important;
-    padding: 11px 32px;
+    padding: 9px 32px;
     text-align: center;
     font-weight: 500;
     font-size: 16px;
-    line-height: 160%;
+    line-height: 26px;
     color: #fff;
     background-color: transparent;
     border-radius: 8px;
@@ -24,6 +24,10 @@
     &--sm {
         font-size: 14px;
         padding: 6px 24px;
+    }
+
+    svg {
+        margin-right: 8px;
     }
 }
 

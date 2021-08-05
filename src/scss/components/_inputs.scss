@@ -23,9 +23,45 @@
     }
 }
 
+.search-input {
+    position: relative;
+    width: 100%;
+}
+
+.search-input__field {
+    padding-left: 40px;
+    background: #F9F9F9;
+    border-color: #F9F9F9;
+
+    &::placeholder{
+        font-size: 14px;
+        color: #646464;
+    }
+}
+
+.search-input__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 41px;
+    padding: 0;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    img {
+        width: 16px;
+        height: auto;
+    }
+}
+
 .materil-group {
     display: block;
     position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .materil-group__label {
@@ -40,7 +76,8 @@
     margin-bottom: 24px;
 }
 
-.materil-group__input {
+.materil-group__input,
+.materil-group__textarea {
     height: 52px;
     padding: 20px 16px 6px;
 
@@ -49,11 +86,32 @@
     }
 }
 
+.materil-group__textarea {
+    height: auto;
+    min-height: 78px!important;
+    resize: none;
+}
+
 .materil-group.active .materil-group__label {
     left: 16px;
     top: 6px;
     font-size: 10px;
     line-height: 14px;
+}
+
+.materil-group__label-backdrop {
+    display: block;
+    height: 21px;
+    position: absolute;
+    left: 2px;
+    right: 22px;
+    top: 1px;
+    background: #F2F2F2;
+    border-radius: 8px;
+}
+
+.materil-group__textarea:focus + .materil-group__label-backdrop {
+    background: #fff;
 }
 
 .materil-group.error .materil-group__input {
@@ -164,4 +222,51 @@ input[type="checkbox"]:checked + span:after {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.input-file-container {
+    position: relative;
+    width: 225px;
+}
+.input-file-trigger {
+    display: block;
+    padding: 14px 45px;
+    background: #39D2B4;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+.input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 225px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+.input-file:hover + .input-file-trigger,
+.input-file:focus + .input-file-trigger,
+.input-file-trigger:hover,
+.input-file-trigger:focus {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.file-return {
+    margin: 0;
+}
+.file-return:not(:empty) {
+    margin: 1em 0;
+}
+.file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+}
+.file-return:not(:empty):before {
+    content: "Выбранный файл: ";
+    font-style: normal;
+    font-weight: normal;
+}
+
 

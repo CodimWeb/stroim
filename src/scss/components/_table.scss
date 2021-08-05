@@ -14,17 +14,24 @@
   background-color: #F2F2F2;
   color: $text_color;
   display: flex;
-  padding: 12px 0;
   font-weight: $font-weight-medium;
 }
 
+.table__head .table__col--num {
+  padding-left: 16px;
+}
+
 .table__row{
+  padding: 0;
   font-weight: $font-weight-normal;
-  padding: 16px 0;
   background-color: #F9F9F9;
-  
+
   &:nth-child(2n + 1) {
     background-color: #fff;
+  }
+
+  .table--bordered & {
+    border-top: 1px solid #DFDEE2;
   }
 
   .table__col--num{
@@ -33,7 +40,7 @@
 }
 
 .table__col {
-  padding: 0 8px;
+  padding: 16px 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,6 +82,20 @@
   &--cost {
     width: 148px;
   }
+
+  //services
+  &--advertising{
+    width: 260px;
+  }
+
+  &--conversion{
+    width: 180px;
+  }
+
+  &--call-office{
+    width: 159px;
+  }
+
 }
 
 .table__status{
@@ -85,3 +106,13 @@
     color: $green;
   }
 }
+
+.table--bordered .table__col{
+  border-right: 1px solid #DFDEE2;
+
+  &:last-child{
+    border: none;
+  }
+}
+
+

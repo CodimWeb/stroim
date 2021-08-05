@@ -1,0 +1,42 @@
+@import "../abstract/variables";
+
+.black-card{
+  padding: 24px 0;
+}
+
+.black-card__date{
+  font-size: 14px;
+  line-height: 160%;
+  color: #646464;
+  margin-bottom: 8px;
+
+  strong{
+    font-weight: $font-weight-medium;
+  }
+}
+
+.black-card__info{
+  margin-bottom: 8px;
+}
+
+.black-card__name{
+  margin-right: 12px;
+}
+
+.black-card__link{
+  font-size: 14px;
+}
+
+.black-card__label{
+  font-size: 14px;
+  line-height: 160%;
+  font-weight: $font-weight-medium;
+  color: #646464;
+}
+
+.black-card__text{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+
