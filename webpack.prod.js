@@ -109,7 +109,7 @@ module.exports = {
           filename: 'tender-card-unauth.html',
           template: './src/tender-card-unauth.html'
         }),
-        new HtmlWebpackPlugin({    
+        new HtmlWebpackPlugin({
           filename: 'blacklist.html',
           template: './src/blacklist.html'
         }),
@@ -120,8 +120,8 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: 'add-to-blacklist.html',
           template: './src/add-to-blacklist.html'
-        }),  
-        new HtmlWebpackPlugin({  
+        }),
+        new HtmlWebpackPlugin({
             filename: 'blacklist.html',
             template: './src/blacklist.html'
         }),
@@ -152,6 +152,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'price-list.html',
             template: './src/price-list.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template: './src/contacts.html'
         }),
         new HtmlWebpackPlugin({
           filename: 'ui.html',

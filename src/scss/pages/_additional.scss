@@ -34,6 +34,16 @@
     }
   }
 
+  .additional__service {
+
+    &--red{
+      color: #ff3d3d;
+    }
+    &--mb-0{
+      margin: 0;
+    }
+  }
+
 }
 
 .additional__form{
@@ -92,15 +102,6 @@
   color: $text-color;
 }
 
-.additional__service {
-
-  &--red{
-    color: #ff3d3d;
-  }
-  &--mb-0{
-    margin: 0;
-  }
-}
 
 .additional__service-caption{
   margin: 0 0 5px 0 !important;
@@ -179,4 +180,8 @@
 
 .additional__form-label{
   color: $grey;
+}
+
+.additional__link{
+  font-size: 18px;
 }
