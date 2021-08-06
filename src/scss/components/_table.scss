@@ -96,6 +96,27 @@
     width: 159px;
   }
 
+  // price-list
+  &--chapter {
+    width: 205px;
+  }
+
+  &--monthly-1{
+    width: 133px;
+  }
+
+  &--monthly-2{
+    width: 184px;
+  }
+
+  &--monthly-3{
+    width: 192px;
+  }
+
+  &--monthly-4{
+    width: 216px;
+  }
+
 }
 
 .table__status{
@@ -105,6 +126,12 @@
   &--pending{
     color: $green;
   }
+}
+
+.table__star {
+  width: 15px;
+  height: auto;
+  margin-left: 4px;
 }
 
 .table--bordered .table__col{
