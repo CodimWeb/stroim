@@ -162,6 +162,22 @@ module.exports = {
             template: './src/dictionary.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'dictionary-pipes.html',
+            template: './src/dictionary-pipes.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-brackets.html',
+            template: './src/dictionary-brackets.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-shutter.html',
+            template: './src/dictionary-shutter.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-coupling.html',
+            template: './src/dictionary-coupling.html'
+        }),
+        new HtmlWebpackPlugin({
           filename: 'ui.html',
           template: './src/ui.html'
         }),

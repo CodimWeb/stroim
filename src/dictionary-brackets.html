@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Добавить компанию в черный список</title>
+    <title>Справочник скобы</title>
 </head>
 
 <body class="page transition-off">
@@ -296,246 +296,219 @@
                 <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <span class="breadcrumbs__text">Черный список</span>
+                <span class="breadcrumbs__text">Справочник</span>
+            </li>
+            <li class="breadcrumbs__item">
+                <span class="breadcrumbs__text">Скоба</span>
             </li>
         </ul>
         <div class="additional">
             <div class="additional__container">
-                <div class="additional__sidebar">
-                    <div class="personal-account">
-                        <div class="personal-account__head">
-                            Личный кабинет
+                <div class="additional__menu">
+                    <div class="dictionary-menu">
+                        <div class="dictionary-menu__item js-faq">
+                            <div class="dictionary-menu__head">
+                                <span>ЖБИ</span>
+                                <img src="img/icon-down-grey.svg" alt="">
+                            </div>
+                            <div class="dictionary-menu__body js-faq-body">
+                                <a href="#" class="link link-dark link-sm">Трубы</a>
+                            </div>
                         </div>
-                        <div class="personal-account__body">
-                            <ul class="personal-account__list">
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Мой кабинет</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Персональные данные</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Моя компания</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Мои тендеры</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Мои предложения на
-                                        торгах</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Мои заявки</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Мои ответы на заявки</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Мои объявления</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Подключить прайс-лист</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Добавить объявление</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Добавить завку на
-                                        покупку</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Объявить тендер</a>
-                                </li>
-                                <li class="personal-account__item">
-                                    <a href="#" class="personal-account__link link link-dark">Подписка на рассылку</a>
-                                </li>
-                            </ul>
+                        <div class="dictionary-menu__item js-faq">
+                            <div class="dictionary-menu__head">
+                                <span>Крепеж и метизы</span>
+                                <img src="img/icon-down-grey.svg" alt="">
+                            </div>
+                            <div class="dictionary-menu__body js-faq-body">
+                                <a href="#" class="link link-dark link-sm">Скоба</a>
+                            </div>
+                        </div>
+                        <div class="dictionary-menu__item js-faq">
+                            <div class="dictionary-menu__head">
+                                <span>Фитинг для труб</span>
+                                <img src="img/icon-down-grey.svg" alt="">
+                            </div>
+                            <div class="dictionary-menu__body js-faq-body">
+                                <p><a href="#" class="link link-dark link-sm">Затвор</a></p>
+                                <p><a href="#" class="link link-dark link-sm">Муфта</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="additional__content">
-                    <div class="additional__wrapper">
-                        <h2 class="h2">Добавить компанию в черный список</h2>
-
-                        <p>В письме укажите Наименование поставщика, дату заключения договора поставки, краткое содержание, сумму договора, другие сведения.</p>
-                        <p>Для размещения Вашего уведомления просим Вас прикрепить к письму копии подтверждающих документов: Договор поставки (если имеется), Счёт к оплате, Копия платёжного документа, Акт сверки с данным предприятием. Предоставленные документы только для внутреннего пользования и не будут выложены в свободном доступе.</p>
-
-                        <form action="" class="additional__form additional__form--comments">
-                            <label class="materil-group">
-                                <span class="materil-group__label">Название вашей компании*</span>
-                                <input type="text" class="form-control base-input materil-group__input">
-                            </label>
-                            <label class="materil-group">
-                                <span class="materil-group__label">Название компании добавляемой в черный список*</span>
-                                <input type="text" class="form-control base-input materil-group__input">
-                            </label>
-                            <label class="materil-group">
-                                <span class="materil-group__label">Email</span>
-                                <input type="email" class="form-control base-input materil-group__input">
-                                <div class="materil-group__error-text">Укажите email</div>
-                            </label>
-                            <label class="materil-group">
-                                <span class="materil-group__label">Телефон</span>
-                                <input type="phone" class="form-control base-input materil-group__input phone-input">
-                                <div class="materil-group__error-text">Укажите Телефон</div>
-                            </label>
-                            <label class="materil-group">
-                                <span class="materil-group__label">Комментарий*</span>
-                                <textarea class="form-control base-input materil-group__input materil-group__textarea"></textarea>
-                                <span class="materil-group__label-backdrop"></span>
-                            </label>
-                            <div class="additional__section">
-                                <p class="additional__caption">
-                                    Прикрепить документ:
-                                </p>
-                                <div class="file-reader">
-                                    <div class="file-reader__return">
-                                        <span class="file-reader__return-text"></span>
-                                        <svg class="file-reader__icon-close" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.3848 2.82857L3.82843 18.3849C3.4381 18.7752 2.64615 18.6168 2.06066 18.0314C1.47517 17.4459 1.31678 16.6539 1.70711 16.2636L17.2635 0.707247C17.6538 0.316923 18.4457 0.475314 19.0312 1.0608C19.6167 1.64629 19.7751 2.43824 19.3848 2.82857Z" fill="#001D3A"/>
-                                            <path d="M16.5562 18.3848L0.999849 2.82843C0.609525 2.4381 0.767916 1.64615 1.3534 1.06066C1.93889 0.475174 2.73084 0.316782 3.12117 0.707107L18.6775 16.2635C19.0678 16.6538 18.9095 17.4457 18.324 18.0312C17.7385 18.6167 16.9465 18.7751 16.5562 18.3848Z" fill="#001D3A"/>
-                                        </svg>
-                                    </div>
-
-                                    <input class="file-reader__input" id="my-file" type="file">
-                                    <label tabindex="0" for="my-file" class="file-reader__label">
-                                        <svg class="file-reader__icon-clip" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.6485 1.5L2.52475 12.6881C1.52512 13.792 0.978705 15.254 1.00064 16.7664C1.02257 18.2787 1.61112 19.7232 2.64232 20.7955C3.70234 21.8871 5.13724 22.5 6.63304 22.5C8.12884 22.5 9.56374 21.8871 10.6238 20.7955L19.3759 11.7017C19.7322 11.3351 20.0149 10.8993 20.2078 10.4192C20.4007 9.93924 20.5 9.42453 20.5 8.9047C20.5 8.38487 20.4007 7.87017 20.2078 7.39016C20.0149 6.91015 19.7322 6.47431 19.3759 6.10767C18.6583 5.36671 17.6858 4.95054 16.6719 4.95054C15.658 4.95054 14.6855 5.36671 13.9679 6.10767L7.43641 12.8638C7.04861 13.2545 6.81409 13.7796 6.77792 14.3383C6.74175 14.897 6.90649 15.4498 7.24047 15.8905C7.66534 16.2389 8.2004 16.4111 8.74135 16.3737C9.28231 16.3362 9.79039 16.0917 10.1666 15.6878L15.3917 10.283" stroke="#001D3A" stroke-opacity="0.9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        <div class="file-reader__loader loader loader--dark">Loading...</div>
-                                        <span class="file-reader__input-text">Выбрать файлы</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <label class="materil-group additional__section">
-                                <input type="checkbox" name="check-one" value="check-one" />
-                                <span>Я принимаю условия
-                                    <a href="/" class="link link-sm">договора оферты</a>
-                                </span>
-                            </label>
-                            <label class="materil-group">
-                                <button class="btn btn-primary" type="submit">Отправить</button>
-                            </label>
-                        </form>
+                    <h2 class="h2">Справочник строительных материалов</h2>
+                    <p class="additional__caption h4">
+                        <strong>Скоба такелажная</strong>
+                    </p>
+                    <p class="additional__paragraph">В ходе работы с широким спектром грузоподъемного оборудования нередко прибегают к использованию такелажной скобы. Она позволяет выполнить прочное соединение таких элементов, как канаты, тросы и пр.</p>
+                    <p class="additional__paragraph">
+                        В городе %CITY% можно приобрести разные модификации такелажных скоб. Различаться они могут:
+                    </p>
+                    <p class="additional__paragraph">
+                        Своей формой. Бывают прямые варианты, выполненные в виде буквы U, а также изогнутые модификации (их принято называть омегообразными);
+                    </p>
+                    <p class="additional__paragraph">
+                        Диаметром отверстия для фиксирующего элемента;
+                    </p>
+                    <p class="additional__paragraph">
+                        Допустимым температурным диапазоном. Помимо обычных модификаций можно купить полярные варианты, которые рассчитаны на использования при температуре до -40 ºС;
+                    </p>
+                    <p class="additional__paragraph">
+                        Наличием дополнительных фиксирующих элементов. Среди таких элементов самым распространенным вариантом являются болты, оснащенные корончатой гайкой, их основное назначение – предотвращение самоотвинчивания элементов подъемного механизма;
+                    </p>
+                    <p class="additional__paragraph">
+                        Защитным покрытием. Есть варианты такелажных скоб, рассчитанные на эксплуатацию при взаимодействии с химически активными продуктами. Есть изделия, подходящие для взаимодействия с горячими заготовками.
+                    </p>
+                    <p class="additional__paragraph">
+                        Серийно выпускаемые изделия могут иметь грузоподъемность в 330-150 000 кг. Данный показатель зависит от сырья, из которого изготовлены детали, геометрических параметров и особенностей упрочняющей термообработки.
+                    </p>
+                    <div class="additional__article">
+                        <p class="additional__caption h4">
+                            <strong>Скоба такелажная ГОСТ</strong>
+                        </p>
+                        <p class="additional__paragraph">
+                            Скоба такелажная имеет довольно простую конструкцию, однако подобные элементы должны выпускаться строго в соответствии с государственными стандартами. В частности, речь идет о ГОСТе 2224-93 и DIN 82101. Данные документы стандартизируют:
+                        </p>
+                        <ul class="additional__list additional__paragraph">
+                            <li>1. Марки сырья, которые должны использоваться при выпуске скоб;</li>
+                            <li>2. Требования к поверхности;</li>
+                            <li>3. Способы производства: это может быть гибка, ковка и пр.;</li>
+                            <li>4. Методики контроля качества готовых изделий;</li>
+                            <li>5. Места нанесения маркировки и др.</li>
+                        </ul>
                     </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
-</div>
-
-<!-- AUTH Modal -->
-<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-    <div class="modal-dialog modalS">
-        <div class="modal-content modalS__content">
-            <button type="button" class="btn-close modalS__btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            <div class="modalS__title">Вход</div>
-            <form class="modal-auth">
-                <label class="materil-group">
-                    <span class="materil-group__label">Email</span>
-                    <input type="email" class="form-control base-input materil-group__input">
-                    <div class="materil-group__error-text">Укажите email</div>
-                </label>
-                <label class="materil-group">
-                    <span class="materil-group__label">Пароль</span>
-                    <input type="password" class="form-control base-input materil-group__input">
-                    <div class="materil-group__error-text">Укажите пароль</div>
-                </label>
-                <button type="submit" class="btn btn-primary modal-auth__btn">Войти</button>
-            </form>
-            <div class="modal-auth__actions">
-                <a href="" class="modal-auth__link link">
-                    Зарегистрироваться
-                </a>
-                <a href="" class="modal-auth__link link">
-                    Забыли пароль?
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- AUTH Modal -->
-
-<!-- REGION CHOOSE Modal -->
-<div class="modal fade" id="regionChooseModal" tabindex="-1" aria-labelledby="regionChooseModal" aria-hidden="true">
-    <div class="modal-dialog modalS modalS--region">
-        <div class="modal-content modalS__content">
-            <button type="button" class="btn-close modalS__btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            <div class="modalS__title">Выберите регион</div>
-            <form class="modal-region">
-                <div class="form-group">
-                    <div class="modal-region__input">
-                        <input type="text" class="form-control base-input" placeholder="Название населенного пункта">
-                    </div>
-                    <div class="modal-region__list">
-                        <a href="" class="modal-region__link link link-dark">Москва</a>
-                        <a href="" class="modal-region__link link link-dark">Санкт - Петербург</a>
-                        <a href="" class="modal-region__link link link-dark">Актау и Мангистау</a>
-                        <a href="" class="modal-region__link link link-dark">Актобе и область</a>
-                        <a href="" class="modal-region__link link link-dark">Алматы</a>
-                        <a href="" class="modal-region__link link link-dark">Архангельск</a>
-                        <a href="" class="modal-region__link link link-dark">Астана</a>
-                        <a href="" class="modal-region__link link link-dark">Астрахань и область</a>
-                        <a href="" class="modal-region__link link link-dark">Атырау и область</a>
-                        <a href="" class="modal-region__link link link-dark">Баку</a>
-                        <a href="" class="modal-region__link link link-dark">Белгород</a>
-                        <a href="" class="modal-region__link link link-dark">Брест и область</a>
-                        <a href="" class="modal-region__link link link-dark">Москва</a>
-                        <a href="" class="modal-region__link link link-dark">Санкт - Петербург</a>
-                        <a href="" class="modal-region__link link link-dark">Актау и Мангистау</a>
-                        <a href="" class="modal-region__link link link-dark">Актобе и область</a>
-                        <a href="" class="modal-region__link link link-dark">Алматы</a>
-                        <a href="" class="modal-region__link link link-dark">Архангельск</a>
+                    <div class="additional__article">
+                        <p class="additional__caption h4">
+                            <strong>Скоба такелажная омегообразная</strong>
+                        </p>
+                        <p class="additional__paragraph">
+                            Такие варианты скоб используются как съемные соединительные детали канатов и цепей при их соединении друг с другом или креплении к каким-либо другим конструкциям. Такие изделия подходят для получения многоветвевых строп, так как их форма дает возможность подвешивать сразу 2 ветки строп.
+                        </p>
+                        <p class="additional__paragraph">
+                            Модели с винтовыми штифтами применяют в тех случаях, когда требуется часто менять крепление. Варианты, оснащенные предохранительным болтом, позволяют прочно крепить грузы при длительных операциях. Также эти изделия считаются подходящим вариантом в случае, когда при смещении груза на штифт ему придаются вращательные движения. Таким образом, выбор конкретного варианта скобы зависит от предполагаемой нагрузки и условий ее эксплуатации.
+                        </p>
+                        <p class="additional__paragraph">
+                            Прежде чем заказать такелажные скобы в городе %CITY% следует ознакомиться с предложениями разных компаний. Сегодня это легко сделать с помощью тендерной площадки STROIM100.RU. На данном сайте собрана актуальная информация о производителях и поставщиках этой категории товаров в регионе.
+                        </p>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-<!-- REGION CHOOSE Modal -->
 
-<footer class="footer">
-    <div class="container footer__container">
-        <div class="footer__info">
-            <a href="/" class="footer__logo">
-                <img src="img/header/logo.svg" alt="">
-            </a>
-            <p class="footer__description">
-                Основная цель проекта — обеспечение потенциальных покупателей, на основе свободного доступа, информацией
-                о наличии, цене и качестве различных видов продукции строительной отрасли, с указанием координат
-                потенциальных поставщиков.
-            </p>
-        </div>
-        <div class="footer__nav">
-            <div class="footer__col">
-                <a href="#" class="footer__link link link-dark">О нас</a>
-                <a href="#" class="footer__link link link-dark">Услуги</a>
-                <a href="#" class="footer__link link link-dark">Реклама</a>
-                <a href="#" class="footer__link link link-dark">Контакты</a>
-                <a href="#" class="footer__link link link-dark">Справочник</a>
-            </div>
-            <div class="footer__col">
-                <a href="#" class="footer__link link link-dark">Тендеры</a>
-                <a href="#" class="footer__link link link-dark">Объявления</a>
-                <a href="#" class="footer__link link link-dark">Цены поставщиков</a>
-                <a href="#" class="footer__link link link-dark">Заявки покупателей</a>
-            </div>
-            <div class="footer__col">
-                <a href="tel:" class="footer__link link link-dark">Отдел Продаж: 8 (499) 270 58 45</a>
-                <a href="tel:" class="footer__link link link-dark">Отдел Рекламы +7 (499) 270-58-45</a>
-                <a href="mailto:" class="footer__link link link-dark">Email: info@stroim100.ru </a>
+
+    </div>
+
+    <!-- AUTH Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modalS">
+            <div class="modal-content modalS__content">
+                <button type="button" class="btn-close modalS__btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                <div class="modalS__title">Вход</div>
+                <form class="modal-auth">
+                    <label class="materil-group">
+                        <span class="materil-group__label">Email</span>
+                        <input type="email" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">Укажите email</div>
+                    </label>
+                    <label class="materil-group">
+                        <span class="materil-group__label">Пароль</span>
+                        <input type="password" class="form-control base-input materil-group__input">
+                        <div class="materil-group__error-text">Укажите пароль</div>
+                    </label>
+                    <button type="submit" class="btn btn-primary modal-auth__btn">Войти</button>
+                </form>
+                <div class="modal-auth__actions">
+                    <a href="" class="modal-auth__link link">
+                        Зарегистрироваться
+                    </a>
+                    <a href="" class="modal-auth__link link">
+                        Забыли пароль?
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</footer>
+    <!-- AUTH Modal -->
+
+    <!-- REGION CHOOSE Modal -->
+    <div class="modal fade" id="regionChooseModal" tabindex="-1" aria-labelledby="regionChooseModal" aria-hidden="true">
+        <div class="modal-dialog modalS modalS--region">
+            <div class="modal-content modalS__content">
+                <button type="button" class="btn-close modalS__btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                <div class="modalS__title">Выберите регион</div>
+                <form class="modal-region">
+                    <div class="form-group">
+                        <div class="modal-region__input">
+                            <input type="text" class="form-control base-input"
+                                   placeholder="Название населенного пункта">
+                        </div>
+                        <div class="modal-region__list">
+                            <a href="" class="modal-region__link link link-dark">Москва</a>
+                            <a href="" class="modal-region__link link link-dark">Санкт - Петербург</a>
+                            <a href="" class="modal-region__link link link-dark">Актау и Мангистау</a>
+                            <a href="" class="modal-region__link link link-dark">Актобе и область</a>
+                            <a href="" class="modal-region__link link link-dark">Алматы</a>
+                            <a href="" class="modal-region__link link link-dark">Архангельск</a>
+                            <a href="" class="modal-region__link link link-dark">Астана</a>
+                            <a href="" class="modal-region__link link link-dark">Астрахань и область</a>
+                            <a href="" class="modal-region__link link link-dark">Атырау и область</a>
+                            <a href="" class="modal-region__link link link-dark">Баку</a>
+                            <a href="" class="modal-region__link link link-dark">Белгород</a>
+                            <a href="" class="modal-region__link link link-dark">Брест и область</a>
+                            <a href="" class="modal-region__link link link-dark">Москва</a>
+                            <a href="" class="modal-region__link link link-dark">Санкт - Петербург</a>
+                            <a href="" class="modal-region__link link link-dark">Актау и Мангистау</a>
+                            <a href="" class="modal-region__link link link-dark">Актобе и область</a>
+                            <a href="" class="modal-region__link link link-dark">Алматы</a>
+                            <a href="" class="modal-region__link link link-dark">Архангельск</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- REGION CHOOSE Modal -->
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <a href="/" class="footer__logo">
+                    <img src="img/header/logo.svg" alt="">
+                </a>
+                <p class="footer__description">
+                    Основная цель проекта — обеспечение потенциальных покупателей, на основе свободного доступа,
+                    информацией
+                    о наличии, цене и качестве различных видов продукции строительной отрасли, с указанием координат
+                    потенциальных поставщиков.
+                </p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <a href="#" class="footer__link link link-dark">О нас</a>
+                    <a href="#" class="footer__link link link-dark">Услуги</a>
+                    <a href="#" class="footer__link link link-dark">Реклама</a>
+                    <a href="#" class="footer__link link link-dark">Контакты</a>
+                    <a href="#" class="footer__link link link-dark">Справочник</a>
+                </div>
+                <div class="footer__col">
+                    <a href="#" class="footer__link link link-dark">Тендеры</a>
+                    <a href="#" class="footer__link link link-dark">Объявления</a>
+                    <a href="#" class="footer__link link link-dark">Цены поставщиков</a>
+                    <a href="#" class="footer__link link link-dark">Заявки покупателей</a>
+                </div>
+                <div class="footer__col">
+                    <a href="tel:" class="footer__link link link-dark">Отдел Продаж: 8 (499) 270 58 45</a>
+                    <a href="tel:" class="footer__link link link-dark">Отдел Рекламы +7 (499) 270-58-45</a>
+                    <a href="mailto:" class="footer__link link link-dark">Email: info@stroim100.ru </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 
 </html>

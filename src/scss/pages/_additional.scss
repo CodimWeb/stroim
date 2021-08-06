@@ -138,6 +138,12 @@
   }
 }
 
+.additional__paragraph{
+  & + & {
+    margin: 16px 0 0 0;
+  }
+}
+
 .additional__service-rating{
   display: flex;
 
@@ -152,7 +158,7 @@
   padding: 0 20px 0 10px;
 
   img{
-    max-width: 15px;
+    max-width: 15px!important;
     height: auto;
     margin-right: 5px;
   }
