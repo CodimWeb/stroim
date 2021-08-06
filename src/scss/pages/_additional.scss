@@ -64,7 +64,12 @@
 }
 
 .additional__sidebar{
-  width: 255px;
+  width: 290px;
+  flex-shrink: 0;
+}
+
+.additional__menu{
+  width: 235px;
   flex-shrink: 0;
 }
 
@@ -184,4 +189,10 @@
 
 .additional__link{
   font-size: 18px;
+}
+
+.additional__product{
+  & + & {
+    margin-top: 28px;
+  }
 }

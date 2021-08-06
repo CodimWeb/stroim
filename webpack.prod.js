@@ -158,6 +158,10 @@ module.exports = {
             template: './src/contacts.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'dictionary.html',
+            template: './src/dictionary.html'
+        }),
+        new HtmlWebpackPlugin({
           filename: 'ui.html',
           template: './src/ui.html'
         }),
