@@ -1,0 +1,16 @@
+.status{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text_color;
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  &--open{
+    background-color: #BEFBC4;
+  }
+
+  &--pending{
+    background-color: #DBBEFF;
+  }
+}

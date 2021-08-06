@@ -7,6 +7,7 @@
   font-size: 14px;
   line-height: 160%;
   overflow: hidden;
+  width: 100%;
 }
 
 .table__head,
@@ -15,6 +16,10 @@
   color: $text_color;
   display: flex;
   font-weight: $font-weight-medium;
+
+  & + & {
+    border-top: 1px solid #DFDEE2;
+  }
 }
 
 .table__head .table__col--num {

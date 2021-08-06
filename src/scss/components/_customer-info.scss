@@ -1,0 +1,28 @@
+@import '../abstract/variables';
+
+.customer-info{
+  padding: 16px;
+  border: 1px solid #DFDEE2;
+  border-radius: 8px;
+}
+
+.customer-info__name{
+  font-size: 18px;
+  line-height: 160%;
+  font-weight: $font-weight-medium;
+}
+
+.customer-info__label {
+  font-size: 12px;
+  line-height: 160%;
+  color: $grey;
+  margin: 0 0 4px 0;
+}
+
+.customer-info__row {
+  padding: 8px 0;
+
+  & + & {
+    border-top: 1px solid #DFDEE2
+  }
+}

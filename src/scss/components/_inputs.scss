@@ -116,13 +116,13 @@
 
 .materil-group.error .materil-group__input {
     background-color: #FFD9D9;
-    border-color: #FF3D3D;
+    border-color: $red;
 }
 
 .materil-group__error-text {
     font-size: 12px;
     line-height: 17px;
-    color: #FF3D3D;
+    color: $red;
     display: none;
     position: absolute;
     left: 0;

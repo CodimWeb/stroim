@@ -1,0 +1,52 @@
+@import '../abstract/_variables.scss';
+
+.tender-page{
+
+  strong{
+    font-weight: $font-weight-medium;
+  }
+}
+
+.tender-page__row{
+  display: flex;
+
+  & + & {
+    margin: 24px 0 0 0;
+  }
+}
+
+.tender-page__content{
+  width: 930px;
+  flex-shrink: 0;
+}
+
+.tender-page__section{
+}
+
+.tender-page__sidebar{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.tender-page__text{
+  margin: 0 0 8px 0;
+
+  &--grey {
+    color: $grey;
+  }
+
+  &--red {
+    color: $red;
+  }
+
+  &--green {
+    color: $green;
+  }
+
+  &--sm{
+    font-size: 14px;
+  }
+}

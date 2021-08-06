@@ -166,6 +166,10 @@ module.exports = {
             template: './src/dictionary-coupling.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'tender-bidding.html',
+            template: './src/tender-bidding.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
