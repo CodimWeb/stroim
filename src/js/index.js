@@ -156,7 +156,7 @@ $(document).ready(function(){
 
     toggleFaq();
     fileReader();
-
+    takePartInTender();
 });
 
 function toggleFaq() {
@@ -173,6 +173,8 @@ function toggleFaq() {
 
 function fileReader() {
     var fileInput  = document.querySelector( ".file-reader__input" );
+    if(!fileInput) return;
+
     var button     = document.querySelector( ".file-reader__label" );
     var theReturn = document.querySelector(".file-reader__return")
     var theReturnText = document.querySelector(".file-reader__return-text");
@@ -202,4 +204,16 @@ function fileReader() {
         }
     }
 
+};
+
+function takePartInTender() {
+    const $btn = $('.js-take-part');
+    if( !$btn ) return;
+
+    $btn.on('click', function (e) {
+        e.preventDefault();
+        $btn.hide();;
+        $('.js-take-part-info').hide();
+        $('.js-take-part-form').show();
+    })
 }

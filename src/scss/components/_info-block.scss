@@ -3,13 +3,53 @@
 .info-block{
   position: relative;
   max-width: 985px;
-  padding: 39px 40px 39px 104px;
+  width: 100%;
+  min-height: 104px;
+  padding: 24px 40px 24px 24px;
   border-radius: 8px;
   background-color: #F9F9F9;
-  background-image: url(../img/info.svg);
-  background-position: 24px 50%;
-  background-repeat: no-repeat;
+
+  color: rgba( $text_color, .9);
+  display: flex;
+
+  &--sm {
+    font-size: 14px;
+  }
+}
+
+.info-block__icon{
+  margin-right: 16px;
+
+  &--large {
+    margin-right: 32px;
+  }
+}
+
+.info-block__caption{
+  margin-bottom: 6px;
+  font-weight: normal;
+}
+
+.info-block__text{
   font-size: 16px;
   line-height: 160%;
-  color: rgba( $text_color, .9);
+
+  em {
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 8px;
+
+    &:first-child{
+      margin: 0;
+    }
+  }
+}
+
+.info-block__note{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.js-take-part-form{
+  display: none;
 }
