@@ -13,6 +13,8 @@ import Tab from 'bootstrap/js/dist/tab';
 import '../scss/style.scss';
 
 import Inputmask from "inputmask";
+import 'slick-carousel';
+
 import select2 from 'select2';
 
 
@@ -157,6 +159,7 @@ $(document).ready(function(){
     toggleFaq();
     fileReader();
     takePartInTender();
+    initSlider();
 });
 
 function toggleFaq() {
@@ -215,5 +218,15 @@ function takePartInTender() {
         $btn.hide();;
         $('.js-take-part-info').hide();
         $('.js-take-part-form').show();
+    })
+};
+
+function initSlider() {
+    const $slider = $(".slider-wrapper");
+
+    $slider.slick({
+        arrows: true,
+        nextArrow: $('.slider__btn-next'),
+        prevArrow: $('.slider__btn-prev'),
     })
 }
