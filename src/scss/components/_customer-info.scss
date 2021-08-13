@@ -1,0 +1,80 @@
+@import '../abstract/variables';
+
+.customer-info{
+  width: 100%;
+  padding: 12px 16px 24px;
+  border: 1px solid #DFDEE2;
+  border-radius: 8px;
+}
+
+.customer-info__head{
+  padding: 12px 0 0 0;
+}
+
+.customer-info__name,
+.customer-info__title{
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.customer-info__title{
+  font-size: 18px;
+  font-weight: $font-weight-medium;
+
+}
+
+.customer-info__label {
+  font-size: 16px;
+  line-height: 160%;
+  color: $grey;
+  margin: 0 0 4px 0;
+}
+
+.customer-info__accent {
+
+  &-green {
+    color: $green;
+    font-weight: $font-weight-medium;
+  }
+
+  &-black{
+    color: $text_color;
+  }
+
+  &-blue {
+    color: $blue;
+    margin: 12px 0 0;
+    display: block;
+  }
+  &-grey {
+    color: $grey;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.customer-info__box{
+
+}
+
+.customer-info__row {
+  padding: 12px 0;
+  border-bottom: 1px solid #DFDEE2;
+}
+
+.customer-info__footnote{
+  padding-top: 24px;
+  text-align: center;
+}
+
+.customer-info__footnote-label{
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey;
+  margin: 0 0 12px 0;
+}
+
+.customer-info__btn{
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

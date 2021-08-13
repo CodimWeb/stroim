@@ -1,0 +1,97 @@
+@import '../abstract/_variables.scss';
+
+.tender-page{
+  display: flex;
+  padding-bottom: 120px;
+
+  strong{
+    font-weight: $font-weight-medium;
+  }
+}
+
+.tender-page__row{
+  width: 100%;
+
+  & + & {
+    margin: 24px 0 0 0;
+  }
+}
+
+.tender-page__content{
+  flex: 1;
+}
+
+.tender-page__section{
+  margin-top: 32px;
+
+  &--lg {
+    margin-top: 48px;
+  }
+}
+
+.tender-page__sidebar{
+  width: 397px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tender-page__text{
+  margin: 0 0 12px 0;
+
+  &--grey {
+    color: $grey;
+  }
+
+  &--red {
+    color: $red;
+  }
+
+  &--green {
+    color: $green;
+  }
+
+  &--sm{
+    font-size: 14px;
+  }
+}
+
+.tender-page__info{
+
+}
+
+.tender-page__info-row{
+
+  & + & {
+    margin-top: 8px;
+  }
+
+}
+
+.tender-page__info-grey{
+  color: $grey;
+}
+
+.tender-page__form{
+  max-width: 360px;
+
+  &--lg {
+    max-width: 480px;
+  }
+
+  .materil-group{
+    margin-top: 24px;
+  }
+}
+
+.tender-page__form-label {
+  margin-bottom: -8px;
+}
+
+.tender-page__form-field{
+
+  & + & {
+    margin-top: 16px;
+  }
+}

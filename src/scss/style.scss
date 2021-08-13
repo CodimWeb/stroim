@@ -59,9 +59,13 @@
 @import "components/recovery";
 @import "components/info-block";
 @import "components/ _personal-account";
-@import "src/scss/pages/additional";
 @import "components/black-card";
 @import "components/product-item";
+@import "components/loader";
+@import "components/advertisement-card";
+@import "components/dictionary-menu";
+@import "components/status";
+@import "components/customer-info";
 
 //Layout
 @import "layout/header";
@@ -72,3 +76,6 @@
 @import "pages/register";
 @import "pages/ceni-postavshikov-card";
 @import "pages/advertisement-card";
+@import "pages/tender-page";
+@import "pages/additional";
+

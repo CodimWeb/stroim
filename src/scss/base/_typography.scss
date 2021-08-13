@@ -76,6 +76,10 @@ p {
 
 .link-dark  {
     color: #001D3A;
+
+    &:hover {
+        color: #3275EE;
+    }
 }
 
 .link-sm {

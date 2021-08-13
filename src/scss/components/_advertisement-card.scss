@@ -1,0 +1,28 @@
+@import '../abstract/variables';
+
+.advertisement-card{
+  padding: 24px 16px 70px 24px;
+  display: flex;
+  border: 2px solid #DFDEE2;
+  border-radius: 8px;
+  height: 100% ;
+}
+
+.advertisement-card__content{
+  position: relative;
+}
+.advertisement-card__img{
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.advertisement-card__link{
+  color: $text-color;
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+
+  svg{
+    margin-left: 5px;
+  }
+}

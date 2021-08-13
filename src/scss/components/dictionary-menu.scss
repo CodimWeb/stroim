@@ -1,0 +1,32 @@
+@import "../abstract/variables";
+
+.dictionary-menu{
+}
+
+.dictionary-menu__item{
+  padding: 12px 0;
+}
+
+.dictionary-menu__body {
+  padding: 16px 0 4px;
+  display: none;
+}
+
+.dictionary-menu__head {
+  position: relative;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transition: transform .2s;
+    transform: translateY(-50%) rotate(0);
+
+    .faq--open & {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

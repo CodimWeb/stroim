@@ -24,17 +24,42 @@
     font-weight: $font-weight-medium;
   }
 
+  .additional__caption,
+  .additional__service{
+    margin: 0 0 12px 0;
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .additional__service {
+
+    &--red{
+      color: $red;
+    }
+    &--mb-0{
+      margin: 0;
+    }
+  }
+
 }
 
 .additional__form{
   margin: 48px 0 0;
 
-  &--comments {
-    width: 360px;
-  }
 
   label + label {
     margin-top: 24px;
+  }
+
+  &-inner{
+    width: 360px;
+  }
+
+  &--comments {
+    width: 500px;
   }
 }
 
@@ -43,7 +68,12 @@
 }
 
 .additional__sidebar{
-  width: 255px;
+  width: 290px;
+  flex-shrink: 0;
+}
+
+.additional__menu{
+  width: 235px;
   flex-shrink: 0;
 }
 
@@ -81,8 +111,98 @@
   color: $text-color;
 }
 
-.additional__caption,
-.additional__service{
-  margin-bottom: 12px;
+
+.additional__service-caption{
+  margin: 0 0 5px 0 !important;
 }
 
+.additional__picture{
+  display: flex;
+}
+
+.additional__picture-content{
+  flex-grow: 1;
+  padding: 0 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.additional__picture-img{
+  width: 550px;
+  flex-shrink: 0;
+}
+
+.additional__picture-text{
+  font-size: 16px;
+  line-height: 160%;
+
+  & + & {
+    margin-top: 55px;
+  }
+}
+
+.additional__paragraph{
+  & + & {
+    margin: 16px 0 0 0;
+  }
+}
+
+.additional__service-rating{
+  display: flex;
+
+  & + & {
+    margin-top: 8px;
+  }
+}
+
+.additional__service-stars{
+  display: flex;
+  width: 75px;
+  padding: 0 20px 0 10px;
+
+  img{
+    max-width: 15px!important;
+    height: auto;
+    margin-right: 5px;
+  }
+}
+
+.additional__list{
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.additional__signature{
+  margin-top: 56px;
+  text-align: right;
+  font-size: 18px;
+  line-height: 160%;
+  font-weight: $font-weight-medium;
+
+  p{
+    margin: 0!important;
+  }
+}
+
+.additional__comment{
+  padding: 24px 0;
+}
+
+.additional__comments{
+  margin: -16px 0 32px 0;
+}
+
+.additional__form-label{
+  color: $grey;
+}
+
+.additional__link{
+  font-size: 18px;
+}
+
+.additional__product{
+  & + & {
+    margin-top: 28px;
+  }
+}

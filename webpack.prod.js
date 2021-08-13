@@ -112,6 +112,82 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: 'advertisement-card.html',
           template: './src/advertisement-card.html'
+        }), 
+        new HtmlWebpackPlugin({ 
+          filename: 'tender-card-unauth.html',
+          template: './src/tender-card-unauth.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'blacklist.html',
+          template: './src/blacklist.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'blacklist-company.html',
+          template: './src/blacklist-company.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'add-to-blacklist.html',
+          template: './src/add-to-blacklist.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blacklist.html',
+            template: './src/blacklist.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blacklist-company.html',
+            template: './src/blacklist-company.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'add-to-blacklist.html',
+            template: './src/add-to-blacklist.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'services.html',
+            template: './src/services.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'advertisement.html',
+            template: './src/advertisement.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'banner-grid.html',
+            template: './src/banner-grid.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'price-list.html',
+            template: './src/price-list.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template: './src/contacts.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary.html',
+            template: './src/dictionary.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-pipes.html',
+            template: './src/dictionary-pipes.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-brackets.html',
+            template: './src/dictionary-brackets.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-shutter.html',
+            template: './src/dictionary-shutter.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dictionary-coupling.html',
+            template: './src/dictionary-coupling.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'tender-bidding.html',
+            template: './src/tender-bidding.html'
         }),
         new HtmlWebpackPlugin({
           filename: 'ui.html',
@@ -122,7 +198,7 @@ module.exports = {
             filename: "css/style.[hash].css"
         }),
         new CopyWebpackPlugin(
-            { 
+            {
                 patterns: [
                     { from: './src/img', to: './img' },
                     // { from: './src/fonts', to: './dist/fonts' }
@@ -133,5 +209,5 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
         }),
-    ],   
+    ],
 }
