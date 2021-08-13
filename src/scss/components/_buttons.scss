@@ -25,6 +25,10 @@
         font-size: 14px;
         padding: 6px 24px;
     }
+
+    svg {
+        margin-right: 8px;
+    }
 }
 
 .btn-primary {
@@ -59,4 +63,8 @@
         border-color: #1C4A9D;
         color: #1C4A9D;
     }
+}
+
+.btn-block {
+    width: 100%;
 }

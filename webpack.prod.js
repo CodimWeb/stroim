@@ -110,6 +110,10 @@ module.exports = {
           template: './src/ceni-postavshikov-card.html'
         }),
         new HtmlWebpackPlugin({
+          filename: 'advertisement-card.html',
+          template: './src/advertisement-card.html'
+        }),
+        new HtmlWebpackPlugin({
           filename: 'ui.html',
           template: './src/ui.html'
         }),

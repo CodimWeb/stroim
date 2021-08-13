@@ -58,6 +58,10 @@
 @import "components/pagination";
 @import "components/recovery";
 @import "components/info-block";
+@import "components/ _personal-account";
+@import "src/scss/pages/additional";
+@import "components/black-card";
+@import "components/product-item";
 
 //Layout
 @import "layout/header";
@@ -67,3 +71,4 @@
 @import "pages/advertisment";
 @import "pages/register";
 @import "pages/ceni-postavshikov-card";
+@import "pages/advertisement-card";

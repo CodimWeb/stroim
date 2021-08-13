@@ -123,7 +123,7 @@ $(document).ready(function(){
     if(phones) {
         Inputmask({"mask": "+7(999) 999-99-99"}).mask(phones);
     }
-    
+
     $('.register-type').on('change', function(e){
         if(e.target.id == 'register-individual') {
             $('.refister__form').removeClass('active');
@@ -146,12 +146,32 @@ $(document).ready(function(){
     //         $('.catalog-list').addClass('horizontal')
     //     }
     //     else {
-    //         $('.catalog-list').removeClass('horizontal')  
+    //         $('.catalog-list').removeClass('horizontal')
     //     }
-        
+
     // })
 
+    // file loader
+    var fileInput  = document.querySelector( ".input-file" ),
+        button     = document.querySelector( ".input-file-trigger" ),
+        the_return = document.querySelector(".file-return");
+
+    button.addEventListener( "keydown", function( event ) {
+        if ( event.keyCode == 13 || event.keyCode == 32 ) {
+            fileInput.focus();
+        }
+    });
+    button.addEventListener( "click", function( event ) {
+        fileInput.focus();
+        return false;
+    });
+    fileInput.addEventListener( "change", function( event ) {
+        console.log(the_return);
+        the_return.innerHTML = this.value;
+    });
+
     toggleFaq();
+
 });
 
 function toggleFaq() {
