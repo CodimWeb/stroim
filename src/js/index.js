@@ -14,11 +14,14 @@ import '../scss/style.scss';
 
 import Inputmask from "inputmask";
 import select2 from 'select2';
+import slick from 'slick-carousel';
 
 
 $(document).ready(function(){
 
-    $('body').removeClass('transition-off')
+    setTimeout(function (){
+        $('body').removeClass('transition-off')
+    }, 100);
 
     $('.materil-group__input').on('focus', function(){
         $(this).closest('.materil-group').addClass('active');
