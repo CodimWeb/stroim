@@ -16,7 +16,6 @@ import Inputmask from "inputmask";
 import 'slick-carousel';
 
 import select2 from 'select2';
-import slick from 'slick-carousel';
 
 
 $(document).ready(function(){
@@ -231,5 +230,6 @@ function initSlider() {
         arrows: true,
         nextArrow: $('.slider__btn-next'),
         prevArrow: $('.slider__btn-prev'),
+        dots: true,
     })
 }

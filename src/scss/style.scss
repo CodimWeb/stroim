@@ -2,11 +2,6 @@
     transition: none !important;
 }
 
-// SLick
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-@import "components/slider";
-
 // BS Abstract
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -31,8 +26,13 @@
 @import "~bootstrap/scss/bootstrap-grid";
 // @import "~bootstrap/scss/bootstrap";
 
-// plugins
+// PLUGINS
+//select2
 @import "~select2/src/scss/core.scss";
+// SLick
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "components/slider";
 
 // fonts
 @import "base/fonts";
@@ -63,7 +63,7 @@
 @import "components/pagination";
 @import "components/recovery";
 @import "components/info-block";
-@import "components/ _personal-account";
+@import "components/personal-account";
 @import "components/black-card";
 @import "components/product-item";
 @import "components/loader";
