@@ -1,3 +1,15 @@
+.breadcrumbs-panel {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    margin-bottom: 24px;
+
+    .breadcrumbs {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+}
+
 .breadcrumbs {
     display: flex;
     padding-top: 24px;
@@ -32,4 +44,12 @@
 
 .breadcrumbs__text {
     color: #646464;
+}
+
+.breadcrumbs__subscribe {
+    margin-left: auto;
+}
+
+.breadcrumbs__subscribe img {
+    margin-right: 5px;
 }

@@ -232,4 +232,31 @@ function initSlider() {
         prevArrow: $('.slider__btn-prev'),
         dots: true,
     })
+
+    const $cardSliderNav = $('.product-card__slider-nav .slider')
+    const $cardSlider = $('.product-card__slider .slider')
+    $cardSlider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        asNavFor: '.product-card__slider-nav .slider',
+        infinite: false,
+        autoplay: true,
+        autoplaySpeed: 4000
+    });
+
+    $cardSliderNav.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.product-card__slider .slider',
+        arrows: false,
+        infinite: false,
+        dots: false,
+        centerMode: false,
+        swipe: false,
+        focusOnSelect: true,
+        vertical: true
+    });
+    
 }
