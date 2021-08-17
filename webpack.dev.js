@@ -174,8 +174,20 @@ module.exports = {
             template: './src/dictionary-coupling.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'tender-bidding.html',
-            template: './src/tender-bidding.html'
+            filename: 'tender-bidding-1.html',
+            template: './src/tender-bidding-1.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'tender-bidding-2.html',
+            template: './src/tender-bidding-2.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'tender-bidding-3.html',
+            template: './src/tender-bidding-3.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'statement-no-auth.html',
+            template: './src/statement-no-auth.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui.html',
