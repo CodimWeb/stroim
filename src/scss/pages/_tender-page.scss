@@ -35,6 +35,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  &--statement {
+    padding-top: 134px;
+  }
 }
 
 .tender-page__text{

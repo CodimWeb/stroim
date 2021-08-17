@@ -186,8 +186,12 @@ module.exports = {
             template: './src/tender-bidding-3.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'statement-no-auth.html',
-            template: './src/statement-no-auth.html'
+            filename: 'statement-unauth.html',
+            template: './src/statement-unauth.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'statement-isauth.html',
+            template: './src/statement-isauth.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui.html',
