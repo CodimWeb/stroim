@@ -50,4 +50,14 @@
   img{
     padding-left: 3px;
   }
+
+  svg {
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(4px);
+    }
+  }
 }

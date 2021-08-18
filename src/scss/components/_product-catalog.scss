@@ -50,6 +50,13 @@
     position: absolute;
     left: 0;
     top: 6px;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &:hover {
+    &:before {
+      transform: translateX(3px);
+    }
   }
 }
 
