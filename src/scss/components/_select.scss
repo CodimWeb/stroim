@@ -3,6 +3,10 @@
 .select2-container {
   .base-select {
     height: 52px;
+
+    &.select--sm {
+      height: 38px;
+    }
   }
 
   .select-header{
@@ -36,10 +40,20 @@
   }
 }
 
-.select2-container--default .base-select .select2-selection__rendered {
-  height: 50px;
-  padding: 19px 16px 5px;
-  background: #F2F2F2;
+.select2-container--default .base-select {
+  &.select--sm{
+    .select2-selection__rendered {
+      height: 38px;
+      padding: 6px 10px 5px;
+      background: #F2F2F2;
+    }
+  }
+
+  .select2-selection__rendered {
+    height: 50px;
+    padding: 19px 16px 5px;
+    background: #F2F2F2;
+  }
 }
 
 .select2-container--default .select-header .select2-selection__rendered {
@@ -63,11 +77,19 @@
   top: 50%;
   right: 18px;
   margin-top: -3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-image: url(../img/icon-down.svg);
 }
 
 .select2-container--default .select-header .select2-selection__arrow{
   right: 10px;
+}
+
+.select2-container--default .base-select.select--sm .select2-selection__arrow{
+  width: 10px;
+  right: 13px;
 }
 
 .select2-container--default .base-select .select2-selection__arrow b,

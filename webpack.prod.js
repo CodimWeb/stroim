@@ -112,8 +112,8 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: 'advertisement-card.html',
           template: './src/advertisement-card.html'
-        }), 
-        new HtmlWebpackPlugin({ 
+        }),
+        new HtmlWebpackPlugin({
           filename: 'tender-card-unauth.html',
           template: './src/tender-card-unauth.html'
         }),
@@ -204,10 +204,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'statement-isauth.html',
             template: './src/statement-isauth.html'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'statement-no-auth.html',
-            template: './src/statement-no-auth.html'
         }),
         new HtmlWebpackPlugin({
           filename: 'ui.html',
