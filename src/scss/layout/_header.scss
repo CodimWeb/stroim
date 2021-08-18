@@ -79,6 +79,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 0 7px!important;
+  overflow: initial!important;
 }
 
 .header__right{
@@ -261,6 +262,11 @@
     opacity: 1;
   }
 
+}
+
+.header__search-input-wrap{
+  width: 138px;
+  flex-shrink: 0;
 }
 
 .header__search--infocus .header__search-input {
