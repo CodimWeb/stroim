@@ -114,10 +114,6 @@ module.exports = {
           template: './src/advertisement-card.html'
         }),
         new HtmlWebpackPlugin({
-          filename: 'tender-card-unauth.html',
-          template: './src/tender-card-unauth.html'
-        }),
-        new HtmlWebpackPlugin({
           filename: 'blacklist.html',
           template: './src/blacklist.html'
         }),
