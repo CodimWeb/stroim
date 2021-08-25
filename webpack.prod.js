@@ -213,8 +213,24 @@ module.exports = {
             template: './src/basket-empty.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'personal-account-price.html',
-            template: './src/personal-account-price.html'
+            filename: 'personal-account_price.html',
+            template: './src/personal-account_price.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-office.html',
+            template: './src/personal-account_my-office.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_personal-data.html',
+            template: './src/personal-account_personal-data.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-company.html',
+            template: './src/personal-account_my-company.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-tenders.html',
+            template: './src/personal-account_my-tenders.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui.html',

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Заявка для не авторизованного</title>
+    <title>Личный кабинет - добавить прайс лист</title>
 </head>
 
 <body class="page transition-off">
@@ -23,7 +23,7 @@
             </a>
             <div class="header__links">
                 <a href="/about" class="header__link">О нас</a>
-                <a href="/black" class="header__link">Черный список</a>
+                <a href="/black" class="header__link">Личный кабинет</a>
                 <a href="tel:" class="header__link">
                 Отдел Продаж:
                 <span class="header__link--accent">8 (499) 270 58 45</span>
@@ -277,371 +277,120 @@
     <div class="content">
 
         <div class="container">
-            <div class="breadcrumbs-panel">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item">
-                        <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__text">Заявки покупателей</span>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__text">Бетон гранит</span>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__text">Бетон гранит М-150 П2 F50 W2</span>
-                    </li>
-                </ul>
-                <a href="#" class="link link-sm breadcrumbs__subscribe">
-                    <img src="img/icon-subscribe.svg" alt=""> Подписаться на разлел
-                </a>
-            </div>
-            <div class="tender-page">
-
-                <div class="tender-page__content">
-                    <div class="tender-page__row">
-                        <h3 class="tender-page__text">
-                            Куплю ЖБИ Плиты аэродромные ПАГ-14А800-1 Москва и область
-                        </h3>
-
-                        <p class="tender-page__text tender-page__text--sm tender-page__text--grey">
-                            Заявка №6647 от
-                            <strong>26.03.2021 10:40</strong>
-                        </p>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">Личный кабинет</span>
+                </li>
+            </ul>
+            <div class="personal-account">
+                <div class="personal-account__container">
+                    <div class="personal-account__sidebar">
+                        <div class="personal-account-sidebar">
+                            <div class="personal-account-sidebar__head">
+                                Личный кабинет
+                            </div>
+                            <div class="personal-account-sidebar__body">
+                                <ul class="personal-account-sidebar__list">
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#personal-account-price_my-office.html" class="personal-account-sidebar__link link link-dark">Мой кабинет</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link  link-dark">Персональные данные</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Моя компания</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark active">Мои тендеры</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Мои предложения на
+                                        торгах</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Мои заявки</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Мои ответы на заявки</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Мои объявления</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="/personal-account-sidebar-price.html" class="personal-account-sidebar__link link link-dark ">Подключить прайс-лист</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Добавить объявление</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Добавить завку на
+                                        покупку</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Объявить тендер</a>
+                                    </li>
+                                    <li class="personal-account-sidebar__item">
+                                        <a href="#" class="personal-account-sidebar__link link link-dark">Подписка на рассылку</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="tender-page__row">
-                        <h4 class="tender-page__text">
-                            <strong>Состав заявки</strong>
-                        </h4>
-                        <div class="table">
+                    <div class="personal-account__content">
+                        <h2 class="h2 mb-4">Мои тендеры</h2>
+                        <div class="table table--bordered table-v3">
                             <div class="table__head">
-                                <div class="table__col table__col--num">
-                                    №
+                                <div class="table__col table__col--pdata">
+                                    Дата
                                 </div>
-                                <div class="table__col table__col--title">
-                                    Наименование
+                                <div class="table__col table__col--tender-num">
+                                    № тендера
                                 </div>
-                                <div class="table__col table__col--size">
-                                    Размер
+                                <div class="table__col table__col--pstructure">
+                                    Состав
                                 </div>
-                                <div class="table__col table__col--count">
-                                    Кол-во
-                                </div>
-                                <div class="table__col table__col--width">
-                                    Длина
-                                </div>
-                                <div class="table__col table__col--params">
-                                    Параметры
-                                </div>
-                                <div class="table__col table__col--cost">
-                                    Цена (не больше)
+                                <div class="table__col table__col--tender-status">
+                                    Статус тендера
                                 </div>
                             </div>
                             <div class="table__body">
                                 <div class="table__row">
-                                    <div class="table__col table__col--num">
-                                        1
+                                    <div class="table__col table__col--pdata">
+                                        <div class="table__field">
+                                            <div class="grey">Создан</div>
+                                            <div>30.10.2021 в 15:20</div>
+                                        </div>
+                                        <div class="table__field">
+                                            <div class="grey">Период торгов</div>
+                                            <div><strong>30.10.2021 в 15:20</strong></div>
+                                        </div>
+                                        <div class="table__field">
+                                            <div class="grey">По</div>
+                                            <div><strong>30.10.2021 в 15:20</strong></div>
+                                        </div>
                                     </div>
-                                    <div class="table__col table__col--title">
-                                        Тендер на поставку отводы, соеденители и прочее
+                                    <div class="table__col table__col--tender-num blue">
+                                        6843
                                     </div>
-                                    <div class="table__col table__col--size">
-                                        СВ - 95 -3
+                                    <div class="table__col table__col--pstructure">
+                                        <div class="mb-1"><strong>Тестовый</strong></div>
+                                        <p class="mb-1">
+                                            <strong>Лот 1</strong>
+                                            <span class="grey"><strong>Тестовый лот</strong></span>
+                                        </p>
+                                        <div class="mb-1"><strong>1. Бетонный блок</strong></div>
+                                        <div>Требется доставка</div>
                                     </div>
-                                    <div class="table__col table__col--count">
-                                        296
-                                    </div>
-                                    <div class="table__col table__col--width">
-                                        Не указана
-                                    </div>
-                                    <div class="table__col table__col--params">
-                                        Не указаны
-                                    </div>
-                                    <div class="table__col table__col--cost">
-                                        32 400 руб.
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col table__col--num">
-                                        2
-                                    </div>
-                                    <div class="table__col table__col--title">
-                                        Тендер на поставку отводы, соеденители и прочее
-                                    </div>
-                                    <div class="table__col table__col--size">
-                                        СВ - 95 -3
-                                    </div>
-                                    <div class="table__col table__col--count">
-                                        296
-                                    </div>
-                                    <div class="table__col table__col--width">
-                                        Не указана
-                                    </div>
-                                    <div class="table__col table__col--params">
-                                        Не указаны
-                                    </div>
-                                    <div class="table__col table__col--cost">
-                                        42 400 руб.
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col table__col--num">
-                                        2
-                                    </div>
-                                    <div class="table__col table__col--title">
-                                        Тендер на поставку отводы, соеденители и прочее
-                                    </div>
-                                    <div class="table__col table__col--size">
-                                        СВ - 95 -3
-                                    </div>
-                                    <div class="table__col table__col--count">
-                                        296
-                                    </div>
-                                    <div class="table__col table__col--width">
-                                        Не указана
-                                    </div>
-                                    <div class="table__col table__col--params">
-                                        Не указаны
-                                    </div>
-                                    <div class="table__col table__col--cost">
-                                        42 400 руб.
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="tender-page__row">
-                        <div class="tender-page__form-label">
-                            <img src="img/icon-truck.svg" alt="" style="padding-right: 5px">
-                            <span>Требуется доставка (г. Москва, ул. Центарильная 21)</span>
-                        </div>
-                    </div>
-
-                    <div class="tender-page__row">
-                        <h6 class="tender-page__text--grey">Комментарий к заявке</h6>
-                        <p>
-                            Переходник (тройник) на закачную скважину предназначен для монтажа на закачную скважину, в условиях самоизлива служит герметизирующим устройством, также является средством для коммутации с технологическим узлом закисления (ТУЗом). Представляет из себя
-                            трубу ПНД-110 с конической резьбой для вкручивания в обсадную трубу ПНД-110 и отвод-63 с отбортовкой 50 (с обратным фланцем ДУ-50, ст-3). Отвод служит для установки запорной арматуры, через которую скважина подключается к ТУЗу.
-                            Сверху посредством конической резьбы в оголовник закачной скважины вкручивается заглушка (ОНС).
-                        </p>
-                    </div>
-
-
-
-                    <div class="tender-page__section">
-                        <div class="info-block">
-                            <div class="info-block__icon info-block__icon--large">
-                                <img src="img/icon-avatar.svg" alt="">
-                            </div>
-                            <div class="info-block__text">
-                                <h3 class="info-block__caption">Здравствуйте, Иван Иванович</h3>
-                                <p><strong>Вы можете ответить на заявку покупателя!</strong></p>
-                                <em class="info-block__note">Просто заполните стоимость тех позиций, которые Вы можете продать. В случае если какую-то позицию Вы не можете продать, оставьте соответствующее поле пустым.</em>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tender-page__section">
-                        <h4 class="tender-page__text">
-                            <strong>Ваше предлжение</strong>
-                        </h4>
-                        <div class="table">
-                            <div class="table__head">
-                                <div class="table__col table__col--num">
-                                    №
-                                </div>
-                                <div class="table__col table__col--stitle">
-                                    Наименование
-                                </div>
-                                <div class="table__col table__col--asize">
-                                    Размер
-                                </div>
-                                <div class="table__col table__col--scount">
-                                    Кол-во
-                                </div>
-                                <div class="table__col table__col--swidth">
-                                    Длина
-                                </div>
-                                <div class="table__col table__col--swidth">
-                                    Параметры
-                                </div>
-                                <div class="table__col table__col--scost">
-                                    Цена (не больше)
-                                </div>
-                                <div class="table__col table__col--scount">
-                                    Ед. изм
-                                </div>
-                                <div class="table__col table__col--count">
-                                    Стоимость
-                                </div>
-                            </div>
-                            <div class="table__body">
-                                <div class="table__row">
-                                    <div class="table__col table__col--num">
-                                        1
-                                    </div>
-                                    <div class="table__col table__col--stitle">
-                                        Стойки
-                                    </div>
-                                    <div class="table__col table__col--asize">
-                                        СВ - 95 -3
-                                    </div>
-                                    <div class="table__col table__col--scount">
-                                        296
-                                    </div>
-                                    <div class="table__col table__col--swidth">
-                                        Не указана
-                                    </div>
-                                    <div class="table__col table__col--swidth">
-                                        Не указаны
-                                    </div>
-                                    <div class="table__col table__col--scost">
-                                        <input type="text" class="base-input base-input--sm" value="1200">
-                                        <span class="table__value">Руб. за</span>
-                                    </div>
-                                    <div class="table__col table__col--scount">
-                                        <select name="" id="" class="select select--sm">
-                                        <option value="1">кг</option>
-                                        <option value="2">т</option>
-                                        <option value="3">lb</option>
-                                        <option value="4">st</option>
-                                    </select>
-                                    </div>
-                                    <div class="table__col table__col--count">
-                                        <input type="text" class="base-input base-input--sm" value="1200">
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col table__col--num">
-                                        2
-                                    </div>
-                                    <div class="table__col table__col--stitle">
-                                        Стойки
-                                    </div>
-                                    <div class="table__col table__col--asize">
-                                        СВ - 95 -3
-                                    </div>
-                                    <div class="table__col table__col--scount">
-                                        296
-                                    </div>
-                                    <div class="table__col table__col--swidth">
-                                        Не указана
-                                    </div>
-                                    <div class="table__col table__col--swidth">
-                                        Не указаны
-                                    </div>
-                                    <div class="table__col table__col--scost">
-                                        <input type="text" class="base-input base-input--sm" value="1200">
-                                        <span class="table__value">Руб. за</span>
-                                    </div>
-                                    <div class="table__col table__col--scount">
-                                        <select name="" id="" class="select select--sm">
-                                        <option value="1">кг</option>
-                                        <option value="2">т</option>
-                                        <option value="3">lb</option>
-                                        <option value="4">st</option>
-                                    </select>
-                                    </div>
-                                    <div class="table__col table__col--count">
-                                        <input type="text" class="base-input base-input--sm" value="1200">
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col table__col--num">
-                                        3
-                                    </div>
-                                    <div class="table__col table__col--stitle">
-                                        Стойки
-                                    </div>
-                                    <div class="table__col table__col--asize">
-                                        СВ - 95 -3
-                                    </div>
-                                    <div class="table__col table__col--scount">
-                                        296
-                                    </div>
-                                    <div class="table__col table__col--swidth">
-                                        Не указана
-                                    </div>
-                                    <div class="table__col table__col--swidth">
-                                        Не указаны
-                                    </div>
-                                    <div class="table__col table__col--scost">
-                                        <input type="text" class="base-input base-input--sm" value="1200">
-                                        <span class="table__value">Руб. за</span>
-                                    </div>
-                                    <div class="table__col table__col--scount">
-                                        <select name="" id="" class="select select--sm">
-                                        <option value="1">кг</option>
-                                        <option value="2">т</option>
-                                        <option value="3">lb</option>
-                                        <option value="4">st</option>
-                                    </select>
-                                    </div>
-                                    <div class="table__col table__col--count">
-                                        <input type="text" class="base-input base-input--sm" value="1200">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tender-page__section d-flex justify-content-end align-items-center">
-                        <span style="padding-right: 32px">Если Вы указали стоимость, нажмите кнопку</span>
-                        <a href="" class="btn btn-primary">Далее</a>
-                    </div>
-
-                </div>
-                <div class="tender-page__sidebar tender-page__sidebar--statement">
-
-                    <div class="tender-page__row">
-                        <div class="table table-v2">
-                            <div class="table__head">
-                                <div class="table__col">
-                                    Заказчик
-                                </div>
-                            </div>
-                            <div class="table__body">
-                                <div class="table__row">
-                                    <div class="table__col">
-                                        <p class="table__label">Контактное лицо</p>
-                                        <p><strong>Иван Иванов</strong></p>
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col">
-                                        <p class="table__label">Ищет поставщика в регионах</p>
-                                        <p><strong>Москва, Новосибирск</strong></p>
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col">
-                                        <p class="table__label">Регион поставки</p>
-                                        <p><strong>Москва, Новосибирск</strong></p>
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col">
-                                        <p class="table__label">Организация</p>
-                                        <p><strong>Доступно после ответа на тендер</strong></p>
-                                    </div>
-                                </div>
-                                <div class="table__row">
-                                    <div class="table__col">
-                                        <p class="table__label">Телефон</p>
-                                        <p><strong>+ 7 777 123 45 67</strong></p>
+                                    <div class="table__col table__col--tender-status table__col--grey">
+                                        Ожидает модерации
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

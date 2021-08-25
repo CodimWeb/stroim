@@ -24,21 +24,24 @@ h3 {
     margin: 0;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-weight: 500;
     font-size: 18px;
     line-height: 29px;
     margin: 0;
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
     margin: 0;
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-weight: 500;
     font-size: 14px;
     line-height: 160%;
@@ -47,8 +50,15 @@ h6, .h6 {
 
 p {
     font-size: 16px;
-    line-height: 26px;
+    line-height: 160%;
     margin: 0;
+    &.sm {
+        font-size: 14px;
+    }
+}
+
+strong {
+    font-weight: 500;
 }
 
 .text-gray {
@@ -63,20 +73,17 @@ p {
     font-size: 16px;
     color: #3275EE;
     text-decoration: none;
-
     &:hover {
         color: #225ECA;
         text-decoration: none;
     }
-
     &:active {
         color: #1C4A9D;
     }
 }
 
-.link-dark  {
+.link-dark {
     color: #001D3A;
-
     &:hover {
         color: #3275EE;
     }

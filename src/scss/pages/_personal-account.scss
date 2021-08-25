@@ -1,3 +1,4 @@
+@import '../abstract/variables';
 .personal-account {
     padding: 0 0 120px;
 }
@@ -54,4 +55,35 @@
     &:first-child {
         margin: 0;
     }
+}
+
+.personal-account__subscriptions {
+    flex-grow: 1;
+    padding-right: 30px;
+}
+
+.personal-account__subscription {
+    padding: 16px;
+    border: 1px solid #DFDEE2;
+    border-radius: 8px;
+    &+& {
+        margin-top: 30px;
+    }
+}
+
+.personal-account__requisites {
+    width: 290px;
+    flex-shrink: 0;
+}
+
+.personal-account__subscription-text {
+    margin: 0 0 12px 0;
+}
+
+.personal-account__subscription-blue {
+    color: $blue;
+}
+
+.personal-account__personal-form {
+    width: 480px;
 }

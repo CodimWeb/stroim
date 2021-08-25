@@ -7,6 +7,12 @@
     line-height: 160%;
     overflow: hidden;
     width: 100%;
+    .grey {
+        color: $grey;
+    }
+    .blue {
+        color: $blue;
+    }
 }
 
 .table__head,
@@ -63,8 +69,14 @@
     .table-v2 & {
         padding: 8px 0;
     }
+    .table-v3 & {
+        justify-content: flex-start;
+    }
     .table--basket .table__head & {
         padding: 8px;
+    }
+    &--grey {
+        background-color: #F5F5F5;
     }
     //tender-table
     &--num {
@@ -173,6 +185,19 @@
     &--bnote {
         width: 152px;
     }
+    // personal-data
+    &--pdata {
+        width: 157px;
+    }
+    &--tender-num {
+        width: 95px;
+    }
+    &--pstructure {
+        width: 534px;
+    }
+    &--tender-status {
+        width: 142px;
+    }
 }
 
 .table__status {
@@ -212,4 +237,8 @@
 .table__value {
     flex-shrink: 0;
     padding-left: 8px;
+}
+
+.table__field {
+    padding: 6px 0;
 }
