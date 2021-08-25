@@ -22,6 +22,10 @@
     width: 235px;
     margin-right: 30px;
     padding-top: 26px;
+
+    &--no-margins{
+        padding: 0;
+    }
 }
 
 .sidebar__item {
@@ -37,7 +41,7 @@
     color: #001D3A;
     text-align: left;
     padding: 7px 20px 7px 0;
-    
+
     &:after {
         content: '';
         display: inline-block;
@@ -419,7 +423,7 @@
     &:nth-child(4) {
         width: 127px;
     }
-   
+
     &:nth-child(5) {
         width: 103px;
     }

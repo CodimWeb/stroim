@@ -20,8 +20,7 @@ module.exports = {
         port: 3000,
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.m?js$/,
                 exclude: /(node_modules)/,
                 use: {
@@ -33,8 +32,7 @@ module.exports = {
             },
             {
                 test: /\.(scss|css)$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader
                     },
                     {
@@ -112,7 +110,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'advertisement-card.html',
             template: './src/advertisement-card.html'
-        }), 
+        }),
         new HtmlWebpackPlugin({
             filename: 'blacklist.html',
             template: './src/blacklist.html'
@@ -190,20 +188,30 @@ module.exports = {
             template: './src/statement-isauth.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'basket.html',
+            template: './src/basket.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'basket-success.html',
+            template: './src/basket-success.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'basket-empty.html',
+            template: './src/basket-empty.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
         new MiniCssExtractPlugin({
             filename: "css/style.css"
         }),
-        new CopyWebpackPlugin(
-            {
-                patterns: [
-                    {from: './src/img', to: './img'},
-                    // {from: './src/fonts', to: './dist/fonts'}
-                ]
-            }
-        ),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/img', to: './img' },
+                // {from: './src/fonts', to: './dist/fonts'}
+            ]
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',

@@ -1,210 +1,215 @@
 @import "../abstract/variables";
-
-.table{
-  background: #FFFFFF;
-  border: 1px solid #DFDEE2;
-  border-radius: 8px;
-  font-size: 14px;
-  line-height: 160%;
-  overflow: hidden;
-  width: 100%;
+.table {
+    background: #FFFFFF;
+    border: 1px solid #DFDEE2;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 160%;
+    overflow: hidden;
+    width: 100%;
 }
 
 .table__head,
-.table__row{
-  background-color: #F2F2F2;
-  color: $text_color;
-  display: flex;
-  font-weight: $font-weight-medium;
-
-  & + & {
-    border-top: 1px solid #DFDEE2;
-  }
+.table__row {
+    background-color: #F2F2F2;
+    color: $text_color;
+    display: flex;
+    font-weight: $font-weight-medium;
+    &+& {
+        border-top: 1px solid #DFDEE2;
+    }
 }
 
 .table__head .table__col--num {
-  padding-left: 16px;
+    padding-left: 16px;
 }
 
-.table__head{
-  .table-v2 & {
-    font-size: 18px;
-    padding: 12px 16px;
-  }
+.table__head {
+    .table-v2 & {
+        font-size: 18px;
+        padding: 12px 16px;
+    }
 }
 
 .table__body {
-  .table-v2 & {
-    padding: 4px 16px 8px;
-  }
+    .table-v2 & {
+        padding: 4px 16px 8px;
+    }
 }
 
-.table__row{
-  padding: 0;
-  font-weight: $font-weight-normal;
-  background-color: #F9F9F9;
-
-  &:nth-child(2n + 1) {
-    background-color: #fff;
-  }
-
-  .table-v2 & {
-    background-color: #fff!important;
-  }
-
-  .table--bordered & {
-    border-top: 1px solid #DFDEE2;
-  }
-
-  .table__col--num{
-    padding-left: 16px;
-  }
+.table__row {
+    padding: 0;
+    font-weight: $font-weight-normal;
+    background-color: #F9F9F9;
+    &:nth-child(2n + 1) {
+        background-color: #fff;
+    }
+    .table-v2 & {
+        background-color: #fff!important;
+    }
+    .table--bordered & {
+        border-top: 1px solid #DFDEE2;
+    }
+    .table__col--num {
+        padding-left: 16px;
+    }
 }
 
 .table__col {
-  padding: 16px 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .table-v2 & {
-    padding: 8px 0;
-  }
-
-  //tender-table
-
-  &--num {
-    width: 48px;
-  }
-
-  &--name {
-    width: 260px;
-  }
-
-  &--lot {
-    width: 370px;
-  }
-
-  &--price,
-  &--status {
-    width: 153px;
-  }
-
-  //customers-request-table
-  &--title{
-    width: 237px;
-  }
-
-  &--size,
-  &--count,
-  &--width{
-    width: 126px;
-  }
-
-  &--params{
-    width: 173px;
-  }
-
-  &--cost {
-    width: 148px;
-  }
-
-  //services
-  &--advertising{
-    width: 260px;
-  }
-
-  &--conversion{
-    width: 180px;
-  }
-
-  &--call-office{
-    width: 159px;
-  }
-
-  // price-list
-  &--chapter {
-    width: 205px;
-  }
-
-  &--monthly-1{
-    width: 133px;
-  }
-
-  &--monthly-2{
-    width: 184px;
-  }
-
-  &--monthly-3{
-    width: 192px;
-  }
-
-  &--monthly-4{
-    width: 216px;
-  }
-
-  &--params {
-    width: 118px;
-  }
-
-  //statement
-  &--stitle{
-    width: 143px;
-  }
-
-  &--asize {
-    width: 104px;
-  }
-
-  &--scount {
-    width: 70px;
-    padding: 0;
-  }
-
-  &--swidth {
-    width: 106px;
-  }
-
-  &--scost {
-    flex-direction: row;
-    align-items: center;
-    width: 159px;
-  }
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .table-v2 & {
+        padding: 8px 0;
+    }
+    .table--basket .table__head & {
+        padding: 8px;
+    }
+    //tender-table
+    &--num {
+        width: 48px;
+    }
+    &--name {
+        width: 260px;
+    }
+    &--lot {
+        width: 370px;
+    }
+    &--price,
+    &--status {
+        width: 153px;
+    }
+    //customers-request-table
+    &--title {
+        width: 237px;
+    }
+    &--size,
+    &--count,
+    &--width {
+        width: 126px;
+    }
+    &--params {
+        width: 173px;
+    }
+    &--cost {
+        width: 148px;
+    }
+    //services
+    &--advertising {
+        width: 260px;
+    }
+    &--conversion {
+        width: 180px;
+    }
+    &--call-office {
+        width: 159px;
+    }
+    // price-list
+    &--chapter {
+        width: 205px;
+    }
+    &--monthly-1 {
+        width: 133px;
+    }
+    &--monthly-2 {
+        width: 184px;
+    }
+    &--monthly-3 {
+        width: 192px;
+    }
+    &--monthly-4 {
+        width: 216px;
+    }
+    &--params {
+        width: 118px;
+    }
+    //statement
+    &--stitle {
+        width: 143px;
+    }
+    &--asize {
+        width: 104px;
+    }
+    &--scount {
+        width: 70px;
+        padding: 0;
+    }
+    &--swidth {
+        width: 106px;
+    }
+    &--scost {
+        flex-direction: row;
+        align-items: center;
+        width: 159px;
+    }
+    //basket
+    &--btitle {
+        width: 230px;
+        padding: 12px 8px;
+    }
+    &--bcount {
+        width: 85px;
+        padding: 12px 8px;
+    }
+    &--bcount {
+        width: 85px;
+    }
+    &--bparams {
+        width: 88px;
+    }
+    &--bsize {
+        width: 120px;
+    }
+    &--bwidth {
+        width: 93px;
+    }
+    &--bsteel {
+        width: 119px;
+    }
+    &--bprice {
+        width: 96px;
+    }
+    &--bnote {
+        width: 152px;
+    }
 }
 
-.table__status{
-  font-weight: $font-weight-medium;
-  color: $grey;
-
-  &--pending{
-    color: $green;
-  }
+.table__status {
+    font-weight: $font-weight-medium;
+    color: $grey;
+    &--pending {
+        color: $green;
+    }
 }
 
 .table__star {
-  width: 15px;
-  height: auto;
-  margin-left: 4px;
+    width: 15px;
+    height: auto;
+    margin-left: 4px;
 }
 
-.table--bordered .table__col{
-  border-right: 1px solid #DFDEE2;
-
-  &:last-child{
-    border: none;
-  }
+.table--bordered .table__col {
+    border-right: 1px solid #DFDEE2;
+    &:last-child {
+        border: none;
+    }
 }
 
 .table__label {
-  font-size: 12px;
-  line-height: 160%;
-  color: $grey;
-  margin: 0 0 4px 0;
+    font-size: 12px;
+    line-height: 160%;
+    color: $grey;
+    margin: 0 0 4px 0;
+    &--black {
+        color: $text-color;
+    }
+    &+& {
+        margin: -4px 0 0;
+    }
 }
 
 .table__value {
-  flex-shrink: 0;
-  padding-left: 8px;
+    flex-shrink: 0;
+    padding-left: 8px;
 }
-
-

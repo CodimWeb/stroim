@@ -1,0 +1,87 @@
+@import '../abstract/_variables.scss';
+.basket {
+    display: flex;
+    padding-bottom: 120px;
+    &--success {
+        justify-content: center;
+    }
+    &--empty {
+        display: block;
+        padding: 32px 0 0;
+    }
+}
+
+.basket__content {
+    flex-grow: 1;
+}
+
+.basket__title {
+    margin-bottom: 24px;
+}
+
+.basket__application-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.basket__suppliers {
+    margin: 48px 0 0;
+}
+
+.basket__suppliers-inner {
+    width: 480px;
+}
+
+.basket__suppliers-field {
+    margin-top: 24px;
+    &:first-of-type {
+        margin-top: 16px;
+    }
+}
+
+.basket__suppliers-textarea-group {
+    margin-top: 24px;
+}
+
+.basket__suppliers-textarea {
+    min-height: 158px!important;
+}
+
+.basket__actions {
+    margin: 32px 0 0;
+}
+
+.basket__btn-continue {
+    margin-left: 24px;
+    .is-loading & {
+        display: none;
+    }
+}
+
+.basket__btn-send {
+    width: 212px;
+    .loader {
+        display: none;
+    }
+    .is-loading & {
+        span {
+            display: none;
+        }
+        .loader {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.basket__box {
+    padding: 96px 20px 0;
+    max-width: 460px;
+    text-align: center;
+}
+
+.basket__move-main {
+    font-weight: $font-weight-medium;
+}
