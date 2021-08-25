@@ -6,14 +6,11 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-
 //BS reboot
 @import "~bootstrap/scss/reboot";
-
 // BS grid
 @import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/grid";
-
 // BS components
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/modal";
@@ -25,7 +22,6 @@
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/bootstrap-grid";
 // @import "~bootstrap/scss/bootstrap";
-
 // PLUGINS
 //select2
 @import "~select2/src/scss/core.scss";
@@ -33,11 +29,9 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 @import "components/slider";
-
 // fonts
 @import "base/fonts";
 @import "base/typography";
-
 // Custom components
 @import "components/buttons";
 @import "components/inputs";
@@ -63,7 +57,7 @@
 @import "components/pagination";
 @import "components/recovery";
 @import "components/info-block";
-@import "components/personal-account";
+@import "components/personal-account-sidebar";
 @import "components/black-card";
 @import "components/product-item";
 @import "components/loader";
@@ -71,11 +65,9 @@
 @import "components/dictionary-menu";
 @import "components/status";
 @import "components/customer-info";
-
 //Layout
 @import "layout/header";
 @import "layout/footer";
-
 // pages
 @import "pages/advertisment";
 @import "pages/register";
@@ -84,4 +76,4 @@
 @import "pages/tender-page";
 @import "pages/additional";
 @import "pages/basket";
-
+@import "pages/personal-account";

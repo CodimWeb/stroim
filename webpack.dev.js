@@ -200,6 +200,10 @@ module.exports = {
             template: './src/basket-empty.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'personal-account-price.html',
+            template: './src/personal-account-price.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

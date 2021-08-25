@@ -1,0 +1,57 @@
+.personal-account {
+    padding: 0 0 120px;
+}
+
+.personal-account__container {
+    display: flex;
+}
+
+.personal-account__sidebar {
+    width: 290px;
+    flex-shrink: 0;
+}
+
+.personal-account__content,
+.personal-account__price-content {
+    flex-grow: 1;
+    padding: 0 0 0 30px;
+}
+
+.personal-account__price-content {
+    p {
+        font-size: 14px;
+        line-height: 160%;
+        margin-top: 24px;
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.personal-account__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-account__dowload {
+    img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+}
+
+.personal-account__price-form {
+    width: 397px;
+    flex-shrink: 0;
+}
+
+.personal-account__btn-send {
+    margin: 32px 0 0;
+}
+
+.personal-account__field {
+    margin: 24px 0 0;
+    &:first-child {
+        margin: 0;
+    }
+}

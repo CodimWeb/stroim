@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Черный список</title>
+    <title>Личный кабинет - добавить прайс лист</title>
 </head>
 
 <body class="page transition-off">
@@ -23,7 +23,7 @@
             </a>
             <div class="header__links">
                 <a href="/about" class="header__link">О нас</a>
-                <a href="/black" class="header__link">Черный список</a>
+                <a href="/black" class="header__link">Добавить прайс-лист</a>
                 <a href="tel:" class="header__link">
                 Отдел Продаж:
                 <span class="header__link--accent">8 (499) 270 58 45</span>
@@ -282,12 +282,12 @@
                     <a href="#" class="link link-dark breadcrumbs__link">Главная</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__text">Черный список</span>
+                    <span class="breadcrumbs__text">Добавить прайс-лист</span>
                 </li>
             </ul>
-            <div class="additional">
-                <div class="additional__container">
-                    <div class="additional__sidebar">
+            <div class="personal-account">
+                <div class="personal-account__container">
+                    <div class="personal-account__sidebar">
                         <div class="personal-account-sidebar">
                             <div class="personal-account-sidebar__head">
                                 Личный кабинет
@@ -320,7 +320,7 @@
                                         <a href="#" class="personal-account-sidebar__link link link-dark">Мои объявления</a>
                                     </li>
                                     <li class="personal-account-sidebar__item">
-                                        <a href="#" class="personal-account-sidebar__link link link-dark">Подключить прайс-лист</a>
+                                        <a href="/personal-account-sidebar-price.html" class="personal-account-sidebar__link link link-dark active">Подключить прайс-лист</a>
                                     </li>
                                     <li class="personal-account-sidebar__item">
                                         <a href="#" class="personal-account-sidebar__link link link-dark">Добавить объявление</a>
@@ -339,104 +339,96 @@
                             </div>
                         </div>
                     </div>
-                    <div class="additional__content">
-                        <div class="additional__wrapper">
-                            <h2 class="h2">Черный список</h2>
-                            <p>В данном разделе портала STROIM100.RU представлены недобросовестные поставщики и покупатели строительных материалов, не исполняющие свои обязательства по договорам поставки (покупки) в той или иной мере, обманывающие своих
-                                покупателей (поставщиков).</p>
-                            <p>Информация имеет документальное подтверждение.</p>
-                            <p>Если у Вас есть сведения о мошенничестве и недобросовестности поставщиков или покупателей, сообщите нам:</p>
-                            <a href="#" class="btn btn-primary additional__btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9" cy="9" r="8.1" stroke="white" stroke-width="1.8"/>
-                                <line x1="5.9" y1="9.1" x2="12.1" y2="9.1" stroke="white" stroke-width="1.8"
-                                      stroke-linecap="round"/>
-                                <line x1="9.1" y1="12.1" x2="9.1" y2="5.9" stroke="white" stroke-width="1.8"
-                                      stroke-linecap="round"/>
-                            </svg>
-                                <span>Добавить компанию в черный список</span>
+                    <div class="personal-account__content">
+                        <div class="personal-account__head mb-4">
+                            <h3 class="h3">Добавить прайс-лист</h3>
+                            <a href="" download class="link personal-account__dowload">
+                                <img src="img/icon-dowload.svg" alt="">
+                                <span>Скачать пример прайс-листа</span>
                             </a>
-                            <form class="additional__form">
-                                <h4 class="h4">Список компаний</h4>
-                                <label class="search-input">
-                                <input type="text" class="form-control base-input search-input__field"
-                                       placeholder="Поиск">
-                                <button class="btn search-input__btn">
-                                    <img src="img/icon-search-gray.svg" alt="">
-                                </button>
-                            </label>
+                        </div>
+
+                        <div class="personal-account__container">
+                            <form class="personal-account__price-form">
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Ссылка для Яндекс.Маркета (если есть)</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите ссылку</div>
+                                </label>
+
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Ваше имя*</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите Ваше имя**</div>
+                                </label>
+
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Ваш город*</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите Ваш город*</div>
+                                </label>
+
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Email*</span>
+                                    <input type="email" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите ваш Email*</div>
+                                </label>
+
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Пароль*</span>
+                                    <input type="password" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите ваш Email*</div>
+                                </label>
+
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Телефон*</span>
+                                    <input type="phone" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите ваш Телефон*</div>
+                                </label>
+
+                                <label class="materil-group personal-account__field">
+                                    <span class="materil-group__label">Организация*</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите ваш Организация*</div>
+                                </label>
+
+                                </label>
+                                <div class="file-reader personal-account__field">
+                                    <div class="file-reader__return">
+                                        <span class="file-reader__return-text"></span>
+                                        <svg class="file-reader__icon-close" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.3848 2.82857L3.82843 18.3849C3.4381 18.7752 2.64615 18.6168 2.06066 18.0314C1.47517 17.4459 1.31678 16.6539 1.70711 16.2636L17.2635 0.707247C17.6538 0.316923 18.4457 0.475314 19.0312 1.0608C19.6167 1.64629 19.7751 2.43824 19.3848 2.82857Z" fill="#001D3A"/>
+                                        <path d="M16.5562 18.3848L0.999849 2.82843C0.609525 2.4381 0.767916 1.64615 1.3534 1.06066C1.93889 0.475174 2.73084 0.316782 3.12117 0.707107L18.6775 16.2635C19.0678 16.6538 18.9095 17.4457 18.324 18.0312C17.7385 18.6167 16.9465 18.7751 16.5562 18.3848Z" fill="#001D3A"/>
+                                    </svg>
+                                    </div>
+
+                                    <input class="file-reader__input" id="my-file" type="file">
+                                    <label tabindex="0" for="my-file" class="file-reader__label">
+                                        <svg class="file-reader__icon-clip" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.6485 1.5L2.52475 12.6881C1.52512 13.792 0.978705 15.254 1.00064 16.7664C1.02257 18.2787 1.61112 19.7232 2.64232 20.7955C3.70234 21.8871 5.13724 22.5 6.63304 22.5C8.12884 22.5 9.56374 21.8871 10.6238 20.7955L19.3759 11.7017C19.7322 11.3351 20.0149 10.8993 20.2078 10.4192C20.4007 9.93924 20.5 9.42453 20.5 8.9047C20.5 8.38487 20.4007 7.87017 20.2078 7.39016C20.0149 6.91015 19.7322 6.47431 19.3759 6.10767C18.6583 5.36671 17.6858 4.95054 16.6719 4.95054C15.658 4.95054 14.6855 5.36671 13.9679 6.10767L7.43641 12.8638C7.04861 13.2545 6.81409 13.7796 6.77792 14.3383C6.74175 14.897 6.90649 15.4498 7.24047 15.8905C7.66534 16.2389 8.2004 16.4111 8.74135 16.3737C9.28231 16.3362 9.79039 16.0917 10.1666 15.6878L15.3917 10.283" stroke="#001D3A" stroke-opacity="0.9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="file-reader__loader loader loader--dark">Loading...</div>
+                                        <span class="file-reader__input-text">Загрузить прайс-лист</span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary personal-account__btn-send">Продолжить</button>
+
                             </form>
+
+                            <div class="personal-account__price-content">
+                                <p>Для авторизации в качестве поставщика строительных материалов, мы предлагаем Вам разместить на нашем портале Ваш прайс-лист. После размещения прайс листа Вам будет открыт полный доступ к Заявкам покупателей.</p>
+                                <p>Так же Вы будете получать прямые звонки покупателей Ваш офис и переходы на Ваш сайт со страниц портала STROIM100.RU Переход покупателя на Ваш сайт высоко конверсионный, так как посетитель уже выбрал необродимые ему строительные
+                                    материалы, узнал Вашу цену и перешёл на Ваш сайт, что бы совершить покупку.</p>
+                                <p>Если Вы готовы авторизоваться. просим Вас отправить в наш адрес info@stroim100.ru список email адресов Ваших менеджеров, которые будут работать с заявками покупателей. Так же, просим Вас указать адрес Вашего сайта, и адрес
+                                    ссылки для скачивания прайс-листа в формате Excel. (при наличии ссылки, обновление цен автоматическое дважды в день) Если ссылка, или данный формат отсутствует, пришлите Ваш прайс в формате Excel. на адрес info@stroim100.ru
+                                    . (обновление цен, по Вашему требованию) + Ваши реквизиты !</p>
+                                <p>Если возникли проблемы или вопросы при добавлении, звоните, мы поможем: +7 (499) 270 58 45</p>
+                            </div>
+
                         </div>
-                        <div class="additional__list">
-                            <div class="additional__card additional__wrapper">
-                                <div class="black-card">
-                                    <p class="black-card__date">
-                                        Опубликовано <strong>24.05.2021 в 10:30</strong>
-                                    </p>
-                                    <p class="black-card__info">
-                                        <span class="h4 black-card__name">
-                                       ООО “Плохие поставщики”
-                                   </span>
-                                        <a href="#" class="link link-sm">Перейти на сайт</a>
-                                    </p>
-                                    <p class="black-card__label">Причина:</p>
-                                    <p class="black-card__text">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве. Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего
-                                        получили распространение в капитальном строительстве. Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве. Высокая.
-                                    </p>
-                                    <a href="#" class="link link-sm">Подробнее</a>
-                                </div>
-
-                            </div>
-                            <div class="additional__card additional__wrapper">
-                                <div class="black-card">
-                                    <p class="black-card__date">
-                                        Опубликовано <strong>24.05.2021 в 10:30</strong>
-                                    </p>
-                                    <p class="black-card__info">
-                                        <span class="h4 black-card__name">
-                                       ООО “Плохие поставщики”
-                                   </span>
-                                        <a href="#" class="link link-sm">Перейти на сайт</a>
-                                    </p>
-                                    <p class="black-card__label">Причина:</p>
-                                    <p class="black-card__text">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве. Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего
-                                        получили распространение в капитальном строительстве. Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве. Высокая.
-                                    </p>
-                                    <a href="#" class="link link-sm">Подробнее</a>
-                                </div>
-
-                            </div>
-                            <div class="additional__card additional__wrapper">
-                                <div class="black-card">
-                                    <p class="black-card__date">
-                                        Опубликовано <strong>24.05.2021 в 10:30</strong>
-                                    </p>
-                                    <p class="black-card__info">
-                                        <span class="h4 black-card__name">
-                                       ООО “Плохие поставщики”
-                                   </span>
-                                        <a href="#" class="link link-sm">Перейти на сайт</a>
-                                    </p>
-                                    <p class="black-card__label">Причина:</p>
-                                    <p class="black-card__text">
-                                        Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве. Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего
-                                        получили распространение в капитальном строительстве. Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                                        Высокая. Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве. Высокая.
-                                    </p>
-                                    <a href="#" class="link link-sm">Подробнее</a>
-                                </div>
-
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
-
             </div>
         </div>
 
