@@ -1,0 +1,49 @@
+.lot-table {
+    border: 1px solid #DFDEE2;
+    border-radius: 8px;
+}
+
+.lot-table__header {
+    background: #F2F2F2;
+}
+
+.lot-table__tr {
+    display: flex;
+    align-items: center;
+}
+
+.lot-table__td {
+    height: 48px;
+
+    &:nth-child(1) {
+        width: 232px;
+    }
+
+    &:nth-child(2) {
+        width: 85px;
+    }
+
+    &:nth-child(3) {
+        width: 88px;
+    }
+
+    &:nth-child(4) {
+        width: 117px;
+    }
+
+    &:nth-child(5) {
+        width: 93px;
+    }
+
+    &:nth-child(6) {
+        width: 119px;
+    }
+
+    &:nth-child(7) {
+        width: 96px;
+    }
+
+    &:nth-child(8) {
+        width: 155px;
+    }
+}

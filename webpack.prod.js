@@ -202,6 +202,10 @@ module.exports = {
             template: './src/statement-isauth.html'
         }),
         new HtmlWebpackPlugin({
+          filename: 'create-tender-table.html',
+          template: './src/create-tender-table.html'
+        }),
+        new HtmlWebpackPlugin({
           filename: 'ui.html',
           template: './src/ui.html'
         }),
