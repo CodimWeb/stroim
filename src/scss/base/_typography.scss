@@ -1,3 +1,5 @@
+@import '../abstract/_variables.scss';
+
 body {
     font-size: 14px;
     line-height: 22px;
@@ -97,4 +99,17 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.grey {
+    color: $grey;
+}
+.blue {
+    color: $blue;
+}
+.green {
+    color: $green;
+}
+.red {
+    color: $red;
 }

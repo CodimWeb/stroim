@@ -72,6 +72,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    width: 100%;
     .table-v2 & {
         padding: 8px 0;
     }
@@ -83,6 +85,9 @@
     }
     &--grey {
         background-color: #F5F5F5;
+    }
+    &--delete {
+        padding-right: 40px;
     }
     //tender-table
     &--num {
@@ -242,6 +247,27 @@
     &--app-status {
         width: 138px;
     }
+    //suppliers
+    &--supplier-1 {
+        width: 250px;
+    }
+    &--supplier-2 {
+        width: 20px;
+    }
+    &--supplier-3 {
+        width: 54px;
+    }
+    &--supplier-4 {
+        width: 128px;
+    }
+    &--supplier-5 {
+        width: 103px;
+    }
+    &--supplier-6 {
+        width: 263px;
+    }
+
+
 }
 
 .table__status {
@@ -285,4 +311,11 @@
 
 .table__field {
     padding: 6px 0;
+}
+
+.table__icon-delete {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }

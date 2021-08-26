@@ -164,7 +164,31 @@ $(document).ready(function() {
     takePartInTender();
     initSlider();
     sendBasket();
+    showApplicationDeletingModal();
+    showAdsDeletingModal();
+    letDescribe();
 });
+
+function showApplicationDeletingModal() {
+    const $deletingBtn = $('.js-close-application');
+    if(!$deletingBtn) return;
+    $deletingBtn.on('click', function (e) {
+        e.preventDefault();
+        // TODO: логика удаления
+        var myModal = new Modal(document.getElementById('applicationDeleteModal'))
+        myModal.show()
+    })
+};
+function showAdsDeletingModal() {
+    const $deletingBtn = $('.js-delete-ads');
+    if(!$deletingBtn) return;
+    $deletingBtn.on('click', function (e) {
+        e.preventDefault();
+        // TODO: логика удаления
+        var myModal = new Modal(document.getElementById('adsDeleteModal'))
+        myModal.show()
+    })
+};
 
 function toggleFaq() {
     const $fagItem = $('.js-faq');
@@ -264,17 +288,33 @@ function initSlider() {
 }
 
 function sendBasket() {
-    const $btn = $('.js-basket-send');
-    if (!$btn) return;
+    const $btnSend = $('.js-basket-send');
+    const $btnContinue = $('.basket__btn-continue');
+    if (!$btnSend) return;
 
-    $btn.on('click', function(e) {
+    $btnSend.on('click', function(e) {
         e.preventDefault();
-        $(e.target).closest('.basket__actions').addClass('is-loading');
-
-        //��������
-
+        $btnSend.addClass('is-loading');
+        $btnContinue.hide();
+        //TODO: Харкод
         setTimeout(() => {
-            $(e.target).closest('.basket__actions').removeClass('is-loading');
-        }, 1000)
+            $btnSend.removeClass('is-loading');
+            $btnContinue.show();
+        }, 2000)
     })
-}
+};
+
+function letDescribe() {
+    const $btnDescribe = $('.js-describe');
+    const $notation = $('.describe-flash');
+    if (!$btnDescribe) return;
+
+    $btnDescribe.on('click', function(e) {
+        e.preventDefault();
+        $btnDescribe.addClass('is-loading');
+        //TODO: Харкод
+        setTimeout(() => $btnDescribe.removeClass('is-loading'), 1000)
+        setTimeout(() => $notation.show(), 1000)
+        setTimeout(() => $notation.hide(), 3000)
+    })
+};

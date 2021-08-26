@@ -241,6 +241,22 @@ module.exports = {
             template: './src/personal-account_my-applications.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'personal-account_my-application.html',
+            template: './src/personal-account_my-application.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-app-response.html',
+            template: './src/personal-account_my-app-response.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-ads.html',
+            template: './src/personal-account_my-ads.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-mailing.html',
+            template: './src/personal-account_my-mailing.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

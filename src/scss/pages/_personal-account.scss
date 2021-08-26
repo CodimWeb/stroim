@@ -50,6 +50,10 @@
     margin: 32px 0 0;
 }
 
+.personal-account__section {
+    margin-bottom: 32px;
+}
+
 .personal-account__field {
     margin: 24px 0 0;
     &:first-child {
@@ -86,4 +90,49 @@
 
 .personal-account__personal-form {
     width: 480px;
+}
+
+.personal-account__icon-star {
+    width: 16px;
+    margin: 0 5px;
+    & + & {
+        margin: 0 2px 0 0;
+    }
+}
+
+.personal-account__offer-label {
+    margin-right: 300px;
+    text-align: right;
+}
+
+.personal-account__check-box {
+    padding: 20px 16px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    display: inline-flex;
+}
+
+.personal-account__check{
+    margin-left: 24px;
+
+    &:first-child {
+        margin: 0;
+    }
+
+    input[type="checkbox"] + span {
+        font-size: 16px;
+    }
+}
+
+.personal-account__describe-box {
+    background: #F2F2F2;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+}
+
+.personal-account__describe-btn{
+    min-width: 173px;
 }
