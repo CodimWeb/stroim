@@ -233,6 +233,14 @@ module.exports = {
             template: './src/personal-account_my-tenders.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'personal-account_my-offers.html',
+            template: './src/personal-account_my-offers.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'personal-account_my-applications.html',
+            template: './src/personal-account_my-applications.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

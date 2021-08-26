@@ -13,6 +13,12 @@
     .blue {
         color: $blue;
     }
+    .green {
+        color: $green;
+    }
+    .red {
+        color: $red;
+    }
 }
 
 .table__head,
@@ -197,6 +203,44 @@
     }
     &--tender-status {
         width: 142px;
+    }
+    //my-offers
+    &--offer-date {
+        width: 122px;
+    }
+    &--offer-name {
+        width: 145px;
+    }
+    &--offer-count {
+        width: 68px;
+    }
+    &--offer-width {
+        width: 69px;
+    }
+    &--offer-sort {
+        width: 75px;
+    }
+    &--offer-price {
+        width: 140px;
+    }
+    &--offer-cost {
+        width: 108px;
+    }
+    &--offer-status {
+        width: 105px;
+    }
+    //my-applications
+    &--app-date {
+        width: 157px;
+    }
+    &--app-num {
+        width: 86px;
+    }
+    &--app-structure {
+        width: 546px;
+    }
+    &--app-status {
+        width: 138px;
     }
 }
 
