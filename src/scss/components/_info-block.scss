@@ -24,8 +24,16 @@
 .info-block__icon{
   margin-right: 16px;
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   &--large {
     margin-right: 32px;
+  }
+  &--small {
+    width: 32px;
   }
 }
 

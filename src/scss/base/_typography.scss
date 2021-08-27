@@ -74,6 +74,7 @@ strong {
 .link {
     font-size: 16px;
     color: #3275EE;
+    transition: color .2s;
     text-decoration: none;
     &:hover {
         color: #225ECA;
@@ -81,6 +82,12 @@ strong {
     }
     &:active {
         color: #1C4A9D;
+    }
+
+    &.red {
+        &:hover {
+            color: darken($red, 20%)
+        }
     }
 }
 

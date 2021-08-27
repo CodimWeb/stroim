@@ -21,7 +21,6 @@ import select2 from 'select2';
 
 Dropzone.autoDiscover = false;
 $(document).ready(function() {
-
     setTimeout(function() {
         $('body').removeClass('transition-off')
     }, 100);
@@ -170,11 +169,56 @@ $(document).ready(function() {
     showAdsDeletingModal();
     letDescribe();
     ImageLoader();
+    dynamicTabs();
 });
 
-function ImageLoader() {
-    let num = 1;
+function dynamicTabs() {
+    if(!$('.nav')) return;
+    const $link = $('.nav__link');
+    const $btnAdd = $('.js-add-nav-item');
+    const $removeAdd = $('.js-remove-nav-item');
 
+    $('.nav__links').delegate('.nav__link', 'click',  function(e) {
+        e.preventDefault();
+        $('.nav__link').removeClass('active');
+        $(e.target).addClass('active')
+        const id = $(e.target).data('page');
+        $('.nav__content').removeClass('active');
+        $(`${id}`).addClass('active');
+    });
+
+    $btnAdd.on('click', function (e) {
+        e.preventDefault();
+        const next = $('.nav__link').length + 1;
+        $('.nav__links').append(`
+            <li class="nav__item">
+                <a class="nav__link" data-page="#lot-${next}" href="#">Лот ${next}</a>
+            </li>
+        `);
+        $('.nav__body').append(`
+             <div class="nav__content" id="lot-${next}">
+                ${new Date().getSeconds()}
+             </div>
+        `);
+    });
+
+    $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
+        console.log('delete');
+        e.preventDefault();
+        if($('.nav__link').length === 1) return;
+        const id = $('.nav__link.active').data('page');
+        $('.nav__link.active').parent().remove();
+        $('.nav__link').eq(0).addClass('active');
+        $('.nav__content').eq(0).addClass('active');
+        $(id).remove();
+    })
+
+}
+
+function ImageLoader() {
+    const dropzone = document.getElementById('my-form');
+    if(!dropzone) return;
+    let num = 1;
     new Dropzone("#my-form", {
         url: "/",
         autoProcessQueue: false,
@@ -191,8 +235,7 @@ function ImageLoader() {
             })
         }
     });
-
-}
+};
 
 function showApplicationDeletingModal() {
     const $deletingBtn = $('.js-close-application');

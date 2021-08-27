@@ -100,3 +100,14 @@
         overflow: hidden;
     }
 }
+
+.basket__tender-textarea{
+    textarea{
+        min-height: 130px!important;
+        overflow: hidden;
+    }
+}
+
+.basket__info-block{
+    align-items: flex-start;
+}

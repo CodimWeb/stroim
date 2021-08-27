@@ -248,6 +248,10 @@ module.exports = {
             template: './src/add-an-ad.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'create-tender.html',
+            template: './src/create-tender.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),

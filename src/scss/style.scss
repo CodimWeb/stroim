@@ -62,11 +62,12 @@
 @import "components/product-item";
 @import "components/loader";
 @import "components/advertisement-card";
-@import "components/dictionary-menu";
+@import "src/scss/components/dictionary-menu";
 @import "components/status";
 @import "components/customer-info";
 @import "components/describe-flash";
-@import "components/dropzona";
+@import "src/scss/components/dropzona";
+@import "src/scss/components/nav";
 //Layout
 @import "layout/header";
 @import "layout/footer";
