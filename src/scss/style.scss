@@ -39,6 +39,7 @@
 @import "base/typography";
 
 // Custom components
+@import "components/helpers";
 @import "components/buttons";
 @import "components/inputs";
 @import "components/select";
@@ -83,4 +84,5 @@
 @import "pages/advertisement-card";
 @import "pages/tender-page";
 @import "pages/additional";
-
+@import "pages/add-price-list";
+@import "pages/add-tender";

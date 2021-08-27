@@ -1,0 +1,55 @@
+.cabinet-price-list {
+    display: flex;
+}
+
+.cabinet-price-list__left {
+    width: 397px;
+    max-width: 397px;
+    margin-right: 30px;
+}
+
+.cabinet-price-list__title .h2 {
+    margin-bottom: 24px;
+}
+
+.cabinet-price-list__form .form-group {
+    margin-bottom: 24px;
+}
+
+.cabinet-price-list__form .form-group--offset {
+    margin-bottom: 32px;
+}
+
+.cabinet-price-list__form .file-reader__return {
+    margin-bottom: 12px;
+}
+
+.cabinet-price-list__form .file-reader__label {
+    width: 268px;
+}
+
+.cabinet-price-list__right {
+    width: 503px;
+    max-width: 503px;
+}
+
+.download-price-list {
+    text-align: right;
+    padding-top: 15px;
+    padding-right: 23px;
+    margin-bottom: 30px;
+}
+
+.download-price-list img {
+    margin-right: 8px;
+}
+
+.download-price-list__text p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+.download-price-list__text p + p {
+    margin-top: 0;
+}

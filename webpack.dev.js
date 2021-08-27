@@ -190,6 +190,14 @@ module.exports = {
             template: './src/statement-isauth.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'add-price-list.html',
+            template: './src/add-price-list.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'add-tender.html',
+            template: './src/add-tender.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
