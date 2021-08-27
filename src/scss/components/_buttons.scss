@@ -1,3 +1,5 @@
+@import '../abstract/variables';
+
 .btn {
     display: inline-block;
     outline: none !important;
@@ -29,6 +31,22 @@
     svg {
         margin-right: 8px;
     }
+
+    .loader {
+        display: none;
+    }
+
+    &.is-loading {
+        line-height: 0;
+
+        .loader{
+            display: inline-block;
+        }
+        span {
+            display: none;
+        }
+    }
+
 }
 
 .btn-primary {
@@ -62,6 +80,22 @@
         background-color: #fff;
         border-color: #1C4A9D;
         color: #1C4A9D;
+    }
+}
+
+.btn-grey {
+    background-color: #F2F2F2;
+    color: $text-color;
+    font-weight: normal;
+
+    &:hover {
+        background-color: #C2C2C2;
+        color: $text-color;
+    }
+
+    &:active {
+        background-color: #C2C2C2;
+        color: $text-color;
     }
 }
 
