@@ -8,16 +8,18 @@ import Collapse from 'bootstrap/js/dist/collapse';
 import Modal from 'bootstrap/js/dist/modal';
 import Dropdown from 'bootstrap/js/dist/dropdown';
 import Tab from 'bootstrap/js/dist/tab';
-
+import Dropzone from "dropzone";
 //styles
 import '../scss/style.scss';
 
+
 import Inputmask from "inputmask";
 import 'slick-carousel';
+import "dropzone/dist/dropzone.css";
 
 import select2 from 'select2';
 
-
+Dropzone.autoDiscover = false;
 $(document).ready(function() {
 
     setTimeout(function() {
@@ -167,7 +169,30 @@ $(document).ready(function() {
     showApplicationDeletingModal();
     showAdsDeletingModal();
     letDescribe();
+    ImageLoader();
 });
+
+function ImageLoader() {
+    let num = 1;
+
+    new Dropzone("#my-form", {
+        url: "/",
+        autoProcessQueue: false,
+        init: function() {
+            this.on("addedfile", function(file) {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {
+                    let img = new Image();
+                    img.src = reader.result;
+                    $(`.preview-box--${num}`).html(img);
+                    num === 5 ? num = 1 : num ++;
+                }
+            })
+        }
+    });
+
+}
 
 function showApplicationDeletingModal() {
     const $deletingBtn = $('.js-close-application');

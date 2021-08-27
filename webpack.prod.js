@@ -257,6 +257,10 @@ module.exports = {
             template: './src/personal-account_my-mailing.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'add-an-ad.html',
+            template: './src/add-an-ad.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui.html',
             template: './src/ui.html'
         }),
