@@ -788,10 +788,270 @@
                             </div>
                         </div>
                         <div class="nav__content" id="lot-2">
-                            lot-2
+                            <div class="table table--basket mb-4">
+                                <div class="table__head">
+                                    <div class="table__col table__col--btitle">
+                                        Наименование
+                                    </div>
+                                    <div class="table__col table__col--bcount">
+                                        Кол-во
+                                    </div>
+                                    <div class="table__col table__col--bparams">
+                                        <div class="table__label table__label--black">Ед. изм</div>
+                                    </div>
+                                    <div class="table__col table__col--bsize">
+                                        <div class="table__label table__label--black">Размер</div>
+                                        <div class="table__label">Толщина/Размер</div>
+                                    </div>
+                                    <div class="table__col table__col--bwidth">
+                                        <div class="table__label table__label--black">Длина</div>
+                                        <div class="table__label">Х ширина</div>
+                                    </div>
+                                    <div class="table__col table__col--bsteel">
+                                        <div class="table__label table__label--black">Сталь</div>
+                                    </div>
+                                    <div class="table__col table__col--bprice">
+                                        <div class="table__label table__label--black">Цена</div>
+                                        <div class="table__label">Не больше</div>
+                                    </div>
+                                    <div class="table__col table__col--bnote">
+                                        <div class="table__label table__label--black">Примечание</div>
+                                    </div>
+                                </div>
+                                <div class="table__body">
+                                    <div class="table__row">
+                                        <div class="table__col table__col--btitle">
+                                            <div>Кабельные каналы</div>
+                                            <div>
+                                                <a href="#" class="link link-sm">Дублировать</a>
+                                            </div>
+                                        </div>
+                                        <div class="table__col table__col--bcount">
+                                            <input type="text" class="base-input base-input--sm" value="24">
+                                        </div>
+                                        <div class="table__col table__col--bparams">
+                                            <select name="" id="" class="select select--sm">
+                                                <option value="1">кг</option>
+                                                <option value="2">т</option>
+                                                <option value="3">lb</option>
+                                                <option value="4">st</option>
+                                            </select>
+                                        </div>
+                                        <div class="table__col table__col--bsize">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bwidth">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bsteel">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bprice">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bnote">
+                                            <input type="text" class="base-input base-input--sm" value="Примечание">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-block basket__info-block mb-4">
+                                <div class="info-block__icon info-block__icon--small">
+                                    <img src="img/info.svg" alt="">
+                                </div>
+                                <div class="info-block__text">
+                                    <h5 class="mb-2">Внимание!</h5>
+                                    <ul>
+                                        <li><em>— если у Вас несколько позиций, заполните поля «кол-во» «размер» «сталь»</em></li>
+                                        <li><em>— если позиций много, просто выберете виды сортамента и прикрепите файл со списком
+                                            <br>снизу станицы</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="basket__suppliers-inner">
+                                <h4 class="mb-3">Описание лота</h4>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Заголовок лота*</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите Заголовок лота*</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Дополнительные сведения</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Дополнительные сведения</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Примечание</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Примечание</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Ориентировочная сумма контракта</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Ориентировочная сумма контракта</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <input type="checkbox" name="check-one" value="check-one" />
+                                    <span>Требуется доставка</span>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Адрес доставки</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите Адрес доставки</div>
+                                </label>
+                            </div>
                         </div>
                         <div class="nav__content" id="lot-3">
-                            lot-3
+                            <div class="table table--basket mb-4">
+                                <div class="table__head">
+                                    <div class="table__col table__col--btitle">
+                                        Наименование
+                                    </div>
+                                    <div class="table__col table__col--bcount">
+                                        Кол-во
+                                    </div>
+                                    <div class="table__col table__col--bparams">
+                                        <div class="table__label table__label--black">Ед. изм</div>
+                                    </div>
+                                    <div class="table__col table__col--bsize">
+                                        <div class="table__label table__label--black">Размер</div>
+                                        <div class="table__label">Толщина/Размер</div>
+                                    </div>
+                                    <div class="table__col table__col--bwidth">
+                                        <div class="table__label table__label--black">Длина</div>
+                                        <div class="table__label">Х ширина</div>
+                                    </div>
+                                    <div class="table__col table__col--bsteel">
+                                        <div class="table__label table__label--black">Сталь</div>
+                                    </div>
+                                    <div class="table__col table__col--bprice">
+                                        <div class="table__label table__label--black">Цена</div>
+                                        <div class="table__label">Не больше</div>
+                                    </div>
+                                    <div class="table__col table__col--bnote">
+                                        <div class="table__label table__label--black">Примечание</div>
+                                    </div>
+                                </div>
+                                <div class="table__body">
+                                    <div class="table__row">
+                                        <div class="table__col table__col--btitle">
+                                            <div>Кабельные каналы</div>
+                                            <div>
+                                                <a href="#" class="link link-sm">Дублировать</a>
+                                            </div>
+                                        </div>
+                                        <div class="table__col table__col--bcount">
+                                            <input type="text" class="base-input base-input--sm" value="24">
+                                        </div>
+                                        <div class="table__col table__col--bparams">
+                                            <select name="" id="" class="select select--sm">
+                                                <option value="1">кг</option>
+                                                <option value="2">т</option>
+                                                <option value="3">lb</option>
+                                                <option value="4">st</option>
+                                            </select>
+                                        </div>
+                                        <div class="table__col table__col--bsize">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bwidth">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bsteel">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bprice">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bnote">
+                                            <input type="text" class="base-input base-input--sm" value="Примечание">
+                                        </div>
+                                    </div>
+                                    <div class="table__row">
+                                        <div class="table__col table__col--btitle">
+                                            <div>Кабельные каналы</div>
+                                            <div>
+                                                <a href="#" class="link link-sm">Дублировать</a>
+                                            </div>
+                                        </div>
+                                        <div class="table__col table__col--bcount">
+                                            <input type="text" class="base-input base-input--sm" value="24">
+                                        </div>
+                                        <div class="table__col table__col--bparams">
+                                            <select name="" id="" class="select select--sm">
+                                                <option value="1">кг</option>
+                                                <option value="2">т</option>
+                                                <option value="3">lb</option>
+                                                <option value="4">st</option>
+                                            </select>
+                                        </div>
+                                        <div class="table__col table__col--bsize">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bwidth">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bsteel">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bprice">
+                                            <input type="text" class="base-input base-input--sm" value="1200">
+                                        </div>
+                                        <div class="table__col table__col--bnote">
+                                            <input type="text" class="base-input base-input--sm" value="Примечание">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-block basket__info-block mb-4">
+                                <div class="info-block__icon info-block__icon--small">
+                                    <img src="img/info.svg" alt="">
+                                </div>
+                                <div class="info-block__text">
+                                    <h5 class="mb-2">Внимание!</h5>
+                                    <ul>
+                                        <li><em>— если у Вас несколько позиций, заполните поля «кол-во» «размер» «сталь»</em></li>
+                                        <li><em>— если позиций много, просто выберете виды сортамента и прикрепите файл со списком
+                                            <br>снизу станицы</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="basket__suppliers-inner">
+                                <h4 class="mb-3">Описание лота</h4>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Заголовок лота*</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите Заголовок лота*</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Дополнительные сведения</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Дополнительные сведения</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Примечание</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Примечание</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Ориентировочная сумма контракта</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Ориентировочная сумма контракта</div>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <input type="checkbox" name="check-one" value="check-one" />
+                                    <span>Требуется доставка</span>
+                                </label>
+                                <label class="materil-group basket__suppliers-field">
+                                    <span class="materil-group__label">Адрес доставки</span>
+                                    <input type="text" class="form-control base-input materil-group__input">
+                                    <div class="materil-group__error-text">Укажите Адрес доставки</div>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -840,9 +1100,17 @@
                     <h4 class="mb-3">Наименование тендера*</h4>
                     <label class="materil-group basket__suppliers-field">
                         <span class="materil-group__label">Наименование тендера*</span>
-                        <input type="text" class="form-control base-input materil-group__input">
+                        <input type="text" class="form-control base-input materil-group__input" value="Рога копыта">
                         <div class="materil-group__error-text">Укажите Наименование тендера*</div>
                     </label>
+
+                    <label class="materil-group materil-group--with-icon basket__suppliers-field">
+                        <span class="materil-group__label">Период проведения конкурса*</span>
+                        <input type="text" name="daterange" class="form-control base-input materil-group__input" value="20.08.2021 - 30.08.2021" />
+                        <img class="materil-group__icon" src="img/icon-calendar.svg" alt="">
+                        <div class="materil-group__error-text">Укажите Период проведения конкурса</div>
+                    </label>
+
                     <label class="materil-group basket__suppliers-field">
                         <span class="materil-group__label">Период проведения конкурса*</span>
                         <input type="text" class="form-control base-input materil-group__input">
@@ -873,16 +1141,19 @@
                         <input type="phone" class="form-control base-input materil-group__input">
                         <div class="materil-group__error-text">Укажите ваш Телефон*</div>
                     </label>
-                    <label class="materil-group basket__suppliers-field">
+
+                    <label class="materil-group active materil-group--with-icon mt-4">
                         <span class="materil-group__label">В какие регионы отправить
                             заявку?*</span>
-                        <input type="text" class="form-control base-input materil-group__input">
-                        <div class="materil-group__error-text">Укажите ваш Телефон*</div>
+                        <textarea class="form-control base-input materil-group__input materil-group__textarea">Москва, Санкт-Петербург, Екатеринбург, Новокузнецк, Томск
+                        </textarea>
+                        <img class="materil-group__icon" src="img/icon-location.svg" alt="">
+                        <span class="materil-group__label-backdrop"></span>
                     </label>
-                    <label class="materil-group active basket__tender-textarea mt-4">
+
+                    <label class="materil-group active mt-4">
                         <span class="materil-group__label">Комментарий к тендеру</span>
-                        <textarea class="form-control base-input materil-group__input materil-group__textarea">Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.
-                            </textarea>
+                        <textarea class="form-control base-input materil-group__input materil-group__textarea">Тяжёлые бетоны обладают большей удельной прочностью на сжатие в сравнении с лёгкими, из-за чего получили распространение в капитальном строительстве.</textarea>
                         <span class="materil-group__label-backdrop"></span>
                     </label>
                     <button type="submit" href="#" class="btn btn-primary basket__actions">Отправить тендер на модерацию</button>

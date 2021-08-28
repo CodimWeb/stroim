@@ -3,21 +3,23 @@
 import $ from 'jquery';
 
 //BS5 components
-
 import Collapse from 'bootstrap/js/dist/collapse';
 import Modal from 'bootstrap/js/dist/modal';
 import Dropdown from 'bootstrap/js/dist/dropdown';
 import Tab from 'bootstrap/js/dist/tab';
+
+//other plugins
 import Dropzone from "dropzone";
+import Inputmask from "inputmask";
+import daterangepicker from 'daterangepicker';
+import select2 from 'select2';
+
 //styles
 import '../scss/style.scss';
-
-
-import Inputmask from "inputmask";
 import 'slick-carousel';
 import "dropzone/dist/dropzone.css";
+import "daterangepicker/daterangepicker.css";
 
-import select2 from 'select2';
 
 Dropzone.autoDiscover = false;
 $(document).ready(function() {
@@ -32,6 +34,12 @@ $(document).ready(function() {
     $('.materil-group__input').on('blur', function(e) {
         if (e.target.value == '') {
             $(this).closest('.materil-group').removeClass('active');
+        }
+    })
+
+    $('.materil-group__input').each((index, item ) => {
+        if($(item).val()) {
+            $(item).closest('.materil-group').addClass('active');
         }
     })
 
@@ -170,7 +178,49 @@ $(document).ready(function() {
     letDescribe();
     ImageLoader();
     dynamicTabs();
+    autoHeightTextarea();
+    initialDatePicker();
 });
+
+function initialDatePicker() {
+    $('input[name="daterange"]').daterangepicker({
+        opens: 'left',
+        locale: {
+            format: 'DD.MM.YYYY',
+            "applyLabel": "Выбрать",
+            "cancelLabel": "Отмена",
+            "fromLabel": "От",
+            "toLabel": "До",
+            "customRangeLabel": "Произвольный",
+            "daysOfWeek": [
+                "Вс",
+                "Пн",
+                "Вт",
+                "Ср",
+                "Чт",
+                "Пт",
+                "Сб"
+            ],
+            "monthNames": [
+                "Январь",
+                "Февраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь"
+            ],
+            firstDay: 1
+        }
+    }, function(start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+};
 
 function dynamicTabs() {
     if(!$('.nav')) return;
@@ -180,8 +230,8 @@ function dynamicTabs() {
 
     $('.nav__links').delegate('.nav__link', 'click',  function(e) {
         e.preventDefault();
-        $('.nav__link').removeClass('active');
-        $(e.target).addClass('active')
+        $('.nav__link').parent().removeClass('active');
+        $(e.target).parent().addClass('active')
         const id = $(e.target).data('page');
         $('.nav__content').removeClass('active');
         $(`${id}`).addClass('active');
@@ -269,6 +319,17 @@ function toggleFaq() {
             $(item).toggleClass('faq--open');
             $body.toggle(400)
         })
+    });
+};
+
+function autoHeightTextarea() {
+    document.querySelectorAll('textarea').forEach(el => {
+        el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
+        el.classList.add('auto');
+        el.addEventListener('input', e => {
+            el.style.height = 'auto';
+            el.style.height = (el.scrollHeight) + 'px';
+        });
     });
 }
 

@@ -80,14 +80,28 @@
 .materil-group__textarea {
     height: 52px;
     padding: 20px 16px 6px;
+    overflow: hidden;
     &::placeholder {
         color: transparent;
     }
 }
 
+.materil-group--with-icon {
+    .materil-group__input,
+    .materil-group__textarea{
+        padding-right: 40px;
+    }
+}
+
+.materil-group__icon{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
 .materil-group__textarea {
     height: auto;
-    min-height: 78px!important;
+    min-height: 40px!important;
     resize: none;
 }
 
@@ -105,7 +119,7 @@
     left: 2px;
     right: 22px;
     top: 1px;
-    background: #F2F2F2;
+    //background: #F2F2F2;
     border-radius: 8px;
 }
 

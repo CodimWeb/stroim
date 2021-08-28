@@ -68,7 +68,7 @@
     transition: opacity .3s;
   }
 
-  &.active,
+  .active &,
   &:hover {
     color: $text-color;
 
