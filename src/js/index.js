@@ -203,7 +203,6 @@ function dynamicTabs() {
     });
 
     $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
-        console.log('delete');
         e.preventDefault();
         if($('.nav__link').length === 1) return;
         const id = $('.nav__link.active').data('page');
@@ -211,8 +210,11 @@ function dynamicTabs() {
         $('.nav__link').eq(0).addClass('active');
         $('.nav__content').eq(0).addClass('active');
         $(id).remove();
-    })
 
+        $('.nav__link').each((index , item) => {
+            $(item).text(`Лот ${index + 1}`)
+        })
+    });
 }
 
 function ImageLoader() {
@@ -271,37 +273,45 @@ function toggleFaq() {
 }
 
 function fileReader() {
-    var fileInput = document.querySelector(".file-reader__input");
-    if (!fileInput) return;
+    const fileReaders = document.querySelectorAll(".file-reader");
 
-    var button = document.querySelector(".file-reader__label");
-    var theReturn = document.querySelector(".file-reader__return")
-    var theReturnText = document.querySelector(".file-reader__return-text");
-    var closeBnt = document.querySelector('.file-reader__icon-close');
+    if (!(fileReaders && fileReaders.length)) return;
 
-    fileInput.addEventListener("change", function() {
-        button.classList.add('loading');
-        getData();
-    });
+    fileReaders.forEach((fileReader) => {
+        var fileInput = fileReader.querySelector(".file-reader__input");
+        var button = fileReader.querySelector(".file-reader__label");
+        var theReturn = fileReader.querySelector(".file-reader__return")
+        var theReturnText = fileReader.querySelector(".file-reader__return-text");
+        var closeBnt = fileReader.querySelector('.file-reader__icon-close');
+        fileInput.addEventListener("change", function() {
+            button.classList.add('loading');
+            getData();
+        });
 
-    function getData() {
-        const files = fileInput.files[0];
-        if (files) {
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(files);
-            fileReader.addEventListener("load", function(e) {
-                setTimeout(() => {
-                    button.classList.remove('loading')
-                }, 500)
-                theReturnText.textContent = files.name;
-                theReturn.style.display = "flex";
-            });
-            closeBnt.addEventListener('click', function() {
-                theReturn.style.display = "none";
-                fileReader.abort()
-            })
+        function getData() {
+            const files = fileInput.files[0];
+            if (files) {
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(files);
+                fileReader.addEventListener("load", function(e) {
+                    setTimeout(() => {
+                        button.classList.remove('loading')
+                    }, 500)
+                    theReturnText.textContent = files.name;
+                    theReturn.style.display = "flex";
+                });
+                closeBnt.addEventListener('click', function() {
+                    theReturn.style.display = "none";
+                    fileReader.abort()
+                })
+            }
+            setTimeout(() => {
+                button.classList.remove('loading')
+            }, 500)
         }
-    }
+    })
+
+
 
 };
 
