@@ -61,19 +61,10 @@
 
 .basket__btn-send {
     width: 212px;
-    .loader {
-        display: none;
-    }
-    .is-loading & {
-        span {
-            display: none;
-        }
-        .loader {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
+}
+
+.basket__btn-send-suppliers{
+    width: 265px;
 }
 
 .basket__box {
