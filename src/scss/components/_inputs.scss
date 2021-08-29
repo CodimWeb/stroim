@@ -1,5 +1,4 @@
 @import '../abstract/variables';
-
 .base-input {
     height: 40px;
     background: #F2F2F2;
@@ -10,18 +9,15 @@
     border: none;
     color: rgba(0, 29, 58, 0.9);
     border: 1px solid #F2F2F2;
-
-    ::placeholder {
+     ::placeholder {
         color: #646464;
     }
-
     &:focus {
         outline: none;
         box-shadow: none;
         background: #fff;
         border-color: #3275EE;
     }
-
     &--sm {
         height: 38px;
         font-size: 14px;
@@ -38,8 +34,7 @@
     padding-left: 40px;
     background: #F9F9F9;
     border-color: #F9F9F9;
-
-    &::placeholder{
+    &::placeholder {
         font-size: 14px;
         color: #646464;
     }
@@ -56,7 +51,6 @@
     position: absolute;
     left: 0;
     top: 0;
-
     img {
         width: 16px;
         height: auto;
@@ -86,15 +80,28 @@
 .materil-group__textarea {
     height: 52px;
     padding: 20px 16px 6px;
-
+    overflow: hidden;
     &::placeholder {
         color: transparent;
     }
 }
 
+.materil-group--with-icon {
+    .materil-group__input,
+    .materil-group__textarea{
+        padding-right: 40px;
+    }
+}
+
+.materil-group__icon{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
 .materil-group__textarea {
     height: auto;
-    min-height: 78px!important;
+    min-height: 40px!important;
     resize: none;
 }
 
@@ -112,11 +119,11 @@
     left: 2px;
     right: 22px;
     top: 1px;
-    background: #F2F2F2;
+    //background: #F2F2F2;
     border-radius: 8px;
 }
 
-.materil-group__textarea:focus + .materil-group__label-backdrop {
+.materil-group__textarea:focus+.materil-group__label-backdrop {
     background: #fff;
 }
 
@@ -140,16 +147,15 @@
     display: block;
 }
 
-
-
 input[type="radio"]:checked,
 input[type="radio"]:not(:checked) {
     display: none;
     position: absolute;
     left: -9999px;
 }
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label {
+
+input[type="radio"]:checked+label,
+input[type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 24px;
     cursor: pointer;
@@ -158,8 +164,9 @@ input[type="radio"]:not(:checked) + label {
     color: $text_color;
     font-size: 14px;
 }
-input[type="radio"]:checked + label:before,
-input[type="radio"]:not(:checked) + label:before{
+
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -171,7 +178,7 @@ input[type="radio"]:not(:checked) + label:before{
     background: #fff;
 }
 
-input[type="radio"]:checked + label:before {
+input[type="radio"]:checked+label:before {
     border: 4px solid #3275EE;
 }
 
@@ -183,19 +190,21 @@ label {
     cursor: pointer;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     position: absolute;
     left: -999em;
     display: none;
 }
-input[type="checkbox"] + span{
+
+input[type="checkbox"]+span {
     padding-left: 24px;
     color: $text_color;
     font-size: 14px;
     line-height: 22px;
 }
 
-input[type="checkbox"] + span:before {
+input[type="checkbox"]+span:before {
     content: "";
     display: inline-block;
     width: 16px;
@@ -210,13 +219,13 @@ input[type="checkbox"] + span:before {
     color: $text_color;
 }
 
-input[type="checkbox"]:checked + span:before {
+input[type="checkbox"]:checked+span:before {
     content: "";
     background-color: #3275EE;
     border-color: #3275EE;
 }
 
-input[type="checkbox"]:checked + span:after {
+input[type="checkbox"]:checked+span:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -232,8 +241,9 @@ input[type="checkbox"]:checked + span:after {
 .file-reader {
     position: relative;
 }
+
 .file-reader__label {
-    display: flex;
+    display: inline-flex;
     padding: 11px 30px;
     background: #F2F2F2;
     color: $text_color;
@@ -242,37 +252,35 @@ input[type="checkbox"]:checked + span:after {
     transition: all .4s;
     cursor: pointer;
     border-radius: 8px;
-    width: 217px;
-
-    &.loading{
-
-        .file-reader__icon-clip{
+    &.loading {
+        .file-reader__icon-clip {
             display: none;
         }
-
-        .file-reader__loader{
+        .file-reader__loader {
             display: block;
         }
     }
 }
 
-.file-reader__loader{
+.file-reader__loader {
     display: none;
 }
 
-.file-reader__icon-clip{
+.file-reader__icon-clip {
     width: 24px;
     padding-right: 4px;
     height: auto;
 }
-.file-reader__input-text{
+
+.file-reader__input-text {
     padding-left: 9px;
     display: block;
 }
 
 .file-reader__input {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 225px;
     opacity: 0;
     padding: 14px 0;
@@ -301,12 +309,8 @@ input[type="checkbox"]:checked + span:after {
     max-width: 343px;
 }
 
-.file-reader__return-text{
+.file-reader__return-text {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-
-
-
-

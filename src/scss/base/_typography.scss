@@ -1,3 +1,5 @@
+@import '../abstract/_variables.scss';
+
 body {
     font-size: 14px;
     line-height: 22px;
@@ -24,21 +26,24 @@ h3 {
     margin: 0;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-weight: 500;
     font-size: 18px;
     line-height: 29px;
     margin: 0;
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
     margin: 0;
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-weight: 500;
     font-size: 14px;
     line-height: 160%;
@@ -47,8 +52,15 @@ h6, .h6 {
 
 p {
     font-size: 16px;
-    line-height: 26px;
+    line-height: 160%;
     margin: 0;
+    &.sm {
+        font-size: 14px;
+    }
+}
+
+strong {
+    font-weight: 500;
 }
 
 .text-gray {
@@ -62,21 +74,25 @@ p {
 .link {
     font-size: 16px;
     color: #3275EE;
+    transition: color .2s;
     text-decoration: none;
-
     &:hover {
         color: #225ECA;
         text-decoration: none;
     }
-
     &:active {
         color: #1C4A9D;
     }
+
+    &.red {
+        &:hover {
+            color: darken($red, 20%)
+        }
+    }
 }
 
-.link-dark  {
+.link-dark {
     color: #001D3A;
-
     &:hover {
         color: #3275EE;
     }
@@ -90,4 +106,17 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.grey {
+    color: $grey;
+}
+.blue {
+    color: $blue;
+}
+.green {
+    color: $green;
+}
+.red {
+    color: $red;
 }

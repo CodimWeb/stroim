@@ -1,0 +1,138 @@
+@import '../abstract/variables';
+.personal-account {
+    padding: 0 0 120px;
+}
+
+.personal-account__container {
+    display: flex;
+}
+
+.personal-account__sidebar {
+    width: 290px;
+    flex-shrink: 0;
+}
+
+.personal-account__content,
+.personal-account__price-content {
+    flex-grow: 1;
+    padding: 0 0 0 30px;
+}
+
+.personal-account__price-content {
+    p {
+        font-size: 14px;
+        line-height: 160%;
+        margin-top: 24px;
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.personal-account__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-account__dowload {
+    img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+}
+
+.personal-account__price-form {
+    width: 397px;
+    flex-shrink: 0;
+}
+
+.personal-account__btn-send {
+    margin: 32px 0 0;
+}
+
+.personal-account__section {
+    margin-bottom: 32px;
+}
+
+.personal-account__field {
+    margin: 24px 0 0;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.personal-account__subscriptions {
+    flex-grow: 1;
+    padding-right: 30px;
+}
+
+.personal-account__subscription {
+    padding: 16px;
+    border: 1px solid #DFDEE2;
+    border-radius: 8px;
+    &+& {
+        margin-top: 30px;
+    }
+}
+
+.personal-account__requisites {
+    width: 290px;
+    flex-shrink: 0;
+}
+
+.personal-account__subscription-text {
+    margin: 0 0 12px 0;
+}
+
+.personal-account__subscription-blue {
+    color: $blue;
+}
+
+.personal-account__personal-form {
+    width: 480px;
+}
+
+.personal-account__icon-star {
+    width: 16px;
+    margin: 0 5px;
+    & + & {
+        margin: 0 2px 0 0;
+    }
+}
+
+.personal-account__offer-label {
+    margin-right: 300px;
+    text-align: right;
+}
+
+.personal-account__check-box {
+    padding: 20px 16px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    display: inline-flex;
+}
+
+.personal-account__check{
+    margin-left: 24px;
+
+    &:first-child {
+        margin: 0;
+    }
+
+    input[type="checkbox"] + span {
+        font-size: 16px;
+    }
+}
+
+.personal-account__describe-box {
+    background: #F2F2F2;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+}
+
+.personal-account__describe-btn{
+    min-width: 173px;
+}
