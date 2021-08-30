@@ -40,6 +40,7 @@
 
 .nav__links{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nav__link{
@@ -85,5 +86,17 @@
   &.active {
     display: block;
   }
+}
+
+.nav__action-link {
+  flex-shrink: 0;
+}
+
+.date-picker-wrapper{
+  z-index: 111!important;
+}
+
+.month-wrapper{
+  min-width: 430px;
 }
 

@@ -11,14 +11,16 @@ import Tab from 'bootstrap/js/dist/tab';
 //other plugins
 import Dropzone from "dropzone";
 import Inputmask from "inputmask";
-import daterangepicker from 'daterangepicker';
+// import daterangepicker from 'daterangepicker';
+import daterangepicker from 'jquery-date-range-picker'
+import moment from 'moment';
 import select2 from 'select2';
 
 //styles
 import '../scss/style.scss';
 import 'slick-carousel';
 import "dropzone/dist/dropzone.css";
-import "daterangepicker/daterangepicker.css";
+import "jquery-date-range-picker/dist/daterangepicker.min.css"
 
 
 Dropzone.autoDiscover = false;
@@ -183,43 +185,51 @@ $(document).ready(function() {
 });
 
 function initialDatePicker() {
-    $('input[name="daterange"]').daterangepicker({
-        opens: 'left',
-        locale: {
-            format: 'DD.MM.YYYY',
-            "applyLabel": "Выбрать",
-            "cancelLabel": "Отмена",
-            "fromLabel": "От",
-            "toLabel": "До",
-            "customRangeLabel": "Произвольный",
-            "daysOfWeek": [
-                "Вс",
-                "Пн",
-                "Вт",
-                "Ср",
-                "Чт",
-                "Пт",
-                "Сб"
-            ],
-            "monthNames": [
-                "Январь",
-                "Февраль",
-                "Март",
-                "Апрель",
-                "Май",
-                "Июнь",
-                "Июль",
-                "Август",
-                "Сентябрь",
-                "Октябрь",
-                "Ноябрь",
-                "Декабрь"
-            ],
-            firstDay: 1
+
+    /*Tender open time range*/
+    moment.locale("ru");
+    $('input[name="daterange"]').dateRangePicker({
+        separator: ' по ',
+        language: 'ru',
+        startOfWeek: 'monday',
+        startDate: Date.now(),
+        format: 'HH:mm DD.MM.YYYY',
+        time: {
+            enabled: true
+        },
+        /*defaultTime: moment().startOf('day').hour(9).minute(0).toDate(),*/
+        defaultEndTime: moment().startOf('day').hour(17).minute(0).toDate(),
+        minDays: 1,
+        maxDays: 15,
+        selectForward: true,
+        autoClose: true,
+        /*getValue: function () {
+            if ($('#startDate').val() && $('#expiryDate').val())
+                return $('#startDate').val() + ' to ' + $('#expiryDate').val();
+            else
+                return '';
+        },*/
+        setValue: function (s, s1, s2) {
+            $('input[name="daterange"]').val(`${s1.split(' ')[1]} - ${s2.split(' ')[1]}`);
+        },
+        customOpenAnimation: function (cb) {
+            $(this).fadeIn(300, cb);
+        },
+        customCloseAnimation: function (cb) {
+            $(this).fadeOut(300, cb);
         }
-    }, function(start, end, label) {
-        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    }).bind('datepicker-change',function(event,obj) {
+        $('#startDate').val(obj.date1.getTime());
+        $('#expiryDate').val(obj.date2.getTime());
+        /* This event will be triggered when second date is selected */
+        // obj will be something like this:
+        // {
+        // 		date1: (Date object of the earlier date),
+        // 		date2: (Date object of the later date),
+        //	 	value: "2013-06-05 to 2013-06-07"
+        // }
     });
+
 };
 
 function dynamicTabs() {
@@ -253,11 +263,13 @@ function dynamicTabs() {
     });
 
     $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
+        console.log($('.js-remove-nav-item'), 'js-remove-nav-item')
         e.preventDefault();
-        if($('.nav__link').length === 1) return;
-        const id = $('.nav__link.active').data('page');
-        $('.nav__link.active').parent().remove();
-        $('.nav__link').eq(0).addClass('active');
+        if($('.nav__item').length === 1) return;
+        const id = $('.nav__item.active').children().data('page');
+        console.log(id, 'id');
+        $('.nav__item.active').remove();
+        $('.nav__item').eq(0).addClass('active');
         $('.nav__content').eq(0).addClass('active');
         $(id).remove();
 
