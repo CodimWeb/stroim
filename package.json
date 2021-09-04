@@ -38,7 +38,6 @@
   "dependencies": {
     "@popperjs/core": "^2.9.3",
     "bootstrap": "^5.0.2",
-    "daterangepicker": "^3.1.0",
     "dropzone": "^5.9.2",
     "i": "^0.3.6",
     "inputmask": "^5.0.5",

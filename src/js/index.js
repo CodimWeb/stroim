@@ -90,15 +90,12 @@ $(document).ready(function() {
         var links = $(this).siblings('.sidebar__links').find('.sidebar__links__item');
         var linkHeight = links.outerHeight();
         var maxHeight = (linkHeight + 12) * links.length;
-        console.log(links.length)
         if ($(this).hasClass('active')) {
             $(this).siblings('.sidebar__links').removeAttr('style')
             $(this).removeClass('active');
-            console.log('if')
         } else {
             $(this).siblings('.sidebar__links').css('max-height', maxHeight + 'px');
             $(this).addClass('active');
-            console.log('else')
         }
     })
 
@@ -144,12 +141,10 @@ $(document).ready(function() {
         if (e.target.id == 'register-individual') {
             $('.refister__form').removeClass('active');
             $('#form-individual').addClass('active');
-            console.log('fiz');
         }
         if (e.target.id == 'register-entity') {
             $('.refister__form').removeClass('active');
             $('#form-entity').addClass('active');
-            console.log('entity');
 
         }
     })
@@ -168,7 +163,27 @@ $(document).ready(function() {
     // })
 
 
+    //select checkbox
+    const $textarea = $('.js-location-modal');
 
+    let accum = [];
+    $('.location-checkbox__input').on('input', function(e) {
+        const $currentCheck = $(e.target);
+        const checkedVal = $currentCheck.val();
+        const textareaVal = $textarea.val();
+
+        if($currentCheck.is(":checked")) {
+            accum.push(checkedVal);
+        }else {
+            accum = accum.filter(item => item !== checkedVal);
+        }
+        $textarea.val(`${accum.join(', ')}`).focus();
+        // $textarea.trigger("change")
+        $textarea.css('overflow', 'auto');
+        // $textarea.css('height', 'auto');
+        // $textarea.css('height', $textarea.scrollTop() + $textarea.height());
+
+    })
 
     toggleFaq();
     fileReader();
@@ -177,12 +192,15 @@ $(document).ready(function() {
     sendBasket();
     showApplicationDeletingModal();
     showAdsDeletingModal();
+    showLocationModal();
     letDescribe();
     ImageLoader();
     dynamicTabs();
     autoHeightTextarea();
     initialDatePicker();
 });
+
+
 
 function initialDatePicker() {
 
@@ -193,7 +211,7 @@ function initialDatePicker() {
         language: 'ru',
         startOfWeek: 'monday',
         startDate: Date.now(),
-        format: 'HH:mm DD.MM.YYYY',
+        format: 'HH:mm DD MMMM YYYY',
         time: {
             enabled: true
         },
@@ -203,14 +221,8 @@ function initialDatePicker() {
         maxDays: 15,
         selectForward: true,
         autoClose: true,
-        /*getValue: function () {
-            if ($('#startDate').val() && $('#expiryDate').val())
-                return $('#startDate').val() + ' to ' + $('#expiryDate').val();
-            else
-                return '';
-        },*/
         setValue: function (s, s1, s2) {
-            $('input[name="daterange"]').val(`${s1.split(' ')[1]} - ${s2.split(' ')[1]}`);
+            $('input[name="daterange"]').val(s);
         },
         customOpenAnimation: function (cb) {
             $(this).fadeIn(300, cb);
@@ -221,13 +233,6 @@ function initialDatePicker() {
     }).bind('datepicker-change',function(event,obj) {
         $('#startDate').val(obj.date1.getTime());
         $('#expiryDate').val(obj.date2.getTime());
-        /* This event will be triggered when second date is selected */
-        // obj will be something like this:
-        // {
-        // 		date1: (Date object of the earlier date),
-        // 		date2: (Date object of the later date),
-        //	 	value: "2013-06-05 to 2013-06-07"
-        // }
     });
 
 };
@@ -263,11 +268,9 @@ function dynamicTabs() {
     });
 
     $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
-        console.log($('.js-remove-nav-item'), 'js-remove-nav-item')
         e.preventDefault();
         if($('.nav__item').length === 1) return;
         const id = $('.nav__item.active').children().data('page');
-        console.log(id, 'id');
         $('.nav__item.active').remove();
         $('.nav__item').eq(0).addClass('active');
         $('.nav__content').eq(0).addClass('active');
@@ -311,6 +314,37 @@ function showApplicationDeletingModal() {
         myModal.show()
     })
 };
+
+function showLocationModal() {
+    const $LocationModalBtn = $('.js-location-modal');
+    if(!$LocationModalBtn) return;
+    let myModal;
+    $LocationModalBtn.on('click', function (e) {
+        e.preventDefault();
+        // TODO: логика удаления
+        myModal = new Modal(document.getElementById('locationModal'))
+        myModal.show();
+
+        // search
+        const $search = $('.js-location-search');
+        $search.on('input', function (e) {
+            const substr = $(e.target).val().toLowerCase();
+            $('.location-checkbox__input').each((_, item) => {
+                const value = $(item).val().toLowerCase();
+                if(!value.includes(substr)) {
+                    $(item).closest('.modal-location__item').hide()
+                }else {
+                    $(item).closest('.modal-location__item').show()
+                }
+            })
+        });
+    $('.js-close-location-modal').on('click', function (e) {
+        e.preventDefault();
+        myModal.hide();
+    })
+
+    });
+};
 function showAdsDeletingModal() {
     const $deletingBtn = $('.js-delete-ads');
     if(!$deletingBtn) return;
@@ -338,7 +372,9 @@ function autoHeightTextarea() {
     document.querySelectorAll('textarea').forEach(el => {
         el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
         el.classList.add('auto');
-        el.addEventListener('input', e => {
+        console.log(el, 'target');
+        el.addEventListener('change', e => {
+            console.log('input');
             el.style.height = 'auto';
             el.style.height = (el.scrollHeight) + 'px';
         });

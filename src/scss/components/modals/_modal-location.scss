@@ -1,0 +1,88 @@
+@import '../../abstract/variables';
+
+.modal-location{
+  width: 100%;
+  max-width: 920px;
+}
+
+
+.modal-location__list {
+  columns: 4;
+}
+
+.modal-location__item {
+  & + & {
+    margin-top: 4px;
+  }
+}
+
+.modal-location__content {
+  border: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-location__head{
+  background-color: #F9F9F9;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #DFDEE2;
+}
+
+.modal-location__body {
+  padding: 16px 0 80px 24px;
+}
+
+.modal-location__footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 24px;
+  border-top: 1px solid #DFDEE2;
+  display: flex;
+  background-color: #fff;
+  justify-content: flex-end;
+}
+
+.modal-location__head-title{
+  font-weight: $font-weight-medium;
+}
+
+.modal-location__input{
+  max-width: 404px;
+}
+
+.modal-location__box{
+  margin-top: 20px;
+  max-height: 370px;
+  overflow: auto;
+}
+
+
+// checkbox
+.location-checkbox {
+
+}
+
+.location-checkbox__text{
+  font-size: 14px;
+  line-height: 160%;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+
+.location-checkbox__input{
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+
+  &:checked + .location-checkbox__text {
+    background: #CCDCF7;
+  }
+}
