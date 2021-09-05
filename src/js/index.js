@@ -277,6 +277,13 @@ function dynamicTabs() {
             $(item).text(`Лот ${index + 1}`)
         })
     });
+
+    $('.js-sidebar-ad-category').on('change', function(){
+        if($(this).prop('checked') == true) {
+            var value = $(this).attr('data-value');
+            $('#basket-ad-form-category').val(`Категория ${value}`);
+        }
+    })
 }
 
 function ImageLoader() {
@@ -294,6 +301,7 @@ function ImageLoader() {
                     let img = new Image();
                     img.src = reader.result;
                     $(`.preview-box--${num}`).html(img);
+                    $(`.preview-box--${num}`).append(`<span class="preview-box--bg" style="background-image: url(${reader.result})"></span>`)
                     num === 5 ? num = 1 : num ++;
                 }
             })
@@ -420,12 +428,11 @@ function initSlider() {
         fade: false,
         asNavFor: '.product-card__slider-nav .slider',
         infinite: false,
-        autoplay: true,
-        autoplaySpeed: 4000
+        vertical: true
     });
 
     $cardSliderNav.slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         asNavFor: '.product-card__slider .slider',
         arrows: false,

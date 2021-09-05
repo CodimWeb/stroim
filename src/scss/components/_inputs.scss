@@ -23,6 +23,15 @@
         font-size: 14px;
         width: 100%;
     }
+
+    &:disabled, 
+    &[readonly] {
+        background: #F2F2F2;
+    }
+}
+
+.input-lg {
+    height: 52px;
 }
 
 .search-input {
