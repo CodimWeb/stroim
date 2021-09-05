@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
@@ -1106,15 +1106,9 @@
 
                     <label class="materil-group materil-group--with-icon basket__suppliers-field">
                         <span class="materil-group__label">Период проведения конкурса*</span>
-                        <input type="text" name="daterange" class="form-control base-input materil-group__input" value="20.08.2021 - 30.08.2021" />
+                        <input type="text" name="daterange" class="form-control base-input materil-group__input" value="18:33 01.10.2021 по 17:00 15.10.2021" />
                         <img class="materil-group__icon" src="img/icon-calendar.svg" alt="">
                         <div class="materil-group__error-text">Укажите Период проведения конкурса</div>
-                    </label>
-
-                    <label class="materil-group basket__suppliers-field">
-                        <span class="materil-group__label">Период проведения конкурса*</span>
-                        <input type="text" class="form-control base-input materil-group__input">
-                        <div class="materil-group__error-text">Укажите Период проведения конкурса*</div>
                     </label>
                     <label class="materil-group basket__suppliers-field">
                         <span class="materil-group__label">Ваше имя*</span>
@@ -1142,11 +1136,10 @@
                         <div class="materil-group__error-text">Укажите ваш Телефон*</div>
                     </label>
 
-                    <label class="materil-group active materil-group--with-icon mt-4">
-                        <span class="materil-group__label">В какие регионы отправить
+                    <label class="materil-group materil-group--with-icon mt-4">
+                        <span class="materil-group__label">В каких регионах разместить тендер*
                             заявку?*</span>
-                        <textarea class="form-control base-input materil-group__input materil-group__textarea">Москва, Санкт-Петербург, Екатеринбург, Новокузнецк, Томск
-                        </textarea>
+                        <textarea class="js-location-modal form-control base-input materil-group__input materil-group__textarea basket__textarea"></textarea>
                         <img class="materil-group__icon" src="img/icon-location.svg" alt="">
                         <span class="materil-group__label-backdrop"></span>
                     </label>
@@ -1193,6 +1186,355 @@
         </div>
     </div>
 </div>
+
+<!-- Location Modal -->
+<div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModal" aria-hidden="true">
+    <div class="modal-dialog modal-location">
+
+        <div class="modal-content modal-location__content">
+            <div class="modal-location__head justify-content-between">
+                <p class="modal-location__head-title">Выберите регион</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-location__body">
+                <div class="modal-location__row">
+                    <label class="search-input search-input--right modal-location__input">
+                        <input type="text" class="form-control base-input search-input__field js-location-search" placeholder="Название населенного пункта">
+                        <button class="btn search-input__btn">
+                            <img src="img/icon-search-gray.svg" alt="">
+                        </button>
+                    </label>
+                </div>
+                <div class="modal-location__box">
+                    <div class="modal-location__col">
+                        <ul class="modal-location__list">
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Москва" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Москва</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Санкт - Петербург" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Санкт - Петербург</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Актау и Мангистау" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Актау и Мангистау</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Алматы" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Алматы</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Архангельск" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Архангельск
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астана" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астана</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астрахань и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астрахань и область</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владикавказ и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владикавказ и область
+
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владимир" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владимир</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Волгоград" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Волгоград</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Москва" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Москва</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Санкт - Петербург" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Санкт - Петербург</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Актау и Мангистау" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Актау и Мангистау</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Алматы" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Алматы</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Архангельск" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Архангельск
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астана" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астана</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астрахань и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астрахань и область</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владикавказ и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владикавказ и область
+
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владимир" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владимир</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Волгоград" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Волгоград</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Москва" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Москва</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Санкт - Петербург" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Санкт - Петербург</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Актау и Мангистау" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Актау и Мангистау</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Алматы" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Алматы</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Архангельск" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Архангельск
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астана" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астана</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астрахань и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астрахань и область</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владикавказ и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владикавказ и область
+
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владимир" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владимир</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Волгоград" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Волгоград</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Москва" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Москва</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Санкт - Петербург" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Санкт - Петербург</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Актау и Мангистау" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Актау и Мангистау</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Алматы" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Алматы</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Архангельск" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Архангельск
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астана" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астана</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астрахань и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астрахань и область</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владикавказ и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владикавказ и область
+
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владимир" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владимир</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Волгоград" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Волгоград</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Москва" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Москва</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Санкт - Петербург" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Санкт - Петербург</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Актау и Мангистау" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Актау и Мангистау</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Алматы" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Алматы</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Архангельск" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Архангельск
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астана" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астана</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Астрахань и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Астрахань и область</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владикавказ и область" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владикавказ и область
+
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Владимир" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Владимир</p>
+                                </label>
+                            </li>
+                            <li class="modal-location__item">
+                                <label class="location-checkbox">
+                                    <input type="checkbox" name="check-one" value="Волгоград" class="location-checkbox__input">
+                                    <p class="location-checkbox__text">Волгоград</p>
+                                </label>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-location__footer">
+                <a href="#" class="btn btn-primary js-close-location-modal">Готово</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Location Modal -->
 
 <footer class="footer">
     <div class="container footer__container">
