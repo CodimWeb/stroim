@@ -22,6 +22,8 @@ import 'slick-carousel';
 import "dropzone/dist/dropzone.css";
 import "jquery-date-range-picker/dist/daterangepicker.min.css"
 
+import Tender from './Tender';
+
 
 Dropzone.autoDiscover = false;
 $(document).ready(function() {
@@ -29,11 +31,11 @@ $(document).ready(function() {
         $('body').removeClass('transition-off')
     }, 100);
 
-    $('.materil-group__input').on('focus', function() {
+    $(document).on('focus', '.materil-group__input', function() {
         $(this).closest('.materil-group').addClass('active');
     })
 
-    $('.materil-group__input').on('blur', function(e) {
+    $(document).on('blur', '.materil-group__input', function(e) {
         if (e.target.value == '') {
             $(this).closest('.materil-group').removeClass('active');
         }
@@ -185,6 +187,146 @@ $(document).ready(function() {
 
     })
 
+    // tender tabs
+    $(document).on('click', '.nav__link', function(e){
+        e.preventDefault();
+        $('.nav__link').parent().removeClass('active');
+        $(e.target).parent().addClass('active')
+        const id = $(e.target).data('page');
+        $('.nav__content').removeClass('active');
+        $(`${id}`).addClass('active');
+    })
+
+    // инициализация тендера
+    const tender = new Tender;
+    tender.render();
+
+    // добавление категорий в лот
+    $('.tender-sidebar-category input').on('change', function(e) {
+        var category = {
+            id: e.target.value,
+            name: e.target.getAttribute('data-name'),
+            isCloned: false,
+            quantity: '',
+            unitId: '',
+            size: '',
+            _length: '',
+            steel: '',
+            maxPrice: '',
+            comment: '',
+        }
+
+        if($(this).prop('checked') == true) {
+            tender.lotList[tender.activeLotIndex].categoties.push(category)
+        }
+        else {
+            tender.lotList[tender.activeLotIndex].categoties = tender.lotList[tender.activeLotIndex].categoties.filter(item => item.id != category.id);
+        }
+        tender.render();
+
+        console.log(tender.lotList);
+    })
+
+    // показать таблицу
+    $(document).on('click', '.lot-show-table', function(e){
+        e.preventDefault();
+        var index = $(this).closest('.nav__content').attr('data-index');
+        tender.lotList[index].isShowTable = true;
+        tender.render();
+    })
+
+    // дублировать категорию
+    $(document).on('click', '.lot-clone-category', function(e){
+        e.preventDefault();
+        const {lotList, activeLotIndex} = tender;
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+        let insertPosition = 0;
+        let categoryId = lotList[activeLotIndex].categoties[categoryIndex].id;
+        // определение позиции вставки
+        for(let i = categoryIndex; i < lotList[activeLotIndex].categoties.length; i++) {
+            
+            if(lotList[activeLotIndex].categoties[i].id == categoryId) {
+                insertPosition = i + 1;
+            }
+        }
+    
+        let category = Object.assign({}, lotList[activeLotIndex].categoties[categoryIndex]);
+        category.isCloned = true;
+        category.quantity = '';
+        category.unitId = '';
+        category.size = '';
+        category._length = '';
+        category.steel = '';
+        category.maxPrice = '';
+        category.comment = '';
+        
+        lotList[activeLotIndex].categoties.splice(insertPosition, 0, category)
+        tender.render();
+    })
+
+    // удалить дублированую категорию
+    $(document).on('click', '.lot-remove-category', function(e){
+        e.preventDefault();
+        const {lotList, activeLotIndex} = tender;
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+        let category = Object.assign({}, lotList[activeLotIndex].categoties[categoryIndex]);
+        category.isCloned = true;
+        lotList[activeLotIndex].categoties.splice(categoryIndex, 1)
+        tender.render();
+    })
+
+    // заполнение полей таблицы лота
+    $(document).on('input', '.lot-category-input', function(e){
+        const {lotList, activeLotIndex} = tender;
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+
+        if($(this).hasClass('quantity')) {
+            lotList[activeLotIndex].categoties[categoryIndex].quantity = e.target.value;
+        }
+        
+        if($(this).hasClass('size')) {
+            lotList[activeLotIndex].categoties[categoryIndex].size = e.target.value;
+        }
+
+        if($(this).hasClass('length')) {
+            lotList[activeLotIndex].categoties[categoryIndex]._length = e.target.value;
+        }
+
+        if($(this).hasClass('steel')) {
+            lotList[activeLotIndex].categoties[categoryIndex].steel = e.target.value;
+        }
+
+        if($(this).hasClass('maxPrice')) {
+            lotList[activeLotIndex].categoties[categoryIndex].maxPrice = e.target.value;
+        }
+
+        if($(this).hasClass('comment')) {
+            lotList[activeLotIndex].categoties[categoryIndex].comment = e.target.value;
+        }
+    })
+
+    // заполнение селекта таблицы лота
+    $(document).on('change', '.lot-category-select.unitId', function(e){
+        const {lotList, activeLotIndex} = tender;
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+        lotList[activeLotIndex].categoties[categoryIndex].unitId = e.target.value;
+    });
+
+    // добавить лот
+    $('.js-add-nav-item').on('click', function(e) {
+        e.preventDefault();
+        var lot = {
+            categoties: [],
+            isShowTable: false,
+        }
+        tender.lotList.push(lot);
+        tender.activeLotIndex = tender.lotList.length -1;
+        tender.render();
+        console.log(tender.lotList);
+    })
+
+    
+
     toggleFaq();
     fileReader();
     takePartInTender();
@@ -195,7 +337,7 @@ $(document).ready(function() {
     showLocationModal();
     letDescribe();
     ImageLoader();
-    dynamicTabs();
+    // dynamicTabs();
     autoHeightTextarea();
     initialDatePicker();
 });
@@ -238,55 +380,55 @@ function initialDatePicker() {
 };
 
 function dynamicTabs() {
-    if(!$('.nav')) return;
-    const $link = $('.nav__link');
-    const $btnAdd = $('.js-add-nav-item');
-    const $removeAdd = $('.js-remove-nav-item');
+    // if(!$('.nav')) return;
+    // const $link = $('.nav__link');
+    // const $btnAdd = $('.js-add-nav-item');
+    // const $removeAdd = $('.js-remove-nav-item');
 
-    $('.nav__links').delegate('.nav__link', 'click',  function(e) {
-        e.preventDefault();
-        $('.nav__link').parent().removeClass('active');
-        $(e.target).parent().addClass('active')
-        const id = $(e.target).data('page');
-        $('.nav__content').removeClass('active');
-        $(`${id}`).addClass('active');
-    });
+    // $('.nav__links').delegate('.nav__link', 'click',  function(e) {
+    //     e.preventDefault();
+    //     $('.nav__link').parent().removeClass('active');
+    //     $(e.target).parent().addClass('active')
+    //     const id = $(e.target).data('page');
+    //     $('.nav__content').removeClass('active');
+    //     $(`${id}`).addClass('active');
+    // });
 
-    $btnAdd.on('click', function (e) {
-        e.preventDefault();
-        const next = $('.nav__link').length + 1;
-        $('.nav__links').append(`
-            <li class="nav__item">
-                <a class="nav__link" data-page="#lot-${next}" href="#">Лот ${next}</a>
-            </li>
-        `);
-        $('.nav__body').append(`
-             <div class="nav__content" id="lot-${next}">
-                ${new Date().getSeconds()}
-             </div>
-        `);
-    });
+    // $btnAdd.on('click', function (e) {
+    //     e.preventDefault();
+    //     const next = $('.nav__link').length + 1;
+    //     $('.nav__links').append(`
+    //         <li class="nav__item">
+    //             <a class="nav__link" data-page="#lot-${next}" href="#">Лот ${next}</a>
+    //         </li>
+    //     `);
+    //     $('.nav__body').append(`
+    //          <div class="nav__content" id="lot-${next}">
+    //             ${new Date().getSeconds()}
+    //          </div>
+    //     `);
+    // });
 
-    $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
-        e.preventDefault();
-        if($('.nav__item').length === 1) return;
-        const id = $('.nav__item.active').children().data('page');
-        $('.nav__item.active').remove();
-        $('.nav__item').eq(0).addClass('active');
-        $('.nav__content').eq(0).addClass('active');
-        $(id).remove();
+    // $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
+    //     e.preventDefault();
+    //     if($('.nav__item').length === 1) return;
+    //     const id = $('.nav__item.active').children().data('page');
+    //     $('.nav__item.active').remove();
+    //     $('.nav__item').eq(0).addClass('active');
+    //     $('.nav__content').eq(0).addClass('active');
+    //     $(id).remove();
 
-        $('.nav__link').each((index , item) => {
-            $(item).text(`Лот ${index + 1}`)
-        })
-    });
+    //     $('.nav__link').each((index , item) => {
+    //         $(item).text(`Лот ${index + 1}`)
+    //     })
+    // });
 
-    $('.js-sidebar-ad-category').on('change', function(){
-        if($(this).prop('checked') == true) {
-            var value = $(this).attr('data-value');
-            $('#basket-ad-form-category').val(`Категория ${value}`);
-        }
-    })
+    // $('.js-sidebar-ad-category').on('change', function(){
+    //     if($(this).prop('checked') == true) {
+    //         var value = $(this).attr('data-value');
+    //         $('#basket-ad-form-category').val(`Категория ${value}`);
+    //     }
+    // })
 }
 
 function ImageLoader() {
@@ -460,6 +602,7 @@ function initSlider() {
     $cardSlider.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 300,
         arrows: false,
         fade: false,
         asNavFor: '.product-card__slider-nav .slider',

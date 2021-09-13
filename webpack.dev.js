@@ -260,6 +260,10 @@ module.exports = {
             template: './src/create-tender.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'create-tender-js.html',
+            template: './src/create-tender-js.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'create-request.html',
             template: './src/create-request.html'
         }),
