@@ -23,6 +23,15 @@
         font-size: 14px;
         width: 100%;
     }
+
+    &:disabled, 
+    &[readonly] {
+        background: #F2F2F2;
+    }
+}
+
+.input-lg {
+    height: 52px;
 }
 
 .search-input {
@@ -37,6 +46,11 @@
     &::placeholder {
         font-size: 14px;
         color: #646464;
+    }
+
+    .search-input--right & {
+        padding-right: 40px;
+        padding-left: 16px;
     }
 }
 
@@ -54,6 +68,10 @@
     img {
         width: 16px;
         height: auto;
+    }
+    .search-input--right & {
+        left: initial;
+        right: 0;
     }
 }
 

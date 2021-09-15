@@ -22,6 +22,8 @@ import 'slick-carousel';
 import "dropzone/dist/dropzone.css";
 import "jquery-date-range-picker/dist/daterangepicker.min.css"
 
+import Tender from './Tender';
+
 
 Dropzone.autoDiscover = false;
 $(document).ready(function() {
@@ -29,11 +31,11 @@ $(document).ready(function() {
         $('body').removeClass('transition-off')
     }, 100);
 
-    $('.materil-group__input').on('focus', function() {
+    $(document).on('focus', '.materil-group__input', function() {
         $(this).closest('.materil-group').addClass('active');
     })
 
-    $('.materil-group__input').on('blur', function(e) {
+    $(document).on('blur', '.materil-group__input', function(e) {
         if (e.target.value == '') {
             $(this).closest('.materil-group').removeClass('active');
         }
@@ -90,15 +92,12 @@ $(document).ready(function() {
         var links = $(this).siblings('.sidebar__links').find('.sidebar__links__item');
         var linkHeight = links.outerHeight();
         var maxHeight = (linkHeight + 12) * links.length;
-        console.log(links.length)
         if ($(this).hasClass('active')) {
             $(this).siblings('.sidebar__links').removeAttr('style')
             $(this).removeClass('active');
-            console.log('if')
         } else {
             $(this).siblings('.sidebar__links').css('max-height', maxHeight + 'px');
             $(this).addClass('active');
-            console.log('else')
         }
     })
 
@@ -144,12 +143,10 @@ $(document).ready(function() {
         if (e.target.id == 'register-individual') {
             $('.refister__form').removeClass('active');
             $('#form-individual').addClass('active');
-            console.log('fiz');
         }
         if (e.target.id == 'register-entity') {
             $('.refister__form').removeClass('active');
             $('#form-entity').addClass('active');
-            console.log('entity');
 
         }
     })
@@ -168,7 +165,231 @@ $(document).ready(function() {
     // })
 
 
+    //select checkbox
+    const $textarea = $('.js-location-modal');
 
+    let accum = [];
+    $('.location-checkbox__input').on('input', function(e) {
+        const $currentCheck = $(e.target);
+        const checkedVal = $currentCheck.val();
+        const textareaVal = $textarea.val();
+
+        if($currentCheck.is(":checked")) {
+            accum.push(checkedVal);
+        }else {
+            accum = accum.filter(item => item !== checkedVal);
+        }
+        $textarea.val(`${accum.join(', ')}`).focus();
+        // $textarea.trigger("change")
+        $textarea.css('overflow', 'auto');
+        // $textarea.css('height', 'auto');
+        // $textarea.css('height', $textarea.scrollTop() + $textarea.height());
+
+    })
+
+    // tender tabs
+    $(document).on('click', '.nav__link', function(e){
+        e.preventDefault();
+        $('.nav__link').parent().removeClass('active');
+        $(e.target).parent().addClass('active')
+        const id = $(e.target).data('page');
+        $('.nav__content').removeClass('active');
+        $(`${id}`).addClass('active');
+        let index = $(this).attr('data-index');
+        tender.activeLotIndex = index;
+        tender.getSelectedCategories();
+        console.log(tender.activeLotIndex, 'activeLotIndex')
+    })
+
+    // инициализация тендера
+    const tender = new Tender;
+    tender.render();
+
+    // добавление категорий в лот
+    $('.tender-sidebar-category input').on('change', function(e) {
+        console.log(tender.activeLotIndex, 'activeLotIndex')
+        var category = {
+            id: e.target.value,
+            name: e.target.getAttribute('data-name'),
+            isCloned: false,
+            quantity: '',
+            unitId: '',
+            size: '',
+            _length: '',
+            steel: '',
+            maxPrice: '',
+            comment: '',
+        }
+
+        if($(this).prop('checked') == true) {
+            tender.lotList[tender.activeLotIndex].categories.push(category)
+        }
+        else {
+            tender.lotList[tender.activeLotIndex].categories = tender.lotList[tender.activeLotIndex].categories.filter(item => item.id != category.id);
+        }
+        tender.render();
+
+        console.log(tender.lotList);
+    })
+
+    // показать таблицу
+    $(document).on('click', '.lot-show-table', function(e){
+        e.preventDefault();
+        var index = $(this).closest('.nav__content').attr('data-index');
+        tender.lotList[index].isShowTable = true;
+        tender.render();
+    })
+
+    // добавить файл
+    $(document).on('click', '.tender-add-file', function(e){
+        e.preventDefault();
+        console.log('scroll');
+        let offsetTop = $('.tender-file-container').offset().top;
+        $('body,html').animate({scrollTop: $('.tender-file-container').offset().top}, 300, function() {
+            console.log('animation end')    
+        });
+    })
+
+    // дублировать категорию
+    $(document).on('click', '.lot-clone-category', function(e){
+        e.preventDefault();
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+        let insertPosition = 0;
+        let categoryId = tender.lotList[tender.activeLotIndex].categories[categoryIndex].id;
+        // определение позиции вставки
+        for(let i = categoryIndex; i < tender.lotList[tender.activeLotIndex].categories.length; i++) {
+            
+            if(tender.lotList[tender.activeLotIndex].categories[i].id == categoryId) {
+                insertPosition = i + 1;
+            }
+        }
+    
+        let category = Object.assign({}, tender.lotList[tender.activeLotIndex].categories[categoryIndex]);
+        category.isCloned = true;
+        category.quantity = '';
+        category.unitId = '';
+        category.size = '';
+        category._length = '';
+        category.steel = '';
+        category.maxPrice = '';
+        category.comment = '';
+        
+        tender.lotList[tender.activeLotIndex].categories.splice(insertPosition, 0, category)
+        tender.render();
+    })
+
+    // удалить дублированую категорию
+    $(document).on('click', '.lot-remove-category', function(e){
+        e.preventDefault();
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+        let category = Object.assign({}, tender.lotList[tender.activeLotIndex].categories[categoryIndex]);
+        category.isCloned = true;
+        tender.lotList[tender.activeLotIndex].categories.splice(categoryIndex, 1)
+        tender.render();
+    })
+
+    // добавить лот
+    $('.js-add-nav-item').on('click', function(e) {
+        e.preventDefault();
+        if(tender.lotList.length < 8) {
+            var lot = {
+                categories: [],
+                isShowTable: false,
+            }
+            tender.lotList.push(lot);
+            tender.activeLotIndex = tender.lotList.length -1;
+            tender.render();
+            tender.getSelectedCategories();
+            console.log(tender.lotList);
+        }    
+    })
+
+    // удалить лот
+    $('.js-remove-nav-item').on('click', function(e){
+        e.preventDefault();
+        if(tender.lotList.length > 1) {
+            tender.lotList.splice(tender.activeLotIndex, 1);
+            if(tender.activeLotIndex != 0) {
+                tender.activeLotIndex--;
+            }
+            else {
+                tender.activeLotIndex = 0;
+            }
+            tender.render()
+            tender.getSelectedCategories();
+            console.log(tender.lotList);
+        }    
+    })
+
+    // заполнение полей таблицы лота
+    $(document).on('input', '.lot-category-input', function(e){
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+
+        if($(this).hasClass('quantity')) {
+            tender.lotList[tender.activeLotIndex].categories[categoryIndex].quantity = e.target.value;
+        }
+        
+        if($(this).hasClass('size')) {
+            tender.lotList[tender.activeLotIndex].categories[categoryIndex].size = e.target.value;
+        }
+
+        if($(this).hasClass('length')) {
+            tender.lotList[tender.activeLotIndex].categories[categoryIndex]._length = e.target.value;
+        }
+
+        if($(this).hasClass('steel')) {
+            tender.lotList[tender.activeLotIndex].categories[categoryIndex].steel = e.target.value;
+        }
+
+        if($(this).hasClass('maxPrice')) {
+            tender.lotList[tender.activeLotIndex].categories[categoryIndex].maxPrice = e.target.value;
+        }
+
+        if($(this).hasClass('comment')) {
+            tender.lotList[tender.activeLotIndex].categories[categoryIndex].comment = e.target.value;
+        }
+    })
+
+    // заполнение селекта таблицы лота
+    $(document).on('select2:select', '.lot-category-select.unitId', function(e){
+        let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
+        console.log(e.target.value)
+        tender.lotList[tender.activeLotIndex].categories[categoryIndex].unitId = e.target.value;
+        
+    });
+
+    $(document).on('input', '.lot-description-input', function(e){
+        if($(this).hasClass('lot-input-title')) {
+            tender.lotList[tender.activeLotIndex].title = e.target.value;
+        }
+
+        if($(this).hasClass('lot-input-description')) {
+            tender.lotList[tender.activeLotIndex].description = e.target.value;
+        }
+
+        if($(this).hasClass('lot-input-note')) {
+            tender.lotList[tender.activeLotIndex].note = e.target.value;
+        }
+
+        if($(this).hasClass('lot-input-estimated')) {
+            tender.lotList[tender.activeLotIndex].estimated = e.target.value;
+        }
+
+        if($(this).hasClass('lot-input-address')) {
+            tender.lotList[tender.activeLotIndex].address = e.target.value;
+        }
+    })
+
+    $(document).on('change', '.lot-description-checkbox', function(e){
+        if($(this).prop('checked') == true) {
+            tender.lotList[tender.activeLotIndex].delivery = true;
+        }
+        else {
+            tender.lotList[tender.activeLotIndex].delivery = false;
+        }
+    });
+
+    
 
     toggleFaq();
     fileReader();
@@ -177,12 +398,15 @@ $(document).ready(function() {
     sendBasket();
     showApplicationDeletingModal();
     showAdsDeletingModal();
+    showLocationModal();
     letDescribe();
     ImageLoader();
-    dynamicTabs();
+    // dynamicTabs();
     autoHeightTextarea();
     initialDatePicker();
 });
+
+
 
 function initialDatePicker() {
 
@@ -193,7 +417,7 @@ function initialDatePicker() {
         language: 'ru',
         startOfWeek: 'monday',
         startDate: Date.now(),
-        format: 'HH:mm DD.MM.YYYY',
+        format: 'HH:mm DD MMMM YYYY',
         time: {
             enabled: true
         },
@@ -203,14 +427,8 @@ function initialDatePicker() {
         maxDays: 15,
         selectForward: true,
         autoClose: true,
-        /*getValue: function () {
-            if ($('#startDate').val() && $('#expiryDate').val())
-                return $('#startDate').val() + ' to ' + $('#expiryDate').val();
-            else
-                return '';
-        },*/
         setValue: function (s, s1, s2) {
-            $('input[name="daterange"]').val(`${s1.split(' ')[1]} - ${s2.split(' ')[1]}`);
+            $('input[name="daterange"]').val(s);
         },
         customOpenAnimation: function (cb) {
             $(this).fadeIn(300, cb);
@@ -221,62 +439,60 @@ function initialDatePicker() {
     }).bind('datepicker-change',function(event,obj) {
         $('#startDate').val(obj.date1.getTime());
         $('#expiryDate').val(obj.date2.getTime());
-        /* This event will be triggered when second date is selected */
-        // obj will be something like this:
-        // {
-        // 		date1: (Date object of the earlier date),
-        // 		date2: (Date object of the later date),
-        //	 	value: "2013-06-05 to 2013-06-07"
-        // }
     });
 
 };
 
 function dynamicTabs() {
-    if(!$('.nav')) return;
-    const $link = $('.nav__link');
-    const $btnAdd = $('.js-add-nav-item');
-    const $removeAdd = $('.js-remove-nav-item');
+    // if(!$('.nav')) return;
+    // const $link = $('.nav__link');
+    // const $btnAdd = $('.js-add-nav-item');
+    // const $removeAdd = $('.js-remove-nav-item');
 
-    $('.nav__links').delegate('.nav__link', 'click',  function(e) {
-        e.preventDefault();
-        $('.nav__link').parent().removeClass('active');
-        $(e.target).parent().addClass('active')
-        const id = $(e.target).data('page');
-        $('.nav__content').removeClass('active');
-        $(`${id}`).addClass('active');
-    });
+    // $('.nav__links').delegate('.nav__link', 'click',  function(e) {
+    //     e.preventDefault();
+    //     $('.nav__link').parent().removeClass('active');
+    //     $(e.target).parent().addClass('active')
+    //     const id = $(e.target).data('page');
+    //     $('.nav__content').removeClass('active');
+    //     $(`${id}`).addClass('active');
+    // });
 
-    $btnAdd.on('click', function (e) {
-        e.preventDefault();
-        const next = $('.nav__link').length + 1;
-        $('.nav__links').append(`
-            <li class="nav__item">
-                <a class="nav__link" data-page="#lot-${next}" href="#">Лот ${next}</a>
-            </li>
-        `);
-        $('.nav__body').append(`
-             <div class="nav__content" id="lot-${next}">
-                ${new Date().getSeconds()}
-             </div>
-        `);
-    });
+    // $btnAdd.on('click', function (e) {
+    //     e.preventDefault();
+    //     const next = $('.nav__link').length + 1;
+    //     $('.nav__links').append(`
+    //         <li class="nav__item">
+    //             <a class="nav__link" data-page="#lot-${next}" href="#">Лот ${next}</a>
+    //         </li>
+    //     `);
+    //     $('.nav__body').append(`
+    //          <div class="nav__content" id="lot-${next}">
+    //             ${new Date().getSeconds()}
+    //          </div>
+    //     `);
+    // });
 
-    $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
-        console.log($('.js-remove-nav-item'), 'js-remove-nav-item')
-        e.preventDefault();
-        if($('.nav__item').length === 1) return;
-        const id = $('.nav__item.active').children().data('page');
-        console.log(id, 'id');
-        $('.nav__item.active').remove();
-        $('.nav__item').eq(0).addClass('active');
-        $('.nav__content').eq(0).addClass('active');
-        $(id).remove();
+    // $('.nav__body').delegate('.js-remove-nav-item', 'click', function (e) {
+    //     e.preventDefault();
+    //     if($('.nav__item').length === 1) return;
+    //     const id = $('.nav__item.active').children().data('page');
+    //     $('.nav__item.active').remove();
+    //     $('.nav__item').eq(0).addClass('active');
+    //     $('.nav__content').eq(0).addClass('active');
+    //     $(id).remove();
 
-        $('.nav__link').each((index , item) => {
-            $(item).text(`Лот ${index + 1}`)
-        })
-    });
+    //     $('.nav__link').each((index , item) => {
+    //         $(item).text(`Лот ${index + 1}`)
+    //     })
+    // });
+
+    // $('.js-sidebar-ad-category').on('change', function(){
+    //     if($(this).prop('checked') == true) {
+    //         var value = $(this).attr('data-value');
+    //         $('#basket-ad-form-category').val(`Категория ${value}`);
+    //     }
+    // })
 }
 
 function ImageLoader() {
@@ -294,6 +510,7 @@ function ImageLoader() {
                     let img = new Image();
                     img.src = reader.result;
                     $(`.preview-box--${num}`).html(img);
+                    $(`.preview-box--${num}`).append(`<span class="preview-box--bg" style="background-image: url(${reader.result})"></span>`)
                     num === 5 ? num = 1 : num ++;
                 }
             })
@@ -310,6 +527,37 @@ function showApplicationDeletingModal() {
         var myModal = new Modal(document.getElementById('applicationDeleteModal'))
         myModal.show()
     })
+};
+
+function showLocationModal() {
+    const $LocationModalBtn = $('.js-location-modal');
+    if(!$LocationModalBtn) return;
+    let myModal;
+    $LocationModalBtn.on('click', function (e) {
+        e.preventDefault();
+        // TODO: логика удаления
+        myModal = new Modal(document.getElementById('locationModal'))
+        myModal.show();
+
+        // search
+        const $search = $('.js-location-search');
+        $search.on('input', function (e) {
+            const substr = $(e.target).val().toLowerCase();
+            $('.location-checkbox__input').each((_, item) => {
+                const value = $(item).val().toLowerCase();
+                if(!value.includes(substr)) {
+                    $(item).closest('.modal-location__item').hide()
+                }else {
+                    $(item).closest('.modal-location__item').show()
+                }
+            })
+        });
+    $('.js-close-location-modal').on('click', function (e) {
+        e.preventDefault();
+        myModal.hide();
+    })
+
+    });
 };
 function showAdsDeletingModal() {
     const $deletingBtn = $('.js-delete-ads');
@@ -338,7 +586,9 @@ function autoHeightTextarea() {
     document.querySelectorAll('textarea').forEach(el => {
         el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
         el.classList.add('auto');
-        el.addEventListener('input', e => {
+        console.log(el, 'target');
+        el.addEventListener('change', e => {
+            console.log('input');
             el.style.height = 'auto';
             el.style.height = (el.scrollHeight) + 'px';
         });
@@ -416,16 +666,16 @@ function initSlider() {
     $cardSlider.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 300,
         arrows: false,
         fade: false,
         asNavFor: '.product-card__slider-nav .slider',
         infinite: false,
-        autoplay: true,
-        autoplaySpeed: 4000
+        vertical: true
     });
 
     $cardSliderNav.slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         asNavFor: '.product-card__slider .slider',
         arrows: false,

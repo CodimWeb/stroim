@@ -76,6 +76,10 @@
     transition: max-height 0.3s ease-in-out;
 }
 
+.sidebar__links--full-height {
+    max-height: fit-content;
+}
+
 .sidebar__links__item {
     margin-bottom: 12px;
 
