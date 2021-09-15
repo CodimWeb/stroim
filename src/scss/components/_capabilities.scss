@@ -1,5 +1,5 @@
 .capabilities{
-  padding: 48px 0 70px;
+  padding: 8px 0 70px;
 }
 
 .capabilities__container{
@@ -11,18 +11,19 @@
 
 .capabilities__item{
   display: flex;
-  padding: 0 15px;
   width: 25%;
+  margin-right: 24px;
 }
 
 .capabilities__icon{
-  width: 56px;
+  width: 64px;
   height: auto;
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .capabilities__text{
   font-size: 16px;
   line-height: 160%;
   color: rgba(0, 29, 58, 0.9);
+  margin-top: 6px;
 }

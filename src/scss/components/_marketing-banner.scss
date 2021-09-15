@@ -1,19 +1,18 @@
 @import '../abstract/variables';
 
 .marketing-banner{
-  padding: 120px 0 80px;
+  padding: 80px 0 80px;
 }
 
 .marketing-banner__inner{
-  background: $yellow;
-  padding: 20px 112px 48px 66px;
-  border-radius: 8px;
+  padding: 35px 140px 39px 0;
   display: flex;
   align-items: center;
+  background: url(../img/marketing-bg.svg) no-repeat right top;
 }
 
 .marketing-banner__title{
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .marketing-banner__image {
@@ -25,18 +24,20 @@
 }
 
 .marketing-banner__info{
-  line-height: 140%;
+  max-width: 345px;
+  font-size: 22px;
   margin-bottom: 32px;
 }
 
 .marketing-banner__price{
   font-weight: $font-weight-medium;
+  color: #3275EE;
   margin-bottom: 4px;
 }
 
 .marketing-banner__location{
   color: $grey;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.6;
   margin-bottom: 48px;
 }

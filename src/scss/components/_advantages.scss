@@ -25,15 +25,34 @@
   }
 }
 
+.advantages__num-1 {
+  font-weight: $font-weight-medium;
+  font-size: 144px;
+  line-height: 125%;
+  margin-bottom: 4px;
+  color: $blue;
+}
+
 .advantages__num{
   font-weight: $font-weight-medium;
   font-size: 144px;
   line-height: 125%;
-  margin-bottom: 5px;
   color: $blue;
 }
 
 .advantages__description{
+  display: flex;
   font-size: 22px;
   line-height: 160%;
+}
+
+.advantages__description__link {
+  text-decoration: none;
+  color: #3275EE;
+}
+
+.advantages__description p {
+  font-size: 22px;
+  line-height: 160%;
+  margin-left: 5px;
 }

@@ -2,78 +2,76 @@
   padding: 56px 0 80px;
 }
 
+.product-catalog__name {
+  display: flex;
+}
+
 .product-catalog__title{
   margin-bottom: 34px;
-  max-width: 570px;
 }
 
-.product-catalog__product{
-  color: #001D3A;
-  img{
-    padding-right: 8px;
-  }
+.product-catalog__left {
+  width: 932px;
+  margin-right: 24px;
 }
 
-.product-catalog__list{
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
+.product-catalog__left .row {
+  margin: 0 -12px;
+}
+
+.product-catalog__left .row > div {
+  padding: 0 12px;
+}
+
+.product-catalog__all {
+  font-size: 16px;
+  color: #3275EE;
+  text-decoration: none;
+  margin-left: 16px;
+  padding-top: 20px;
 }
 
 .product-catalog__container{
   display: flex;
-  flex-wrap: nowrap;
 }
 
-.product-catalog__left{
-  flex-grow: 1;
-}
-
-.product-catalog__right{
-  flex-shrink: 0;
-  width: 294px;
-}
-
-.product-catalog__product{
-  display: inline-block;
-  position: relative;
-  padding-left: 20px;
-
-  &::before{
-    content: '';
-    background-image: url("../img/icon-right.svg");
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    background-position: center center;
-    width: 13px;
-    height: 8px;
-    position: absolute;
-    left: 0;
-    top: 6px;
-    transition: transform 0.15s ease-in-out;
-  }
+.product-catalog__category {
+  display: block;
+  background-color: #F9F9F9;
+  text-decoration: none;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #F9F9F9;
 
   &:hover {
-    &:before {
-      transform: translateX(3px);
-    }
+    border-color: #3275EE;
   }
 }
 
-.product-catalog__item{
-  & + & {
-    margin-top: 19px;
-  }
+.product-catalog__img {
+  max-width: 140px;
+  max-height: 140px;
 }
 
-.product-catalog__footnote{
-  margin-top: 48px;
+.product-catalog__category p {
+  text-align: center;
+  color: #001D3A;
+  margin-top: 16px;
+  line-height: 22px;
 }
 
-.product-catalog__actions{
-  margin-top: 24px;
+.product-catalog__right .banner-card-sm {
+  width: 294px;
+  height: 452px;
+  border-radius: 8px;
+  display: block;
+  overflow: hidden;
+}
 
-  .btn + .btn{
-    margin-left: 24px;
-  }
+.banner-card-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

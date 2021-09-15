@@ -1,0 +1,41 @@
+.about-project {
+    padding: 56px 0 80px;
+}
+
+.about-project__description {
+    display: flex;
+    border-bottom: 1px solid #DFDEE2;
+}
+
+.about-project__left {
+    max-width: 710px;
+    padding-right: 93px;
+}
+
+.about-project__title {
+    margin-top: 15px;
+    margin-bottom: 16px;
+}
+
+.about-project__text p {
+    margin-bottom: 16px;
+    line-height: 25px;
+}
+
+.about-project__statistic {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-project__sector {
+    max-width: 188px;
+}
+
+.about-project__purely {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #3275EE;
+    margin-bottom: 8px;
+}
