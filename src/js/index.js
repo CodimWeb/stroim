@@ -246,7 +246,7 @@ $(document).ready(function() {
         console.log('scroll');
         let offsetTop = $('.tender-file-container').offset().top;
         $('body,html').animate({scrollTop: $('.tender-file-container').offset().top}, 300, function() {
-            console.log('animation end')    
+            console.log('animation end')
         });
     })
 
@@ -258,12 +258,12 @@ $(document).ready(function() {
         let categoryId = tender.lotList[tender.activeLotIndex].categories[categoryIndex].id;
         // определение позиции вставки
         for(let i = categoryIndex; i < tender.lotList[tender.activeLotIndex].categories.length; i++) {
-            
+
             if(tender.lotList[tender.activeLotIndex].categories[i].id == categoryId) {
                 insertPosition = i + 1;
             }
         }
-    
+
         let category = Object.assign({}, tender.lotList[tender.activeLotIndex].categories[categoryIndex]);
         category.isCloned = true;
         category.quantity = '';
@@ -273,7 +273,7 @@ $(document).ready(function() {
         category.steel = '';
         category.maxPrice = '';
         category.comment = '';
-        
+
         tender.lotList[tender.activeLotIndex].categories.splice(insertPosition, 0, category)
         tender.render();
     })
@@ -301,7 +301,7 @@ $(document).ready(function() {
             tender.render();
             tender.getSelectedCategories();
             console.log(tender.lotList);
-        }    
+        }
     })
 
     // удалить лот
@@ -318,7 +318,7 @@ $(document).ready(function() {
             tender.render()
             tender.getSelectedCategories();
             console.log(tender.lotList);
-        }    
+        }
     })
 
     // заполнение полей таблицы лота
@@ -328,7 +328,7 @@ $(document).ready(function() {
         if($(this).hasClass('quantity')) {
             tender.lotList[tender.activeLotIndex].categories[categoryIndex].quantity = e.target.value;
         }
-        
+
         if($(this).hasClass('size')) {
             tender.lotList[tender.activeLotIndex].categories[categoryIndex].size = e.target.value;
         }
@@ -355,7 +355,7 @@ $(document).ready(function() {
         let categoryIndex = $(this).closest('.table__row').attr('lot-category-index');
         console.log(e.target.value)
         tender.lotList[tender.activeLotIndex].categories[categoryIndex].unitId = e.target.value;
-        
+
     });
 
     $(document).on('input', '.lot-description-input', function(e){
@@ -389,7 +389,7 @@ $(document).ready(function() {
         }
     });
 
-    
+
 
     toggleFaq();
     fileReader();
@@ -573,11 +573,9 @@ function showAdsDeletingModal() {
 function toggleFaq() {
     const $fagItem = $('.js-faq');
     $fagItem.each(function(_, item) {
-        const $body = $(item).find('.js-faq-body');
-        $(item).off('click').on('click', function(e) {
+        $(item).on('click', function(e) {
             e.preventDefault();
             $(item).toggleClass('faq--open');
-            $body.toggle(400)
         })
     });
 };
