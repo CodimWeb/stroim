@@ -412,35 +412,36 @@ function initialDatePicker() {
 
     /*Tender open time range*/
     moment.locale("ru");
-    $('input[name="daterange"]').dateRangePicker({
-        separator: ' по ',
-        language: 'ru',
-        startOfWeek: 'monday',
-        startDate: Date.now(),
-        format: 'HH:mm DD MMMM YYYY',
-        time: {
-            enabled: true
-        },
-        /*defaultTime: moment().startOf('day').hour(9).minute(0).toDate(),*/
-        defaultEndTime: moment().startOf('day').hour(17).minute(0).toDate(),
-        minDays: 1,
-        maxDays: 15,
-        selectForward: true,
-        autoClose: true,
-        setValue: function (s, s1, s2) {
-            $('input[name="daterange"]').val(s);
-        },
-        customOpenAnimation: function (cb) {
-            $(this).fadeIn(300, cb);
-        },
-        customCloseAnimation: function (cb) {
-            $(this).fadeOut(300, cb);
-        }
-    }).bind('datepicker-change',function(event,obj) {
-        $('#startDate').val(obj.date1.getTime());
-        $('#expiryDate').val(obj.date2.getTime());
-    });
-
+    if(document.querySelector('input[name="daterange"]')) {
+        $('input[name="daterange"]').dateRangePicker({
+            separator: ' по ',
+            language: 'ru',
+            startOfWeek: 'monday',
+            startDate: Date.now(),
+            format: 'HH:mm DD MMMM YYYY',
+            time: {
+                enabled: true
+            },
+            /*defaultTime: moment().startOf('day').hour(9).minute(0).toDate(),*/
+            defaultEndTime: moment().startOf('day').hour(17).minute(0).toDate(),
+            minDays: 1,
+            maxDays: 15,
+            selectForward: true,
+            autoClose: true,
+            setValue: function (s, s1, s2) {
+                $('input[name="daterange"]').val(s);
+            },
+            customOpenAnimation: function (cb) {
+                $(this).fadeIn(300, cb);
+            },
+            customCloseAnimation: function (cb) {
+                $(this).fadeOut(300, cb);
+            }
+        }).bind('datepicker-change',function(event,obj) {
+            $('#startDate').val(obj.date1.getTime());
+            $('#expiryDate').val(obj.date2.getTime());
+        });
+    }
 };
 
 function dynamicTabs() {
